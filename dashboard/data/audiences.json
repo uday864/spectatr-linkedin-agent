@@ -1,86 +1,81 @@
 [
   {
     "date": "2026-03-06",
-    "name": "Broadcast & OTT Content Operations Leaders — UK/AUS/UAE",
-    "angle": "Post-production efficiency pain — AXIS time savings",
-    "why": "Broadcast Production Managers and Heads of Content at mid-size sports broadcasters and OTT platforms own the post-production bottleneck that AXIS directly solves. Table Tennis England's 250-hour saving and 3x upload increase is a highly credible proof point for this persona. This segment is not currently targeted by any detectable active campaign.",
-    "product": "AXIS",
-    "titles": [
-      "Head of Content",
-      "Content Operations Manager",
-      "Broadcast Production Manager",
-      "Head of Post-Production",
-      "Archive Manager",
-      "Digital Content Director",
-      "Head of Sports Content"
-    ],
-    "industries": [
-      "Broadcast Media",
-      "Online Audio and Video Media",
-      "Sports"
-    ],
-    "size": "Estimated 18,000–35,000 reachable on LinkedIn (UK + AUS + UAE combined)",
-    "geo": "United Kingdom, Australia, United Arab Emirates",
-    "headline": "250+ hours saved in post-production. 3× more content published. Same team.",
-    "body": "Table Tennis England cut 250+ post-production hours and tripled their weekly video output in 3 months — without adding headcount.\n\nAXIS automatically tags every clip: sport, athlete, action, sponsor brand — 100% accuracy. Your archive becomes instantly searchable. Your team stops logging and starts creating.\n\nIf you're still spending hours manually tagging and finding footage, you're leaving content (and revenue) on the table.\n\n→ See a 20-minute AXIS walkthrough.",
-    "cta": "See How It Works",
-    "reason": "Directly addresses post-production cost pain with a sport-specific proof point. Document Ad format recommended — stat-forward carousel will outperform image ads for this analytical persona. Bid CPL target: $160–$200."
-  },
-  {
-    "date": "2026-03-06",
-    "name": "League & Federation Digital Directors — Football, Hockey, Basketball — Global",
-    "angle": "Fan growth and real-time highlights — PULSE matchday ROI",
-    "why": "Heads of Digital and Content Directors at national federations and semi-professional leagues are responsible for social growth KPIs but lack the production capacity to publish highlights at the speed fans expect. HockeyOne (9x engagement growth) and NSL (51.8M views, 2x Instagram growth) are directly comparable organisations. This audience will self-identify with the pain immediately.",
+    "name": "Multi-Sport Federation Digital Directors — Global",
+    "angle": "Scale proof — ISG/NSL case studies",
+    "why": "Multi-sport federations (Olympic committees, continental games, regional associations) have the highest clip volume requirements and the largest potential PULSE contract values. ISG Riyadh 2025 (50,000+ clips, 57 NOCs) is a direct peer-reference for this audience. Currently untested as a standalone LinkedIn segment — likely bundled into a broader 'Leagues' audience, which dilutes relevance and CPL efficiency.",
     "product": "PULSE",
     "titles": [
-      "Head of Digital",
-      "Digital Content Director",
-      "Head of Social Media",
-      "Head of Communications",
-      "Director of Marketing",
-      "Content Manager",
-      "Head of Fan Engagement"
+      "Director of Digital",
+      "Head of Digital Media",
+      "Director of Communications",
+      "Head of Content",
+      "Digital Media Manager",
+      "Director of Broadcast"
     ],
     "industries": [
       "Sports",
-      "Spectator Sports",
-      "Entertainment Providers"
+      "International Organizations",
+      "Non-profit Organizations"
     ],
-    "size": "Estimated 25,000–45,000 reachable on LinkedIn globally",
-    "geo": "United Kingdom, Australia, Germany, Netherlands, South Africa, UAE, United States",
-    "headline": "9x fan engagement growth in 7 weeks. HockeyOne ran PULSE. Here's what happened.",
-    "body": "HockeyOne 2025: 9,500+ AI clips published within seconds of the action. 10.6M video views. 264% Facebook reach increase. 9x growth in engagement (18,589 → 170,154 likes).\n\nPrevious season? Manual highlights. Standard results.\n\nPULSE generates AI highlight clips across 15+ sports — automatically, in real-time, published directly to your social channels before fans leave the stadium.\n\nNo edit queue. No overnight turnaround. Just clips, at the speed of sport.\n\n→ See PULSE in a 20-minute demo.",
-    "cta": "Request a Demo",
-    "reason": "Highest-credibility audience-product fit in the Spectatr portfolio. HockeyOne and NSL case studies will generate strong resonance with this persona. Single Image Ad with bold stat headline recommended for cold traffic; retarget with Document Ad carousel of full case study stats."
+    "size": "8,000 – 18,000",
+    "geo": "Global (prioritise: Middle East, Europe, Asia-Pacific)",
+    "headline": "50,000 AI clips. 57 countries. 15 days. Is your federation next?",
+    "body": "At the Islamic Solidarity Games Riyadh 2025, PULSE generated 50,000+ real-time highlights for 57 National Olympic Committees — 512 published daily, 7.5 million views generated.\n\nNo editors. No delays. Every moment, every nation, in seconds.\n\nIf you’re managing a multi-sport event in 2026 or beyond, this is the benchmark for AI-powered content at scale.\n\n👉 See the full ISG case study.",
+    "cta": "Download Case Study",
+    "reason": "Multi-sport federations are the highest-value PULSE buyers (event-scale contracts, multi-year deals). ISG proof point creates instant credibility. Estimated CPL on LinkedIn for this segment: $80–150 (high intent, niche audience). Segment is untested and should be isolated from the broader Leagues audience for clean CPL benchmarking."
   },
   {
     "date": "2026-03-06",
-    "name": "Sports Sponsorship & Partnership Directors — FMCG, Financial Services, Telco — Europe & ANZ",
-    "angle": "Sponsor ROI accountability — BRAND GAUGE media value measurement",
-    "why": "VP-Sponsorship and Head of Brand Partnerships roles at companies with active sports sponsorship budgets face increasing internal pressure to prove ROI against rising spend. BRAND GAUGE directly resolves this with automated, real-time media value measurement. This persona is entirely untargeted in current detectable campaigns and represents a high-value, high-intent B2B segment.",
-    "product": "BRAND GAUGE",
+    "name": "OTT Platform Content & Technology Leaders — Europe & APAC",
+    "angle": "Broadcast reliability + volume — PULSE as infrastructure",
+    "why": "OTT platforms (regional sports streamers, telco sports products, rights-holder OTT) are evaluating AI highlights infrastructure for 2026–2027 rights cycles. Their buyer is the VP of Content or CTO, and their objection is reliability at scale, not feature lists. This is a distinct segment from 'Broadcasters' and should be tested separately. No evidence this segment is currently targeted.",
+    "product": "PULSE",
     "titles": [
-      "VP Sponsorship",
-      "Head of Partnerships",
-      "Head of Brand Partnerships",
-      "Sponsorship Manager",
-      "Director of Marketing Partnerships",
-      "Head of Sports Marketing",
-      "Commercial Partnerships Director"
+      "VP Content",
+      "Chief Technology Officer",
+      "Head of Product",
+      "SVP Streaming",
+      "Head of Broadcast Technology",
+      "Director of Content Operations"
     ],
     "industries": [
-      "Food & Beverages",
-      "Financial Services",
+      "Broadcast Media",
       "Telecommunications",
-      "Automotive",
-      "Insurance",
-      "Retail"
+      "Entertainment",
+      "Technology"
     ],
-    "size": "Estimated 30,000–50,000 reachable on LinkedIn (Europe + ANZ)",
-    "geo": "United Kingdom, Germany, France, Netherlands, Australia, New Zealand",
-    "headline": "Your CFO wants proof on $500K of sports sponsorship. What do you show them?",
-    "body": "Sports sponsorship budgets are at record highs — and so is the pressure to prove they worked.\n\nBRAND GAUGE measures your actual media value in real-time: logo exposure seconds, broadcast airtime, social reach, equivalent advertising value — all automated, all auditable, all delivered without chasing rights holders for reports.\n\nStop estimating ROI. Start proving it — in the boardroom, at renewal, and in every campaign review.\n\n→ Get your free sponsorship ROI report.",
-    "cta": "Get Your Free ROI Report",
-    "reason": "Untested, high-intent segment with a clear pain-to-product match. Lead Gen Form recommended (lower friction for busy exec audience). CFO accountability angle differentiates from generic 'sports analytics' messaging. Suggested bid: CPL target $200–$280 reflecting seniority of audience."
+    "size": "12,000 – 28,000",
+    "geo": "Europe (UK, DACH, Nordics), Asia-Pacific (Australia, SE Asia)",
+    "headline": "Real-time AI highlights, built for OTT scale. No editors. No delays.",
+    "body": "OTT audiences expect match highlights within seconds of the moment — not minutes, not hours.\n\nPULSE delivers: AI-generated clips, published automatically, across 15+ sports.\n\nAt the Islamic Solidarity Games: 512 highlights/day. 50,000+ clips. 15 days. Zero manual intervention.\n\nBuilt for the volume your platform demands.\n\n👉 Book a 20-minute technical demo.",
+    "cta": "Book a Demo",
+    "reason": "OTT rights cycles are accelerating in Europe and APAC. AI highlights infrastructure decisions are being made now for 2026–2027. 'Book a Demo' CTA suits a technical evaluator buyer (CTO/VP) better than a content download. Segment isolation from general 'Broadcasters' allows CPL benchmarking by buyer type."
+  },
+  {
+    "date": "2026-03-06",
+    "name": "Sports Club CMOs & Heads of Digital — Professional Teams (UK, Australia, MENA)",
+    "angle": "Fan retention + content ROI — JORDY AI + PULSE bundle",
+    "why": "Professional sports clubs (football, rugby, basketball, cricket) have a clear digital KPI stack: M1 retention, time-in-app, content engagement. JORDY AI’s 30% M1 retention and 140% time-spent metrics map directly to this KPI stack. Simultaneously, PULSE’s real-time clips solve the content volume problem that drives poor retention. A bundled JORDY+PULSE message for club CMOs is currently untested and addresses two pain points in one narrative.",
+    "product": "JORDY AI",
+    "titles": [
+      "Chief Marketing Officer",
+      "Head of Digital",
+      "Head of Fan Experience",
+      "Digital Director",
+      "VP Marketing",
+      "Head of Content"
+    ],
+    "industries": [
+      "Sports",
+      "Entertainment",
+      "Leisure, Travel & Tourism"
+    ],
+    "size": "15,000 – 35,000",
+    "geo": "United Kingdom, Australia, UAE, Saudi Arabia",
+    "headline": "30% more fans stayed after Month 1. Here’s what changed.",
+    "body": "Most sports clubs publish great content.\n\nMost fans still churn within 30 days.\n\nThe problem isn’t the content — it’s the distribution. Fans aren’t seeing the moments that matter to them.\n\nJordy AI fixes that: serving the right content to the right fan, automatically.\n\nResult: 30% M1 retention boost. 140% increase in time spent. +60% new content discovered.\n\nSame content. Smarter delivery.\n\n👉 See how Jordy works for clubs like yours.",
+    "cta": "See How Jordy Works",
+    "reason": "UK, Australia, and MENA are Spectatr’s strongest existing case study markets (HockeyOne = Australia, NSL = Australia, ISG = MENA). Geographic relevance increases ad resonance and CTR. Club CMOs in these markets are actively investing in fan engagement tech for 2026 season. Bundle angle (JORDY + PULSE) creates cross-sell opportunity from a single lead."
   }
 ]

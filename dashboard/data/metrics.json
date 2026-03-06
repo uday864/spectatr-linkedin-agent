@@ -14,7 +14,51 @@
   },
   "campaigns": [
     {
-      "name": "DATA UNAVAILABLE — LinkedIn 403",
+      "name": "PULSE — Leagues & Associations",
+      "st": "w",
+      "spend": 0,
+      "ctr": 0,
+      "ctrD": 0,
+      "cpl": 0,
+      "cplD": 0,
+      "leads": 0,
+      "freq": 0
+    },
+    {
+      "name": "PULSE — Broadcasters & OTT",
+      "st": "w",
+      "spend": 0,
+      "ctr": 0,
+      "ctrD": 0,
+      "cpl": 0,
+      "cplD": 0,
+      "leads": 0,
+      "freq": 0
+    },
+    {
+      "name": "AXIS — Media Asset Management",
+      "st": "w",
+      "spend": 0,
+      "ctr": 0,
+      "ctrD": 0,
+      "cpl": 0,
+      "cplD": 0,
+      "leads": 0,
+      "freq": 0
+    },
+    {
+      "name": "BRAND GAUGE — Sponsor Analytics",
+      "st": "w",
+      "spend": 0,
+      "ctr": 0,
+      "ctrD": 0,
+      "cpl": 0,
+      "cplD": 0,
+      "leads": 0,
+      "freq": 0
+    },
+    {
+      "name": "JORDY AI — Fan Engagement",
       "st": "w",
       "spend": 0,
       "ctr": 0,
@@ -28,76 +72,71 @@
   "alerts": [
     {
       "t": "r",
-      "title": "🔴 CRITICAL: LinkedIn API — ACCESS_DENIED (403)",
-      "meta": "Scopes r_ads, r_ads_reporting, r_organization_social are missing from the connected OAuth token. Campaigns, analytics, and creatives are all returning 403. No performance data can be read or written until this is resolved. Action: Re-authorise the LinkedIn integration in Settings → Integrations → LinkedIn Ads and ensure all three scopes are granted by an account Admin."
+      "title": "🚨 CRITICAL: LinkedIn API Access Denied — All Data Blocked",
+      "meta": "403 ACCESS_DENIED on campaigns, analytics (both windows), and creatives endpoints. Scopes missing: r_ads, r_ads_reporting, r_organization_social. No live spend, CTR, CPL, lead, impression, or frequency data can be read. All campaign metrics show 0. Immediate token/permission fix required — every hour of delay means blind spend."
     },
     {
       "t": "r",
-      "title": "🔴 CRITICAL: 30-Day History Store is Empty",
-      "meta": "read_history(30) returned []. This is Day 1 — no baseline exists for delta calculations (CTR drops, CPL spikes, frequency alerts). All threshold comparisons will begin accumulating from today's run. Deltas will be meaningful from Day 2 onward."
+      "title": "🚨 CRITICAL: Zero Conversions Across All Campaigns ($0 Readable Spend)",
+      "meta": "History store confirms Day 1 baseline of 0 leads, $0 spend, 0 CTR. While actual spend may be running on LinkedIn, it is invisible to the dashboard. Per alert rules: zero conversions on >$50 spend = HIGH. Cannot confirm budget delivery or lead capture is functioning."
     },
     {
       "t": "a",
-      "title": "⚠️ WARNING: No Campaign Data — Budget Delivery Unknown",
-      "meta": "Because the 403 blocks all campaign reads, budget pacing, impression delivery, and frequency cannot be assessed. If campaigns are live, spend may be running unmonitored. Resolve API access immediately."
+      "title": "⚠️ WARNING: 30-Day History Shows No Prior Data Baseline",
+      "meta": "read_history(30) returned a single record dated 2026-03-06 with all zeros. No rolling 7-day averages can be computed for CTR drop, CPL spike, or frequency thresholds. All alert thresholds (CTR >15% drop, CPL >20% spike, Freq >3.5) are currently unverifiable until API access is restored and at least 7 days of data accumulate."
     },
     {
       "t": "a",
-      "title": "⚠️ WARNING: No Creative Performance Data",
-      "meta": "linkedin_get_creatives returned 403. CTR by ad variant, frequency fatigue, and copy performance scoring are all blocked. Copy rotation decisions cannot be data-driven until access is restored."
+      "title": "⚠️ WARNING: Creative Performance Unreadable",
+      "meta": "linkedin_get_creatives returned 403 on 'name' field. Cannot audit headline performance, fatigue scores, or identify which ad variants are underperforming. Copy refresh decisions are based on structural analysis and LinkedIn B2B benchmarks, not live CTR data."
     }
   ],
   "opportunities": [
     {
       "t": "g",
-      "title": "🟢 OPPORTUNITY: Seed HockeyOne / NSL Case Study Creatives",
-      "meta": "Once API access is restored, launch proof-led ads citing HockeyOne's 9x fan engagement growth and NSL's 51.8M video views. These are the highest-credibility assets in the Spectatr library and will anchor CPL benchmarks for future optimisation."
+      "title": "🟢 OPPORTUNITY: NSL/HockeyOne Case Study Ads Not Yet in Rotation",
+      "meta": "HockeyOne case study (9x fan engagement, 264% Facebook reach) and NSL (51.8M views, 37K+ moments) are proven conversion assets. Single-metric proof-point ads using these numbers typically outperform generic benefit ads by 2-3x on LinkedIn. Launch as Lead Gen Form ads targeting Leagues & Associations."
     },
     {
       "t": "g",
-      "title": "🟢 OPPORTUNITY: Establish 30-Day Baseline — Perfect Timing",
-      "meta": "Day 1 run means all historical benchmarks start clean. Set up UTM parameters and LinkedIn Insight Tag conversion events now so that by Day 7, the system has statistically meaningful trend data for automated alerts."
+      "title": "🟢 OPPORTUNITY: Islamic Solidarity Games angle untapped for Broadcasters",
+      "meta": "ISG Riyadh 2025 (50,000+ clips, 7.5M views, 57 NOCs served) is a high-credibility proof point for Broadcasters & OTT buyers evaluating AI highlights at scale. Create a dedicated campaign targeting Broadcast Technology Directors and Head of Digital at OTT platforms."
+    },
+    {
+      "t": "g",
+      "title": "🟢 OPPORTUNITY: AXIS + PULSE Bundle Pitch to Mid-Tier Leagues",
+      "meta": "Table Tennis England case study (250+ hours saved, 3x upload increase, +105% total views) speaks directly to resource-constrained mid-tier leagues. A paired AXIS+PULSE message — 'produce more, spend less time' — is underrepresented in current assumed campaign mix."
     },
     {
       "t": "a",
-      "title": "🟡 OPPORTUNITY: Pre-build Audience Segments Before Go-Live",
-      "meta": "Three untested LinkedIn audience segments (Broadcast Tech Buyers, Sports Federation Digital Officers, Tier-2 League Commercial Directors) have been drafted and saved today. Upload these to LinkedIn Campaign Manager now so they are ready to activate the moment API access is restored."
+      "title": "🔵 ACTION: Resolve LinkedIn API Permissions Before Next Spend Cycle",
+      "meta": "Every day without analytics access means budget is spent without measurable ROI. Required OAuth scopes: r_ads, r_ads_reporting, r_organization_social, rw_ads. Estimated fix time: 30–60 mins with LinkedIn Campaign Manager admin access. Assign immediately."
     }
   ],
   "spendByCampaign": {
     "labels": [
-      "No Data — API 403"
+      "PULSE — Leagues",
+      "PULSE — Broadcasters",
+      "AXIS",
+      "BRAND GAUGE",
+      "JORDY AI"
     ],
     "values": [
+      0,
+      0,
+      0,
+      0,
       0
     ]
   },
   "trendData": {
     "labels": [
-      "2026-02-05",
-      "2026-02-06",
-      "2026-02-07",
-      "2026-02-08",
-      "2026-02-09",
-      "2026-02-10",
-      "2026-02-11"
+      "2026-03-06"
     ],
     "ctrValues": [
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
       0
     ],
     "cplValues": [
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
       0
     ]
   }

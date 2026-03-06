@@ -1,100 +1,133 @@
 [
   {
     "date": "2026-03-06",
-    "adName": "PULSE — Leagues & Associations — Proof-Led Launch",
-    "campaign": "PULSE | Leagues & Associations",
+    "adName": "PULSE — Leagues & Associations — HockeyOne Proof",
+    "campaign": "PULSE — Leagues & Associations",
     "product": "PULSE",
-    "diagnosis": "Day 1 baseline — no live creative data available due to API 403. These variants are pre-built using Spectatr copy rules and NSL/HockeyOne case study proof points. Activate immediately once API access is restored.",
-    "format": "Single Image Ad + Sponsored Content",
-    "cta": "Request a Demo",
+    "diagnosis": "No live creative data available (403 API block). Variant generated from structural analysis: case-study proof-point format consistently outperforms feature-led ads on LinkedIn B2B. HockeyOne metrics are the strongest available proof asset for this audience.",
+    "format": "Single Image / Lead Gen Form",
+    "cta": "Download Case Study",
     "headlines": [
       {
-        "label": "H1 — Pain Hook (Delay)",
-        "text": "Your match ends. Your highlights take hours. Meanwhile, your fans are already on the next thing."
+        "label": "H1 — Outcome Lead (Engagement)",
+        "text": "9x fan engagement. 9,500 AI clips. 7 weeks. This is what HockeyOne built with PULSE."
       },
       {
-        "label": "H2 — Proof Hook (NSL Result)",
-        "text": "51.8M video views. 37,000+ moments. One AI. See how NSL did it."
+        "label": "H2 — Pain Lead (Production Bottleneck)",
+        "text": "Your highlights are still being edited while the moment is already forgotten. HockeyOne fixed that."
       },
       {
-        "label": "H3 — Outcome Hook (Speed)",
-        "text": "Published in seconds, not hours. AI highlights for every match, every moment, every platform."
+        "label": "H3 — Proof Lead (Scale)",
+        "text": "10.6 million video views in one season — without a single extra editor. See how HockeyOne did it."
       }
     ],
     "bodies": [
       {
-        "label": "B1 — Urgency + Proof (NSL)",
-        "text": "NSL generated 37,000+ match moments across 80 games — automated, real-time, published to social in seconds.\n\nNo edit queue. No overnight turnaround. Fans got clips before they left the stadium.\n\nResult: 51.8M video views. 2x Instagram follower growth in a single season.\n\nIf your league is still manually cutting highlights, you're losing audience every matchday.\n\n→ See PULSE in action. Request a demo today."
+        "label": "B1 — Results-First",
+        "text": "In 7 weeks, HockeyOne generated 9,500+ AI-powered clips — published within seconds of each moment.\n\nThe result: 10.6M video views. 264% Facebook reach increase. 9x growth in fan engagement.\n\nNo extra production staff. No post-production backlog. Just real-time AI highlights, every match.\n\nIf your league is still relying on manual clipping, you’re leaving millions of views on the table.\n\n👉 Download the full HockeyOne case study."
       },
       {
-        "label": "B2 — Fear of Missing Out (HockeyOne)",
-        "text": "HockeyOne 2025: 9x growth in fan engagement in 7 weeks.\n\n9,500+ AI clips published within seconds of the action. 10.6M video views. 264% Facebook reach increase. 500% surge in video views.\n\nTheir previous season? Manual highlights, standard results.\n\nThe difference was one decision.\n\nLeagues running PULSE don't wait for the edit suite. They publish while the crowd is still cheering.\n\n→ Request a Demo and see your matchday transformed."
+        "label": "B2 — Pain-to-Proof",
+        "text": "Every match, your team captures maybe 5–10 highlights. Manually. Hours after the final whistle.\n\nHockeyOne captures every moment — automatically, in seconds, across every match.\n\n9,500+ clips. 10.6M views. 9x fan engagement growth. One season.\n\nPULSE turns your live sports into a real-time content engine — without adding headcount.\n\nSee the numbers. Download the case study."
       }
     ]
   },
   {
     "date": "2026-03-06",
-    "adName": "AXIS — Broadcasters & OTT — Post-Production Pain",
-    "campaign": "AXIS | Broadcasters & OTT",
+    "adName": "PULSE — Broadcasters & OTT — ISG Scale Proof",
+    "campaign": "PULSE — Broadcasters & OTT",
+    "product": "PULSE",
+    "diagnosis": "Broadcaster buyers are volume-and-reliability buyers. ISG Riyadh 2025 (50,000+ clips, 57 NOCs, 15 days) is the only proof point in Spectatr’s arsenal that directly answers scale objections. No live CTR data available — copy built on audience persona analysis.",
+    "format": "Single Image / Lead Gen Form",
+    "cta": "See the Full Case Study",
+    "headlines": [
+      {
+        "label": "H1 — Volume Lead",
+        "text": "50,000 real-time clips. 57 countries. 15 days. This is AI highlights at broadcast scale."
+      },
+      {
+        "label": "H2 — Reliability Lead",
+        "text": "512 highlights published daily across 57 NOCs — zero delays, zero manual intervention."
+      },
+      {
+        "label": "H3 — Outcome Lead",
+        "text": "7.5 million views. 57 national committees served. One AI system. The ISG Riyadh 2025 story."
+      }
+    ],
+    "bodies": [
+      {
+        "label": "B1 — Scale Proof",
+        "text": "The Islamic Solidarity Games Riyadh 2025 needed 512 daily highlights — for every one of 57 NOC committees — for 15 consecutive days.\n\nPULSE delivered. 50,000+ real-time clips. 7.5 million video views. 2 million views and 50,000+ comments across NOC social channels.\n\nNo broadcast operation scaled manually could match that output. PULSE did it automatically.\n\nIf you’re evaluating AI highlights for your next major event, this is the benchmark.\n\n👉 See the full ISG case study."
+      },
+      {
+        "label": "B2 — Objection-Busting",
+        "text": "The question every broadcaster asks: ‘Can it handle our volume?’\n\nAt ISG Riyadh 2025, PULSE handled 50,000+ clips across 57 countries in 15 days.\n\n512 highlights published daily. 7.5M views generated. Every moment, every NOC, every day — in seconds, not hours.\n\nWe built PULSE for exactly this: the moments that can’t wait for an edit suite.\n\nSee how it worked. Download the ISG case study."
+      }
+    ]
+  },
+  {
+    "date": "2026-03-06",
+    "adName": "AXIS — Media Asset Management — TTE Time Savings",
+    "campaign": "AXIS — Media Asset Management",
     "product": "AXIS",
-    "diagnosis": "Day 1 baseline — pre-built from Table Tennis England case study and B2B broadcast persona research. Target: Head of Content, Broadcast Production Manager, Archive Manager.",
-    "format": "Document Ad (Stats Carousel) + Single Image Ad",
-    "cta": "See How It Works",
+    "diagnosis": "No live creative performance data (API block). AXIS targets media operations buyers. Table Tennis England case study (250+ hours saved, 3x upload increase) directly addresses the #1 AXIS buyer pain point: post-production time cost. This angle has not been confirmed in rotation.",
+    "format": "Single Image / Lead Gen Form",
+    "cta": "Get the Free Guide",
     "headlines": [
       {
-        "label": "H1 — Time Pain Hook",
-        "text": "Your team spent 250+ hours last quarter tagging footage. AXIS does it in seconds."
+        "label": "H1 — Time Savings Lead",
+        "text": "250+ hours of post-production saved in 3 months. Table Tennis England didn’t hire anyone new."
       },
       {
-        "label": "H2 — Output Proof Hook",
-        "text": "3× more content. 105% more views. 0 extra headcount. The Table Tennis England story."
+        "label": "H2 — Output Lead",
+        "text": "They went from 5 videos a week to 15. Same team. Same budget. Just smarter asset management."
       },
       {
-        "label": "H3 — Accuracy Hook",
-        "text": "100% AI tagging accuracy. Every asset, every sport, instantly searchable."
+        "label": "H3 — Pain Lead",
+        "text": "How much of your team’s week disappears into finding, tagging, and exporting media? Here’s the fix."
       }
     ],
     "bodies": [
       {
-        "label": "B1 — Post-Production Cost Pain",
-        "text": "Table Tennis England's production team was uploading 5 videos a week.\n\nAfter AXIS: 15 videos a week. +105% in total views. 250+ hours of post-production time saved in 3 months.\n\nSame team. Same budget. Dramatically more output.\n\nAXIS tags every clip automatically — athletes, actions, events, sponsors — with 100% accuracy. No manual logging. No lost assets. No bottlenecks.\n\nYour archive is a revenue asset. AXIS unlocks it.\n\n→ See how it works. Book a 20-minute walkthrough."
+        "label": "B1 — Proof-Led",
+        "text": "Table Tennis England’s digital team was spending hundreds of hours on post-production — tagging clips, hunting assets, manually organising archives.\n\nWithin 3 months of using AXIS:\n✔ 250+ hours saved in post-production\n✔ 3× increase in video uploads (5 → 15 per week)\n✔ +105% surge in total views\n✔ +65% growth in views per video\n\nSame team. No extra headcount. AI tagging with 100% accuracy.\n\nIf your media library is a time sink, AXIS is the fix.\n\n👉 Get the free sports media management guide."
       },
       {
-        "label": "B2 — Archive ROI Angle",
-        "text": "Broadcasters sit on thousands of hours of footage that never gets reused.\n\nNot because it isn't valuable — because finding it takes too long.\n\nAXIS uses AI to tag 100% of your media library: sport, player, moment, sponsor brand, sentiment. Search in plain language. Find in seconds.\n\nResult: More content repurposed. More sponsor inventory activated. More revenue from footage you already own.\n\n→ See AXIS in action today."
+        "label": "B2 — ROI-Led",
+        "text": "What would your team do with 250 extra hours a year?\n\nTable Tennis England reclaimed that time — and used it to triple their video output and grow total views by 105% in 3 months.\n\nAXIS handles the rest: AI tagging, instant search, automated organisation. 100% accuracy.\n\nYour archive is full of moments your audience never saw — because finding them takes too long.\n\nAXIS changes that.\n\n👉 See how it works — free guide inside."
       }
     ]
   },
   {
     "date": "2026-03-06",
-    "adName": "BRAND GAUGE — Sponsorship ROI — Proof of Value",
-    "campaign": "BRAND GAUGE | Sponsors & Rights Holders",
-    "product": "BRAND GAUGE",
-    "diagnosis": "Day 1 baseline — no live creative data. Built for VP-Sponsorship and Partnership Director personas. Addresses the #1 sponsor pain: inability to prove media value ROI to internal stakeholders.",
-    "format": "Sponsored Content + Lead Gen Form",
-    "cta": "Get Your Free ROI Report",
+    "adName": "JORDY AI — Fan Engagement — Retention Hook",
+    "campaign": "JORDY AI — Sports Teams",
+    "product": "JORDY AI",
+    "diagnosis": "JORDY AI campaign appears inactive or untracked (API block + no history). Fan retention is the #1 digital KPI for sports club CMOs. 30% M1 retention boost is a metric that every club Head of Digital can immediately benchmark against their own app. Copy built on persona analysis.",
+    "format": "Single Image / Lead Gen Form",
+    "cta": "See How Jordy Works",
     "headlines": [
       {
-        "label": "H1 — Accountability Hook",
-        "text": "Your CFO wants ROI proof on $500K of sports sponsorship. What do you show them?"
+        "label": "H1 — Retention Lead",
+        "text": "30% more fans still active after Month 1. No new content team. Just Jordy AI."
       },
       {
-        "label": "H2 — Measurement Pain Hook",
-        "text": "Sponsorship budgets are rising. Measurement is still spreadsheets and guesswork."
+        "label": "H2 — Engagement Lead",
+        "text": "140% increase in time spent. 60% more content discovered. This is what fan engagement looks like now."
       },
       {
-        "label": "H3 — Outcome Hook",
-        "text": "Real-time sponsor analytics. Media value, measured automatically, every match."
+        "label": "H3 — Pain Lead",
+        "text": "You publish great content. But most fans never see it. Jordy AI fixes the distribution problem."
       }
     ],
     "bodies": [
       {
-        "label": "B1 — CFO Pressure Angle",
-        "text": "Sports sponsorship spending hit a record high in 2025.\n\nBut when the CFO asks 'what did we get for it?' — most Partnership Directors are still pulling together clips and estimated reach figures from rights holders.\n\nBRAND GAUGE measures your actual media value in real-time: logo exposure, broadcast airtime, social impressions, equivalent advertising value — all automated, all auditable.\n\nStop estimating. Start proving.\n\n→ Get your free sponsorship ROI report."
+        "label": "B1 — Retention-First",
+        "text": "The average sports club loses 60–70% of app users within the first month.\n\nJordy AI changes that.\n\nClubs using Jordy see:\n✔ 30% boost in M1 retention\n✔ 140% increase in average time spent\n✔ +60% new content exposure\n\nJordy is an AI fan engagement agent that serves the right content to the right fan at the right moment — automatically.\n\nMore time spent. More content discovered. More fans who stay.\n\n👉 See how Jordy works."
       },
       {
-        "label": "B2 — Rights Holder Angle",
-        "text": "Sponsors are asking harder questions.\n\n'How many seconds did our logo appear on-screen?' 'What was the equivalent broadcast value?' 'Show us the data.'\n\nBRAND GAUGE gives rights holders the answers — automatically.\n\nReal-time sponsor analytics across broadcast, OTT, and social. Media value calculated per brand, per placement, per event. Delivered to sponsors before they ask.\n\nRetain sponsors. Upsell confidently. Prove value at renewal.\n\n→ Book a 15-minute demo."
+        "label": "B2 — Content Discovery Angle",
+        "text": "Your club publishes 10, 20, 50 pieces of content a week.\n\nThe average fan sees 3.\n\nJordy AI surfaces the moments each fan actually cares about — and the results show: 140% more time spent, 60% more content discovered, 30% stronger retention after Month 1.\n\nNo extra content. No extra staff. Just smarter distribution.\n\n👉 See how Jordy AI works for your club."
       }
     ]
   }
