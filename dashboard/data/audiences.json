@@ -1,81 +1,88 @@
 [
   {
     "date": "2026-03-09",
-    "name": "Head of Digital — European Football Federations",
-    "angle": "Senior digital decision-makers at national football associations and UEFA-affiliated federations across Europe who own content strategy and social distribution budgets.",
-    "why": "Current EU campaign targets 'Leagues' broadly. Football federations are the highest-volume content producers in European sport — they publish more match moments than any other code and have the most acute post-production pain. This segment is untested and represents the largest addressable opportunity within the EU ICP.",
-    "product": "PULSE",
+    "name": "Sports Teams — Fan Engagement & Digital Directors (JORDY AI)",
+    "angle": "Fan retention and engagement crisis — teams investing in apps and digital touchpoints but seeing poor M1 retention and declining time-spent",
+    "why": "JORDY AI has zero active campaigns despite having the strongest retention proof point in the portfolio (30% M1 boost, 140% time-spent increase). Sports Teams is a defined target audience in the Spectatr product strategy. Digital directors at professional sports teams are a well-defined, reachable LinkedIn segment not currently being addressed.",
+    "product": "JORDY AI",
     "titles": [
       "Head of Digital",
-      "Digital Content Director",
-      "Head of Media & Communications",
-      "Social Media Director",
-      "Head of Broadcasting"
+      "Digital Director",
+      "Fan Experience Manager",
+      "Fan Engagement Manager",
+      "CRM Director",
+      "Director of Digital Media",
+      "VP Fan Experience",
+      "Head of Marketing Technology"
     ],
     "industries": [
-      "Sports",
-      "Media & Communications",
+      "Professional Sports Teams",
+      "Sports & Recreation",
       "Entertainment"
     ],
-    "size": "Estimated 8,000–15,000 on LinkedIn across UEFA member associations + major domestic leagues (Premier League, La Liga, Bundesliga, Serie A, Ligue 1, Eredivisie)",
-    "geo": "United Kingdom, Germany, France, Spain, Italy, Netherlands, Belgium, Portugal",
-    "headline": "Your highlights editor can't keep up with 90 minutes of football. AI can.",
-    "body": "Table Tennis England saved 250+ post-production hours and grew total video views by 105% in 3 months with PULSE.\n\nImagine what real-time AI highlights do for a football federation publishing across 5 platforms per matchday.\n\nPULSE by Spectatr.ai — match moments published in seconds, not hours.\n\nBook a demo →",
-    "cta": "Request a Demo",
-    "reason": "Highest content volume + highest post-production pain in European sport. No active campaign is targeting football-specific titles at association level. Distinct from the current broad EU leagues campaign."
+    "size": "15000-25000",
+    "geo": "United States, United Kingdom, Australia",
+    "headline": "30% more fans still engaged after Month 1. Here’s the AI behind it.",
+    "body": "Most sports apps lose 60-70% of users in the first month. JORDY AI changes that.\n\nJORDY is an AI fan engagement agent that personalises every touchpoint — from match previews to post-game recaps — driving 30% higher M1 retention and 140% more time spent in-app.\n\nMore time spent = more content exposure (+60% new content discovery) = more matchday revenue.\n\nIf your team is investing in digital but not seeing the numbers, let’s show you what JORDY does in 20 minutes →",
+    "cta": "Request Demo",
+    "reason": "JORDY AI has no active campaigns. This is the highest-ROI untapped audience segment in the Spectatr portfolio. Sports teams have direct budget authority for fan technology platforms and are actively seeking engagement solutions heading into the 2026 season cycle."
   },
   {
     "date": "2026-03-09",
-    "name": "VP Partnerships / Sponsorship — US Professional Sports Leagues",
-    "angle": "Commercial and partnership executives at US professional leagues (NBA, MLS, MLB, NHL, NWSL, USL) who are responsible for sponsor ROI measurement and renewal.",
-    "why": "BRAND GAUGE is entirely untested in current campaigns — all 6 active campaigns promote PULSE exclusively. Sponsorship measurement is a $2B+ industry problem with no dominant AI solution. VP-level partnership titles at pro leagues have direct budget authority for analytics tooling and face sponsor renewal pressure every season.",
+    "name": "Sponsorship & Commercial Directors — Leagues & Broadcasters (BRAND GAUGE)",
+    "angle": "Sponsor ROI proof gap — commercial teams under pressure to quantify media value and justify sponsorship fees as rights costs rise",
+    "why": "BRAND GAUGE (sponsor analytics, media value measurement) has zero active campaigns. The 2026 sports calendar (FIFA World Cup, Olympics) creates peak urgency for sponsorship ROI measurement. Commercial directors and sponsorship managers at leagues and broadcasters are active on LinkedIn and budget-holders for analytics platforms.",
     "product": "BRAND GAUGE",
     "titles": [
-      "VP of Partnerships",
-      "SVP Sponsorship Sales",
-      "Director of Partnership Activation",
-      "Head of Sponsor Relations",
+      "Head of Commercial",
+      "Sponsorship Director",
+      "Head of Partnerships",
+      "Commercial Director",
       "Chief Revenue Officer",
-      "VP Business Development"
+      "VP Sponsorship",
+      "Head of Sponsor Relations",
+      "Partnerships Manager"
     ],
     "industries": [
-      "Sports",
+      "Sports & Recreation",
+      "Broadcast Media",
       "Entertainment",
-      "Media & Communications"
+      "Marketing & Advertising"
     ],
-    "size": "Estimated 12,000–20,000 across US professional league organisations and their agency partners",
-    "geo": "United States",
-    "headline": "Your sponsors want ROI data. Not a PDF with logo placements.",
-    "body": "Modern sponsors demand real media value measurement — impressions, sentiment, share of voice, and verified broadcast exposure.\n\nBRAND GAUGE by Spectatr.ai delivers AI-powered sponsor analytics that prove value in real-time — and protect your renewal conversations.\n\nUsed by leagues generating 10M+ video views per season.\n\nSee a live dashboard →",
-    "cta": "See a Demo",
-    "reason": "BRAND GAUGE is a completely untested product in LinkedIn campaigns. Sponsorship measurement has a distinct buyer persona (commercial/revenue side) vs. PULSE (content/digital side). New product, new buyer, new pipeline."
+    "size": "20000-35000",
+    "geo": "United States, United Kingdom, Germany, France, Spain",
+    "headline": "Your sponsors want ROI proof. BRAND GAUGE gives you the exact number.",
+    "body": "Sponsors are asking harder questions in 2026. ‘What was our media value?’ ‘Did our logo get seen?’ ‘Was this deal worth it?’\n\nBRAND GAUGE by Spectatr.ai measures real media exposure value across broadcast, digital and social — automatically, accurately, in real time.\n\nGive your commercial team data that wins renewals, justifies premium rates, and closes new sponsors faster.\n\nSee BRAND GAUGE in action →",
+    "cta": "Learn More",
+    "reason": "Zero active campaigns for BRAND GAUGE despite it being a core product. Peak commercial urgency in 2026 (World Cup sponsorship cycle). Sponsorship directors are proven LinkedIn converters in B2B SaaS. This audience has explicit budget authority and a near-term pain point."
   },
   {
     "date": "2026-03-09",
-    "name": "Broadcast Technology & OTT Product Leaders — Tier 1 US & EU",
-    "angle": "CTOs, VPs of Product, and Heads of Technology at established broadcasters and OTT platforms who are evaluating AI content automation to reduce per-clip production cost and increase publishing velocity.",
-    "why": "The two active broadcaster campaigns (US ABM, EU ABM) are Account-Based Marketing campaigns — highly targeted to named accounts but by definition limited in reach. A broader title + seniority targeting layer could feed the top of the funnel for broadcaster ICP at a lower CPL, with warm accounts then graduating to the ABM layer.",
-    "product": "AXIS",
+    "name": "National & Regional Sports Federations — Multi-Sport Event Producers (PULSE + AXIS)",
+    "angle": "Production scalability crisis — federations running multi-sport events cannot generate enough content to cover all sports and athletes simultaneously with manual workflows",
+    "why": "The Islamic Solidarity Games case study (50K clips, 57 NOCs, 15 days) is a perfect proof point for this audience but there is no campaign targeting sports federations and multi-sport event organising committees. This is a distinct audience from leagues (different buying centre, longer sales cycle, event-driven urgency). ANOC, GAISF-affiliated federations and continental games committees are active and addressable on LinkedIn.",
+    "product": "PULSE + AXIS",
     "titles": [
-      "Chief Technology Officer",
-      "VP Product",
-      "Head of Content Technology",
-      "Director of Media Operations",
-      "VP Engineering",
-      "Head of AI & Automation"
+      "Secretary General",
+      "Head of Communications",
+      "Director of Media & Communications",
+      "Head of Digital",
+      "Event Director",
+      "Head of Broadcasting",
+      "Content Director",
+      "CEO"
     ],
     "industries": [
-      "Broadcast Media",
-      "Online Audio and Video Media",
-      "Entertainment",
-      "Sports"
+      "Sports & Recreation",
+      "Government Administration",
+      "Non-profit Organizations"
     ],
-    "size": "Estimated 15,000–25,000 across US and EU Tier 1 broadcasters and sports OTT platforms",
-    "geo": "United States, United Kingdom, Germany, France, Netherlands, Sweden, Australia",
-    "headline": "100% AI tagging accuracy. Every asset. Every sport. At broadcast scale.",
-    "body": "Your archive has thousands of hours of footage. Your team has finite hours to tag it.\n\nAXIS by Spectatr.ai delivers 100% accurate AI tagging across every asset — searchable, organised, and ready for distribution in minutes.\n\nBuilt for broadcast and OTT teams that publish at scale across 15+ sports.\n\nBook a technical walkthrough →",
-    "cta": "Book a Demo",
-    "reason": "AXIS is untested in any current campaign. Broadcaster/OTT technology buyers (CTO, VP Product) are distinct from content/digital buyers targeted by PULSE campaigns. Opens a new product and new buyer persona in the same ICP vertical."
+    "size": "10000-18000",
+    "geo": "United Kingdom, France, Germany, UAE, Saudi Arabia, United States",
+    "headline": "50,000 clips. 57 countries. 15 days. Zero production bottleneck.",
+    "body": "At the Islamic Solidarity Games Riyadh 2025, Spectatr’s PULSE AI generated 50,000+ real-time highlight clips across all 57 NOC committees — 500 published daily with zero manual editing.\n\n7.5 million video views. 250,000+ likes. Every nation. Every sport. Covered.\n\nIf your federation or event organising committee is planning coverage for 2026 and beyond, this is the infrastructure that makes it possible — at any scale.\n\nBook a federation briefing →",
+    "cta": "Contact Us",
+    "reason": "Highly specific proof point (ISG) maps directly to this audience’s exact pain. No current campaign in this segment. Multi-sport event federations represent high-value, multi-year contracts. The 2026 calendar creates immediate urgency. Estimated addressable LinkedIn audience is tight and high-quality."
   },
   {
     "date": "2026-03-07",

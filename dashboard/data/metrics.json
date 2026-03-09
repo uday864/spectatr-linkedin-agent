@@ -16,118 +16,118 @@
     {
       "name": "Website visits - Image Ads",
       "st": "a",
-      "spend": 0,
-      "ctr": 0,
-      "ctrD": 0,
-      "cpl": 0,
-      "cplD": 0,
-      "leads": 0,
-      "freq": 0
+      "spend": null,
+      "ctr": null,
+      "ctrD": null,
+      "cpl": null,
+      "cplD": null,
+      "leads": null,
+      "freq": null
     },
     {
       "name": "PULSE Lead generation - Jan 20, 2026 - US 2",
       "st": "a",
-      "spend": 0,
-      "ctr": 0,
-      "ctrD": 0,
-      "cpl": 0,
-      "cplD": 0,
-      "leads": 0,
-      "freq": 0
+      "spend": null,
+      "ctr": null,
+      "ctrD": null,
+      "cpl": null,
+      "cplD": null,
+      "leads": null,
+      "freq": null
     },
     {
       "name": "leagues - US - pulse",
       "st": "a",
-      "spend": 0,
-      "ctr": 0,
-      "ctrD": 0,
-      "cpl": 0,
-      "cplD": 0,
-      "leads": 0,
-      "freq": 0
+      "spend": null,
+      "ctr": null,
+      "ctrD": null,
+      "cpl": null,
+      "cplD": null,
+      "leads": null,
+      "freq": null
     },
     {
       "name": "Leagues - pulse - EU",
       "st": "a",
-      "spend": 0,
-      "ctr": 0,
-      "ctrD": 0,
-      "cpl": 0,
-      "cplD": 0,
-      "leads": 0,
-      "freq": 0
+      "spend": null,
+      "ctr": null,
+      "ctrD": null,
+      "cpl": null,
+      "cplD": null,
+      "leads": null,
+      "freq": null
     },
     {
       "name": "broadcasters & OTT - US - ABM",
       "st": "a",
-      "spend": 0,
-      "ctr": 0,
-      "ctrD": 0,
-      "cpl": 0,
-      "cplD": 0,
-      "leads": 0,
-      "freq": 0
+      "spend": null,
+      "ctr": null,
+      "ctrD": null,
+      "cpl": null,
+      "cplD": null,
+      "leads": null,
+      "freq": null
     },
     {
       "name": "broadcasters & OTT - EU - ABM",
       "st": "a",
-      "spend": 0,
-      "ctr": 0,
-      "ctrD": 0,
-      "cpl": 0,
-      "cplD": 0,
-      "leads": 0,
-      "freq": 0
+      "spend": null,
+      "ctr": null,
+      "ctrD": null,
+      "cpl": null,
+      "cplD": null,
+      "leads": null,
+      "freq": null
     }
   ],
   "alerts": [
     {
       "t": "r",
-      "title": "🚨 LinkedIn Analytics API — ACCESS_DENIED (403)",
-      "meta": "Fields 'clickThroughRate' and 'name' blocked. All campaign-level and 7-day trend analytics unavailable. Token scopes require rw_ads + r_ads_reporting. Resolve immediately to restore daily reporting."
+      "title": "⚠️ LinkedIn Analytics API — 403 Access Denied",
+      "meta": "All linkedin_get_analytics calls failed with serviceErrorCode 100 ('Unpermitted fields present in PARAMETER: granularity'). Per-campaign spend, CTR, CPL, leads and frequency cannot be computed for 2026-03-02 → 2026-03-09 or the prior 7-day window. WoW deltas are unavailable. Investigate OAuth token scopes (r_ads_reporting required) and re-run."
     },
     {
       "t": "r",
-      "title": "CTR Drop — -18.4% WoW (Threshold: >15%)",
-      "meta": "Account CTR fell from ~0.71% to 0.58% WoW as of 2026-03-07. Exceeds HIGH alert threshold of -15%. Likely creative fatigue or audience overlap across 6 active campaigns."
+      "title": "🚨 CTR Drop >15% vs 7-Day Average — Account Level",
+      "meta": "History shows avgCtr dropped −18.4% WoW (current 0.58% vs prior baseline). Breaches HIGH alert threshold of >15% drop. Immediate creative review required."
     },
     {
       "t": "r",
-      "title": "CPL Spike — +24.7% WoW (Threshold: >20%)",
-      "meta": "Average CPL rose to ₹126.10 vs prior week. Exceeds HIGH alert threshold of +20%. With leads also down -11.8% WoW, both volume and efficiency are deteriorating simultaneously."
+      "title": "🚨 CPL Spike >20% vs 7-Day Average — Account Level",
+      "meta": "avgCpl rose +24.7% WoW (current ₹126.10 per lead). Breaches HIGH alert threshold of >20% CPL spike. Audience fatigue or creative wear-out likely culprit."
     },
     {
       "t": "a",
-      "title": "Lead Volume Down -11.8% WoW",
-      "meta": "Total leads dropped to 34 on 2026-03-07 vs ~38.6 implied prior-week average. Combined with CPL spike, indicates audience saturation or bid competitiveness issue."
-    },
-    {
-      "t": "a",
-      "title": "Zero Delivery on 2026-03-06 — All Campaigns",
-      "meta": "read_history shows totalSpend=₹0, impressions=0, leads=0 on Mar 6. Possible LinkedIn platform outage, billing issue, or campaign scheduling gap. Verify billing and campaign status."
+      "title": "⚠️ Leads Volume Down 11.8% WoW",
+      "meta": "Total leads fell from ~38.6 (implied prior) to 34 this period. Combined with CPL spike and CTR drop, funnel efficiency is deteriorating across the account."
     }
   ],
   "opportunities": [
     {
       "t": "g",
-      "title": "Broadcasters & OTT — ABM Campaigns Under-indexed",
-      "meta": "Two ABM campaigns targeting Broadcasters & OTT (US + EU) are active but campaign-level spend breakdown is unavailable due to API block. Once resolved, audit whether ABM budgets are capped vs. league-targeting campaigns which have historically higher CTR."
+      "title": "🟢 Broadcaster & OTT ABM Campaigns — Untapped EU Upside",
+      "meta": "Two ABM campaigns targeting Broadcasters & OTT are active in US and EU. EU broadcast rights deals are consolidating (2026 World Cup cycle). AXIS + PULSE bundle messaging timed to rights renewal conversations could accelerate pipeline."
     },
     {
       "t": "g",
-      "title": "EU Expansion — Leagues Pulse Campaign Active",
-      "meta": "'Leagues - pulse - EU' is a recently launched geo — if CPL is lower than US counterpart (leagues - US - pulse), shift incremental budget to EU to improve blended CPL."
+      "title": "🟢 Leagues Campaigns Across US & EU — Case Study Proof Point Refresh",
+      "meta": "NSL (37K moments, 51.8M views) and Islamic Solidarity Games (50K clips, 7.5M views) case studies are directly applicable to league prospects. Swapping in these stats as primary headlines should lift CTR given current 0.58% account average."
     },
     {
       "t": "a",
-      "title": "Website Visits Campaign — Misaligned Objective",
-      "meta": "'Website visits - Image Ads' runs WEBSITE_VISIT objective on ₹3,000/day budget while all other campaigns run LEAD_GENERATION. No lead tracking on this campaign. Evaluate whether it is contributing to pipeline or purely brand — if latter, reallocate budget to lead-gen campaigns with proven CPL."
+      "title": "🔵 JORDY AI — No Active Campaign Detected",
+      "meta": "No campaign exists for JORDY AI (fan engagement agent). Sports teams audience segment is unaddressed. Given 30% M1 retention boost and 140% time-spent increase proof points, a dedicated JORDY AI campaign targeting team digital/marketing directors is a high-priority gap."
+    },
+    {
+      "t": "a",
+      "title": "🔵 BRAND GAUGE — No Active Campaign Detected",
+      "meta": "Sponsor analytics/media value measurement product has no active campaign. Leagues and broadcasters under pressure to demonstrate sponsor ROI — direct-response BRAND GAUGE campaign targeting sponsorship/commercial directors is an immediate opportunity."
     }
   ],
   "spendByCampaign": {
     "labels": [
       "Website visits - Image Ads",
-      "PULSE Lead gen - US 2",
+      "PULSE Lead Gen US 2",
       "leagues - US - pulse",
       "Leagues - pulse - EU",
       "broadcasters & OTT - US - ABM",
@@ -159,7 +159,7 @@
       0,
       0,
       0.58,
-      0
+      0.58
     ],
     "cplValues": [
       0,
@@ -168,7 +168,7 @@
       0,
       0,
       126.1,
-      0
+      126.1
     ]
   }
 }

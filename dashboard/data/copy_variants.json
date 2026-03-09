@@ -1,100 +1,100 @@
 [
   {
     "date": "2026-03-09",
-    "adName": "PULSE Lead Gen - US 2 - Refresh A",
-    "campaign": "PULSE Lead generation - Jan 20, 2026 - US 2",
+    "adName": "Leagues US — CTR Recovery Variant",
+    "campaign": "leagues - US - pulse",
     "product": "PULSE",
-    "diagnosis": "CTR down -18.4% WoW (0.58% vs ~0.71%). Oldest active campaign — highest creative fatigue risk. Running since Jan 20, 2026.",
-    "format": "Single Image Lead Gen Ad",
+    "diagnosis": "Account CTR dropped -18.4% WoW to 0.58%. Leagues campaigns are likely contributing given they run the most active creatives. Current hooks are product-led; replacing with outcome-led proof points from NSL and HockeyOne case studies.",
+    "format": "SPONSORED_STATUS_UPDATE",
     "cta": "Download Now",
     "headlines": [
       {
-        "label": "H1 — Pain Lead",
-        "text": "Your best match moments are buried in raw footage. Not anymore."
+        "label": "Variant A — Volume Proof",
+        "text": "51.8 million video views. One AI. 80 matches. Here’s how NSL did it."
       },
       {
-        "label": "H2 — Proof-First",
-        "text": "51.8M video views. 37K+ clips. One AI. Zero editors."
+        "label": "Variant B — Speed Hook",
+        "text": "Highlights published in seconds, not hours. 37,000+ moments. Zero editors."
       },
       {
-        "label": "H3 — Urgency + Outcome",
-        "text": "Publish match highlights in seconds — before the crowd leaves the stadium."
+        "label": "Variant C — Urgency / FOMO",
+        "text": "Your rivals are already publishing AI clips before the final whistle. Are you?"
       }
     ],
     "bodies": [
       {
-        "label": "B1 — Result-Led",
-        "text": "NSL generated 37,000+ match moments across 80 games in a single season — automated, published in real-time, no production team required.\n\nPULSE by Spectatr.ai turns live footage into social-ready highlights in seconds.\n\n✅ 15+ sports supported\n✅ Published within seconds of the moment\n✅ 2× follower growth on Instagram (NSL Season 1)\n\nSee how leagues are winning the second-screen battle."
+        "label": "Body 1 — NSL Proof Point",
+        "text": "NSL ran 80 competitive matches over 7 months. PULSE generated 37,000+ match moments automatically — published to socials in real time, with zero post-production lag.\n\nResult: 51.8M video views. 2× Instagram follower growth. 110K+ likes.\n\nIf your league is still editing manually, you’re losing fans to whoever isn’t. Book a 20-minute demo →"
       },
       {
-        "label": "B2 — Pain-to-Outcome",
-        "text": "By the time your highlights team finishes editing, the conversation has moved on.\n\nHockeyOne published 9,500+ AI clips in 7 weeks — 10.6M video views, 9× growth in fan engagement.\n\nPULSE delivers the same pipeline for your league. No extra headcount. No post-production bottleneck.\n\nDownload the playbook →"
+        "label": "Body 2 — HockeyOne Proof Point",
+        "text": "HockeyOne went from manual editing to 9,500+ AI clips in a 7-week season. Published within seconds of the moment happening.\n\n9× growth in fan engagement. 264% Facebook reach increase. 500% surge in video views.\n\nYour league. Your moments. Live before the crowd leaves the stadium. See PULSE →"
       }
     ]
   },
   {
     "date": "2026-03-09",
-    "adName": "Leagues US Pulse - Refresh A",
-    "campaign": "leagues - US - pulse",
-    "product": "PULSE",
-    "diagnosis": "CTR declining account-wide (-18.4% WoW). US Leagues campaign competes in same auction as PULSE Lead Gen US 2 — audience overlap likely. Fresh creative needed to differentiate.",
-    "format": "Single Image Lead Gen Ad",
-    "cta": "Get the Guide",
-    "headlines": [
-      {
-        "label": "H1 — Specificity Hook",
-        "text": "9,500 AI clips. 7 weeks. 10.6M views. This is what your season could look like."
-      },
-      {
-        "label": "H2 — Competitive Angle",
-        "text": "Every league without AI highlights is leaving fans to find the moment elsewhere."
-      },
-      {
-        "label": "H3 — Direct Challenge",
-        "text": "How many match moments did your league miss publishing last weekend?"
-      }
-    ],
-    "bodies": [
-      {
-        "label": "B1 — Case Study Lead",
-        "text": "HockeyOne Season 5 ran 7 weeks. In that window, PULSE generated 9,500+ AI clips — delivering a 264% Facebook reach increase and 9× growth in fan engagement.\n\nNo highlights editor. No 4-hour turnaround. Just real-time clips, seconds after the moment.\n\nIf your league is still relying on manual production, you're already behind.\n\nGet the playbook for AI-powered league content →"
-      },
-      {
-        "label": "B2 — Volume + Velocity",
-        "text": "The Islamic Solidarity Games published 512 daily highlights for 57 national committees over 15 days — 50,000+ clips, 7.5M views.\n\nScale like a major games organiser, regardless of your production budget.\n\nPULSE by Spectatr.ai. Built for leagues that can't afford to miss the moment.\n\nSee how it works →"
-      }
-    ]
-  },
-  {
-    "date": "2026-03-09",
-    "adName": "Leagues EU Pulse - Refresh A",
+    "adName": "Leagues EU — CTR Recovery Variant",
     "campaign": "Leagues - pulse - EU",
     "product": "PULSE",
-    "diagnosis": "EU campaign active but likely running US-market creatives. CTR declining account-wide -18.4% WoW. EU audiences require localised proof points — Table Tennis England and ISG 2025 more resonant than NSL/HockeyOne.",
-    "format": "Single Image Lead Gen Ad",
-    "cta": "Request a Demo",
+    "diagnosis": "EU leagues campaign mirrors US setup but operates in a different rights and language environment. Refreshing with ISG and HockeyOne international proof points more relevant to EU market context (multi-sport events, pan-European rights).",
+    "format": "SPONSORED_STATUS_UPDATE",
+    "cta": "Learn More",
     "headlines": [
       {
-        "label": "H1 — EU Proof Lead",
-        "text": "Table Tennis England cut 250+ hours of post-production. Their views went up 105%."
+        "label": "Variant A — Scale Proof",
+        "text": "50,000 real-time clips. 57 countries. 15 days. One AI platform."
       },
       {
-        "label": "H2 — Local Stakes",
-        "text": "European leagues are publishing AI highlights in seconds. Is yours?"
+        "label": "Variant B — Speed / Efficiency",
+        "text": "500 highlights published daily at the Islamic Solidarity Games. No production team. Just PULSE."
       },
       {
-        "label": "H3 — Outcome Frame",
-        "text": "From 5 videos a week to 15 — with no extra production budget."
+        "label": "Variant C — Pain-Led",
+        "text": "Your production team can’t cover every match. An AI that never sleeps can."
       }
     ],
     "bodies": [
       {
-        "label": "B1 — EU Case Study",
-        "text": "Table Tennis England was spending hundreds of hours in post-production. Within 3 months of switching to PULSE:\n\n✅ 250+ production hours saved\n✅ 3× more content published weekly\n✅ +105% surge in total video views\n\nYour federation, association, or league can do the same — without hiring a single extra editor.\n\nRequest a demo and see PULSE live with your footage →"
+        "label": "Body 1 — ISG Scale Proof",
+        "text": "At the Islamic Solidarity Games Riyadh 2025, PULSE delivered 512 daily highlights across 57 NOC committees — automatically, in real time, across 15 days.\n\n7.5M+ video views. 250K+ likes. 50K+ clips published with zero manual bottleneck.\n\nIf you’re running a league, tournament or multi-sport event in Europe, this is what your coverage infrastructure could look like. Let’s talk →"
       },
       {
-        "label": "B2 — Scale Angle",
-        "text": "At the Islamic Solidarity Games Riyadh 2025, PULSE generated 50,000+ real-time clips for 57 national committees in 15 days.\n\nIf it scales to a multi-sport Games, it scales to your league's full season.\n\nNo long contracts. No integration complexity. Real results, first season.\n\nBook a 20-minute demo →"
+        "label": "Body 2 — Table Tennis England Efficiency Proof",
+        "text": "Table Tennis England saved 250+ hours in post-production in 3 months.\n\nUploads went from 5 to 15 videos per cycle. Views per video up 65%. Total views surged 105% (from 4K to 45K).\n\nSame content. Same team. Radically different output — because PULSE handles the editing. See how it works →"
+      }
+    ]
+  },
+  {
+    "date": "2026-03-09",
+    "adName": "Broadcaster ABM US — CPL Reduction Variant",
+    "campaign": "broadcasters & OTT - US - ABM",
+    "product": "PULSE + AXIS",
+    "diagnosis": "ABM campaigns targeting small, precise broadcaster audiences are at high frequency risk given account CPL is +24.7% WoW. Fresh creative with a broadcaster-specific pain point (rights coverage gaps, AI tagging for MAM) should improve relevance score and lower CPL.",
+    "format": "SPONSORED_STATUS_UPDATE",
+    "cta": "Request Demo",
+    "headlines": [
+      {
+        "label": "Variant A — Coverage Gap Pain",
+        "text": "You hold the rights. You can’t cover every match. PULSE can."
+      },
+      {
+        "label": "Variant B — Asset Management Pain",
+        "text": "Your archive is worth millions. AXIS tags and surfaces it in seconds."
+      },
+      {
+        "label": "Variant C — Combined Value Prop",
+        "text": "AI highlights in seconds. 100% accurate asset tagging. Built for broadcast."
+      }
+    ],
+    "bodies": [
+      {
+        "label": "Body 1 — PULSE for Broadcasters",
+        "text": "Rights holders and OTT platforms are sitting on thousands of hours of content they can’t monetise fast enough.\n\nPULSE generates broadcast-ready highlight clips within seconds of the moment happening — across 15+ sports, at any scale.\n\nHockeyOne saw 500% Facebook video view growth. NSL hit 51.8M views. These were league social channels — imagine what a broadcaster’s distribution can do.\n\nLet’s show you a live demo with your content →"
+      },
+      {
+        "label": "Body 2 — AXIS for Asset Management",
+        "text": "How long does it take your team to find a specific play from last season? Hours? Days?\n\nAXIS delivers 100% accurate AI tagging across your entire media library — searchable by sport, moment type, player, and more. Instantly.\n\n250+ hours saved in 3 months at Table Tennis England. Scaled to broadcast-grade libraries, the efficiency gain is transformational.\n\nBook a 15-minute walkthrough →"
       }
     ]
   },
