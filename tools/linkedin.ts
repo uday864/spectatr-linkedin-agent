@@ -85,24 +85,35 @@ export class LinkedInClient {
   async getAnalytics(range: DateRange, granularity = "DAILY"): Promise<unknown> {
     const [sy, sm, sd] = range.start.split("-").map(Number);
     const [ey, em, ed] = range.end.split("-").map(Number);
-    const p = new URLSearchParams({
-      q: "analytics",
-      pivot: "CAMPAIGN",
-      granularity,
-      "dateRange.start.year": String(sy),
-      "dateRange.start.month": String(sm),
-      "dateRange.start.day": String(sd),
-      "dateRange.end.year": String(ey),
-      "dateRange.end.month": String(em),
-      "dateRange.end.day": String(ed),
-      // Fields confirmed accessible with r_ads + r_ads_reporting scopes.
-      // leads/costPerLead/costPerClick require additional LinkedIn product access;
-      // agent derives CPL from costInLocalCurrency / externalWebsiteConversions.
-      fields:
-        "dateRange,pivotValues,impressions,clicks,costInLocalCurrency," +
-        "approximateUniqueImpressions,externalWebsiteConversions,clickThroughRate",
-    });
-    return this.get(`/adAnalyticsV2?${p}`);
+    const a = encodeURIComponent(this.accountId);
+
+    // Build URL as a plain string to preserve bracket-notation (accounts[0]).
+    // URLSearchParams encodes [ and ] in *keys*, breaking LinkedIn's REST.li 1.0 parser.
+    const base =
+      `/adAnalyticsV2?q=analytics&pivot=CAMPAIGN&granularity=${granularity}` +
+      `&dateRange.start.year=${sy}&dateRange.start.month=${sm}&dateRange.start.day=${sd}` +
+      `&dateRange.end.year=${ey}&dateRange.end.month=${em}&dateRange.end.day=${ed}` +
+      `&accounts[0]=${a}`;
+
+    // Try with oneClickLeads (LinkedIn Lead Gen Form submissions).
+    // Falls back to externalWebsiteConversions if the field is access-denied.
+    const withLeads =
+      "dateRange,pivotValues,impressions,clicks,costInLocalCurrency," +
+      "approximateUniqueImpressions,externalWebsiteConversions,oneClickLeads,clickThroughRate";
+    const withoutLeads =
+      "dateRange,pivotValues,impressions,clicks,costInLocalCurrency," +
+      "approximateUniqueImpressions,externalWebsiteConversions,clickThroughRate";
+
+    try {
+      return await this.get(`${base}&fields=${withLeads}`);
+    } catch (err) {
+      const msg = err instanceof Error ? err.message : String(err);
+      if (msg.includes("403") || msg.includes("ACCESS_DENIED") || msg.includes("ILLEGAL_ARGUMENT")) {
+        console.log("  ⚠️  oneClickLeads blocked — retrying without it");
+        return await this.get(`${base}&fields=${withoutLeads}`);
+      }
+      throw err;
+    }
   }
 
   async getCreatives(): Promise<unknown> {

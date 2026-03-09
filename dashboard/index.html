@@ -200,6 +200,12 @@ tbody tr:hover td{background:rgba(255,255,255,.02)}
 .ic.pos{background:rgba(0,196,140,.07);border-color:rgba(0,196,140,.2);color:var(--green)}
 .ic.neg{background:rgba(240,80,58,.07);border-color:rgba(240,80,58,.2);color:var(--red)}
 
+/* date filter */
+.frow{display:flex;gap:5px;align-items:center}
+.filt{padding:5px 12px;border-radius:6px;border:1px solid var(--b2);cursor:pointer;font-family:var(--mono);font-size:10px;font-weight:500;background:transparent;color:var(--mu);transition:all .15s}
+.filt:hover{color:var(--tx);border-color:var(--mu2)}
+.filt.on{background:var(--s3);color:var(--tx);border-color:var(--mu2)}
+
 /* modal */
 .mbg{position:fixed;inset:0;background:rgba(0,0,0,.75);z-index:200;display:none;align-items:center;justify-content:center;backdrop-filter:blur(4px)}
 .mbg.on{display:flex}
@@ -261,10 +267,17 @@ tbody tr:hover td{background:rgba(255,255,255,.02)}
   </aside>
   <main class="main">
     <div class="page on" id="p-overview">
-      <div class="ph"><div><h2>Overview</h2><p id="osub">Loading…</p></div></div>
+      <div class="ph">
+        <div><h2>Overview</h2><p id="osub">Loading…</p></div>
+        <div class="frow">
+          <button class="filt on" data-f="7d"    onclick="applyFilter('7d')">Last 7 Days</button>
+          <button class="filt"     data-f="30d"   onclick="applyFilter('30d')">Last 30 Days</button>
+          <button class="filt"     data-f="month" onclick="applyFilter('month')">This Month</button>
+        </div>
+      </div>
       <div class="krow" id="krow"><div class="ld">Loading metrics</div></div>
       <div class="g21">
-        <div class="card"><div class="ch"><div><h3>7-Day Trend</h3><div class="sub">CTR % · CPL $</div></div></div><div class="cb"><canvas id="tc"></canvas></div></div>
+        <div class="card"><div class="ch"><div><h3>Performance Trend</h3><div class="sub" id="tsub">CTR % · CPL $ — Last 7 Days</div></div></div><div class="cb"><canvas id="tc"></canvas></div></div>
         <div class="card"><div class="ch"><div><h3>Spend Split</h3><div class="sub">By campaign</div></div></div><div class="cb"><canvas id="sc"></canvas></div></div>
       </div>
       <div class="g2">
@@ -327,8 +340,9 @@ tbody tr:hover td{background:rgba(255,255,255,.02)}
 </div>
 
 <script>
-let M=null,SUGG=[],COPY=[],AUD=[],CL=[];
+let M=null,SUGG=[],COPY=[],AUD=[],CL=[],HIST=[];
 let TC=null,SC=null;
+let FILTER='7d';
 const PAGES=['overview','campaigns','suggestions','copy','audiences','changelog'];
 
 async function fetchJ(f){
@@ -338,13 +352,31 @@ async function fetchJ(f){
 
 async function loadAll(){
   document.getElementById('stx').textContent='Refreshing…';
-  const[m,s,c,a,cl,meta]=await Promise.all([
+  const[m,s,c,a,cl,meta,hist]=await Promise.all([
     fetchJ('metrics.json'),fetchJ('suggestions.json'),fetchJ('copy_variants.json'),
-    fetchJ('audiences.json'),fetchJ('changelog.json'),fetchJ('meta.json'),
+    fetchJ('audiences.json'),fetchJ('changelog.json'),fetchJ('meta.json'),fetchJ('history.json'),
   ]);
-  M=m;SUGG=s||[];COPY=c||[];AUD=a||[];CL=cl||[];
+  M=m;SUGG=s||[];COPY=c||[];AUD=a||[];CL=cl||[];HIST=hist||[];
   renderAll(meta);
   document.getElementById('stx').textContent='Updated '+new Date().toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'});
+}
+
+function applyFilter(f){
+  FILTER=f;
+  document.querySelectorAll('.filt').forEach(b=>b.classList.toggle('on',b.dataset.f===f));
+  const lbl={'7d':'Last 7 Days','30d':'Last 30 Days','month':'This Month'}[f]||'';
+  document.getElementById('tsub').textContent=`CTR % · CPL $ — ${lbl}`;
+  renderCharts();
+}
+
+function getHistSlice(){
+  if(!HIST.length) return [];
+  if(FILTER==='30d') return HIST.slice(-30);
+  if(FILTER==='month'){
+    const m=new Date().toISOString().slice(0,7);
+    return HIST.filter(h=>(h.date||'').startsWith(m));
+  }
+  return HIST.slice(-7);
 }
 
 function renderAll(meta){
@@ -379,7 +411,21 @@ function renderKPIs(){
 function renderCharts(){
   const gc='rgba(31,36,54,.8)',tf={family:'Fira Code',size:9};
   if(TC){TC.destroy();TC=null;}if(SC){SC.destroy();SC=null;}
-  const td=M?.trendData;
+
+  // Trend chart: use history slice for 30d / month, fall back to metrics.json trendData for 7d
+  const slice=getHistSlice();
+  let td=null;
+  if(FILTER!=='7d' && slice.length>1){
+    // Build trend from daily history snapshots (avgCtr / avgCpl per agent run)
+    td={
+      labels:slice.map(h=>{const d=new Date(h.date);return d.toLocaleDateString([],{month:'short',day:'numeric'});}),
+      ctrValues:slice.map(h=>h.kpis?.avgCtr||0),
+      cplValues:slice.map(h=>h.kpis?.avgCpl||0),
+    };
+  } else {
+    td=M?.trendData; // default: agent-generated 7-day trend
+  }
+
   if(td){TC=new Chart(document.getElementById('tc'),{type:'line',data:{labels:td.labels,datasets:[
     {label:'CTR %',data:td.ctrValues,borderColor:'#0A66C2',backgroundColor:'rgba(10,102,194,.08)',fill:true,tension:.4,pointRadius:3,yAxisID:'y'},
     {label:'CPL $',data:td.cplValues,borderColor:'#f0503a',backgroundColor:'rgba(240,80,58,.05)',fill:true,tension:.4,pointRadius:3,yAxisID:'y2'},

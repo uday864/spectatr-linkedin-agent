@@ -12,12 +12,17 @@ export const TOOLS: Anthropic.Tool[] = [
   },
   {
     name: "linkedin_get_analytics",
-    description: "Fetch campaign analytics for a date range",
+    description: "Fetch campaign analytics. Use granularity=ALL for accurate per-campaign totals over a date range (one row per campaign, already aggregated). Use granularity=DAILY for day-by-day rows to build trend arrays (SUM each field per campaign across all daily rows to get period totals).",
     input_schema: {
       type: "object" as const,
       properties: {
         startDate: { type: "string", description: "YYYY-MM-DD" },
         endDate: { type: "string", description: "YYYY-MM-DD" },
+        granularity: {
+          type: "string",
+          enum: ["ALL", "DAILY"],
+          description: "ALL = one aggregated row per campaign (default for totals). DAILY = one row per campaign per day (use for trend chart arrays).",
+        },
       },
       required: ["startDate", "endDate"],
     },

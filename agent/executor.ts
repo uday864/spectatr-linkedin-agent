@@ -19,10 +19,10 @@ export async function executeTool(
 
       case "linkedin_get_analytics":
         return JSON.stringify(
-          await linkedin.getAnalytics({
-            start: input.startDate as string,
-            end: input.endDate as string,
-          })
+          await linkedin.getAnalytics(
+            { start: input.startDate as string, end: input.endDate as string },
+            (input.granularity as string | undefined) ?? "ALL"
+          )
         );
 
       case "linkedin_get_creatives":
