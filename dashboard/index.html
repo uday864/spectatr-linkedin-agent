@@ -364,10 +364,10 @@ function renderKPIs(){
   const k=M?.kpis;
   if(!k){document.getElementById('krow').innerHTML='<div class="empty"><div class="ei">📊</div><p>No metrics yet — run the agent first.</p></div>';return;}
   const kpis=[
-    {l:'Total Spend',v:k.totalSpend,d:k.spendDelta,ac:k.spendDelta?.startsWith('-')?'kr':'kg'},
-    {l:'Avg CTR',v:k.avgCtr,d:k.ctrDelta,ac:k.ctrDelta?.startsWith('-')?'kr':'kg'},
-    {l:'Total Leads',v:k.totalLeads,d:k.leadsDelta,ac:k.leadsDelta?.startsWith('+')?'kg':'km'},
-    {l:'Avg CPL',v:k.avgCpl,d:k.cplDelta,ac:k.cplDelta?.startsWith('+')?'ka_':'kg'},
+    {l:'Total Spend',v:k.totalSpend,d:k.spendDelta,ac:Number(k.spendDelta)<0?'kr':'kg'},
+    {l:'Avg CTR',v:k.avgCtr,d:k.ctrDelta,ac:Number(k.ctrDelta)<0?'kr':'kg'},
+    {l:'Total Leads',v:k.totalLeads,d:k.leadsDelta,ac:Number(k.leadsDelta)>0?'kg':'km'},
+    {l:'Avg CPL',v:k.avgCpl,d:k.cplDelta,ac:Number(k.cplDelta)>0?'ka_':'kg'},
     {l:'Impressions',v:k.impressions,d:k.imprDelta,ac:'km'},
   ];
   document.getElementById('krow').innerHTML=kpis.map(k=>`
@@ -408,9 +408,9 @@ function renderCamps(){
     <td style="font-weight:700">${c.name}</td>
     <td><span class="pill ${c.st==='a'?'pa':c.st==='w'?'pw':'pp'}">${c.st==='a'?'● Active':c.st==='w'?'▲ Review':'◌ Paused'}</span></td>
     <td>${c.spend}</td><td style="font-weight:700">${c.ctr}</td>
-    <td class="mn ${c.ctrD?.startsWith('-')?'neg':c.ctrD?.startsWith('+')?'pos':'neu'}">${c.ctrD||'—'}</td>
+    <td class="mn ${Number(c.ctrD)<0?'neg':Number(c.ctrD)>0?'pos':'neu'}">${c.ctrD||'—'}</td>
     <td>${c.cpl}</td>
-    <td class="mn ${c.cplD?.startsWith('+')?'neg':c.cplD?.startsWith('-')?'pos':'neu'}">${c.cplD||'—'}</td>
+    <td class="mn ${Number(c.cplD)>0?'neg':Number(c.cplD)<0?'pos':'neu'}">${c.cplD||'—'}</td>
     <td style="font-weight:700">${c.leads}</td>
     <td class="mn ${parseFloat(c.freq)>4?'neg':'neu'}">${c.freq}</td></tr>`).join('');
 }
