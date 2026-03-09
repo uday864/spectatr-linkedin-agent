@@ -82,20 +82,32 @@ export class LinkedInClient {
     );
   }
 
-  async getAnalytics(range: DateRange, granularity = "DAILY"): Promise<unknown> {
+  async getAnalytics(
+    range: DateRange,
+    granularity = "ALL",
+    campaignUrns?: string[]
+  ): Promise<unknown> {
     const [sy, sm, sd] = range.start.split("-").map(Number);
     const [ey, em, ed] = range.end.split("-").map(Number);
     const a = encodeURIComponent(this.accountId);
 
-    // Build URL as a plain string to preserve bracket-notation (accounts[0]).
-    // URLSearchParams encodes [ and ] in *keys*, breaking LinkedIn's REST.li 1.0 parser.
-    const base =
+    // Build URL as a plain string to preserve bracket-notation for REST.li 1.0.
+    // URLSearchParams encodes [ and ] in *keys*, breaking LinkedIn's query parser.
+    let base =
       `/adAnalyticsV2?q=analytics&pivot=CAMPAIGN&granularity=${granularity}` +
       `&dateRange.start.year=${sy}&dateRange.start.month=${sm}&dateRange.start.day=${sd}` +
       `&dateRange.end.year=${ey}&dateRange.end.month=${em}&dateRange.end.day=${ed}` +
       `&accounts[0]=${a}`;
 
-    // Try with oneClickLeads (LinkedIn Lead Gen Form submissions).
+    // Pin to exact campaign URNs from getCampaigns — prevents pulling in
+    // data from any other account or campaign the token can see.
+    if (campaignUrns && campaignUrns.length > 0) {
+      base += campaignUrns
+        .map((urn, i) => `&campaigns[${i}]=${encodeURIComponent(urn)}`)
+        .join("");
+    }
+
+    // Try with oneClickLeads (Lead Gen Form submissions).
     // Falls back to externalWebsiteConversions if the field is access-denied.
     const withLeads =
       "dateRange,pivotValues,impressions,clicks,costInLocalCurrency," +

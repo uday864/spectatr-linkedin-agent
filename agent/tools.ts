@@ -12,7 +12,7 @@ export const TOOLS: Anthropic.Tool[] = [
   },
   {
     name: "linkedin_get_analytics",
-    description: "Fetch campaign analytics. Use granularity=ALL for accurate per-campaign totals over a date range (one row per campaign, already aggregated). Use granularity=DAILY for day-by-day rows to build trend arrays (SUM each field per campaign across all daily rows to get period totals).",
+    description: "Fetch campaign analytics scoped to exact campaign URNs. Always pass campaignUrns from linkedin_get_campaigns to guarantee data comes only from those campaigns. granularity=ALL returns one aggregated row per campaign (use for totals/deltas). granularity=DAILY returns one row per campaign per day (use for 7-day trend arrays — SUM each field across all daily rows per campaign to get totals).",
     input_schema: {
       type: "object" as const,
       properties: {
@@ -21,10 +21,15 @@ export const TOOLS: Anthropic.Tool[] = [
         granularity: {
           type: "string",
           enum: ["ALL", "DAILY"],
-          description: "ALL = one aggregated row per campaign (default for totals). DAILY = one row per campaign per day (use for trend chart arrays).",
+          description: "ALL = one aggregated row per campaign (default). DAILY = one row per campaign per day.",
+        },
+        campaignUrns: {
+          type: "array",
+          items: { type: "string" },
+          description: "Array of campaign URNs from linkedin_get_campaigns (e.g. ['urn:li:sponsoredCampaign:123','urn:li:sponsoredCampaign:456']). REQUIRED for accuracy — filters analytics to exactly these campaigns.",
         },
       },
-      required: ["startDate", "endDate"],
+      required: ["startDate", "endDate", "campaignUrns"],
     },
   },
   {

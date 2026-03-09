@@ -26,29 +26,35 @@ async function run(): Promise<void> {
       role: "user",
       content: `Today is ${today}. Yesterday: ${yest}. 7 days ago: ${week_ago}. 14 days ago: ${prev_week}.
 
-Run the full daily LinkedIn ad analysis for Spectatr.ai:
-1. linkedin_get_campaigns
-2. linkedin_get_analytics(${week_ago}, ${today}, DAILY) ← current 7-day window, daily rows
-3. linkedin_get_analytics(${prev_week}, ${week_ago}, ALL) ← prior 7-day window for WoW delta
-4. linkedin_get_creatives
-5. read_history(30)
+Run the full daily LinkedIn ad analysis for Spectatr.ai.
 
-Data processing rules (strictly follow):
-- Match analytics pivotValues (urn:li:sponsoredCampaign:ID) to campaign names using the ID suffix from step 1
-- Granularity=DAILY (step 2): SUM impressions, clicks, costInLocalCurrency, conversions per campaign across all 7 daily rows to get weekly totals. Do NOT use a single row's value.
-- Leads: use oneClickLeads if present and > 0 in the response; otherwise use externalWebsiteConversions
-- WoW deltas: compute by comparing step 2 totals vs step 3 totals (real comparison, not estimated)
-- Frequency: impressions / approximateUniqueImpressions per campaign
-- CPL: costInLocalCurrency / leads per campaign
-- Trend arrays: use the 7 DAILY rows from step 2, ordered by date ascending
+STEP 1 — call linkedin_get_campaigns FIRST and wait for the result.
 
-6. save_metrics — KPIs, campaign table, 7-day trend arrays, alerts, opportunities
-7. save_suggestions — HIGH priority first, every item cites exact metric + delta
-8. save_copy_variants — 3 headlines + 2 body copies per flagged ad
-9. save_new_audiences — 2-3 Spectatr-specific segments, ready-to-launch copy
-10. save_report — full markdown narrative
+STEP 2 — from the campaigns response, extract every campaign URN in the format urn:li:sponsoredCampaign:ID (the id field, or embedded in the element URN). Build an array of these URNs — you will pass it to EVERY analytics call.
 
-All 5 save_ calls are required. Be specific — cite exact numbers.`,
+STEP 3 — call these three in parallel, passing the campaignUrns array from step 2 to each:
+  a. linkedin_get_analytics(startDate=${week_ago}, endDate=${today}, granularity=DAILY, campaignUrns=[...])
+     → current 7-day window; daily rows for trend arrays + per-campaign totals (SUM each field across all 7 rows per campaign)
+  b. linkedin_get_analytics(startDate=${prev_week}, endDate=${week_ago}, granularity=ALL, campaignUrns=[...])
+     → prior 7-day window; already aggregated — use for WoW delta calculation
+  c. linkedin_get_creatives
+
+STEP 4 — call read_history(30)
+
+DATA PROCESSING RULES (strictly follow):
+- Impressions: SUM the impressions field across all daily rows for each campaign (granularity=DAILY returns one row per campaign per day — you must add them up)
+- Clicks: same — SUM across daily rows per campaign
+- Spend: SUM costInLocalCurrency across daily rows per campaign (currency is INR ₹)
+- CTR: total clicks / total impressions × 100 (recalculate from summed values, do not average the clickThroughRate field)
+- Leads: use oneClickLeads if present and > 0; otherwise use externalWebsiteConversions. SUM across daily rows.
+- CPL: total spend / total leads per campaign
+- Frequency: total impressions / total approximateUniqueImpressions per campaign
+- WoW delta: ((current value − prior value) / prior value) × 100 — use step 3b as prior week baseline
+- Trend arrays: 7 data points from step 3a, one per date, ordered ascending — use account-level CTR and CPL averages
+
+STEP 5 — save_metrics, save_suggestions, save_copy_variants, save_new_audiences, save_report
+
+All 5 save_ calls are required. Cite exact numbers (e.g. ₹12,090.57 not rounded). Do not estimate any metric.`,
     },
   ];
 
