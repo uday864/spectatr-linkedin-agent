@@ -32,10 +32,10 @@ STEP 1 — call linkedin_get_campaigns FIRST and wait for the result.
   Collect the numeric id of every returned campaign — used to match analytics rows to names.
 
 STEP 2 — call all three in parallel after STEP 1 completes:
-  a. linkedin_get_analytics(startDate=${week_ago}, endDate=${today})
-     → current 7-day window; returns multiple rows per campaign (one per day)
-  b. linkedin_get_analytics(startDate=${prev_week}, endDate=${week_ago})
-     → prior 7-day window; used for WoW delta comparison
+  a. linkedin_get_analytics(startDate=${week_ago}, endDate=${today}, granularity=DAILY)
+     → current 7-day window; one row per campaign per day — SUM across days for totals
+  b. linkedin_get_analytics(startDate=${prev_week}, endDate=${week_ago}, granularity=ALL)
+     → prior 7-day window; one aggregated row per campaign — use as WoW baseline
   c. linkedin_get_creatives
 
 STEP 3 — call read_history(30) to get historical daily snapshots.

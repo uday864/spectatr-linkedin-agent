@@ -20,7 +20,8 @@ export async function executeTool(
       case "linkedin_get_analytics":
         return JSON.stringify(
           await linkedin.getAnalytics(
-            { start: input.startDate as string, end: input.endDate as string }
+            { start: input.startDate as string, end: input.endDate as string },
+            (input.granularity as string | undefined) ?? "DAILY"
           )
         );
 

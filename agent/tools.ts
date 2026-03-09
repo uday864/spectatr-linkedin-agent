@@ -12,12 +12,17 @@ export const TOOLS: Anthropic.Tool[] = [
   },
   {
     name: "linkedin_get_analytics",
-    description: "Fetch campaign analytics for the given date range. Returns multiple rows per campaign (one per day in the range). SUM all rows per campaign ID to get period totals. Match pivotValues[0] campaign IDs against linkedin_get_campaigns results to scope to this account only.",
+    description: "Fetch campaign analytics for the given date range. DAILY returns one row per campaign per day (SUM across days for period totals). ALL returns one aggregated row per campaign for the entire range. Match pivotValues[0] campaign IDs against linkedin_get_campaigns to scope to this account.",
     input_schema: {
       type: "object" as const,
       properties: {
         startDate: { type: "string", description: "YYYY-MM-DD (inclusive)" },
         endDate: { type: "string", description: "YYYY-MM-DD (inclusive)" },
+        granularity: {
+          type: "string",
+          enum: ["DAILY", "ALL"],
+          description: "DAILY = one row per campaign per day. ALL = one aggregated row per campaign for the date range.",
+        },
       },
       required: ["startDate", "endDate"],
     },
