@@ -5,9 +5,9 @@
     "status": "open",
     "type": "t",
     "priority": "HIGH",
-    "title": "Fix LinkedIn Analytics API Access — Restore r_ads_reporting Scope",
-    "detail": "All linkedin_get_analytics calls returned 403 serviceErrorCode 100 today. The OAuth token is missing the r_ads_reporting permission or the token has expired. Without analytics data, per-campaign CTR, CPL, spend, leads and frequency cannot be computed, making daily optimisation impossible. Action: re-authorise the LinkedIn Marketing API token with r_ads_reporting + rw_ads scopes. Re-run the daily job once restored.",
-    "meta": "Blocking: 0 of 6 campaigns have performance data for 2026-03-02 – 2026-03-09."
+    "title": "Restore LinkedIn Analytics API Access — r_ads_reporting Scope",
+    "detail": "Both analytics API calls returned LinkedIn 403 ACCESS_DENIED ('Unpermitted fields present in PARAMETER: /granularity'). Per-campaign CTR, CPL, spend, leads, and frequency are completely dark. Action: Re-authorise the LinkedIn Campaign Manager OAuth app — confirm r_ads_reporting and r_ads scopes are granted. Re-run the daily analysis once access is restored.",
+    "meta": "Impact: 100% of per-campaign analytics unavailable. KPIs sourced from read_history only. SLA risk: if this persists >24h, optimisation decisions are made blind."
   },
   {
     "id": "sug_2026-03-09_1",
@@ -15,9 +15,9 @@
     "status": "open",
     "type": "cp",
     "priority": "HIGH",
-    "title": "Rotate Creatives Immediately — CTR -18.4% WoW at Account Level",
-    "detail": "Account avgCtr fell from an implied 0.71% to 0.58% WoW (−18.4%), breaching the HIGH alert threshold of >15%. With 99 creatives in the system (18 ACTIVE sponsored status updates, 12 ACTIVE sponsored videos) there is significant creative inventory, but the current rotation is clearly fatiguing the audience. Immediately retire the 3 longest-running active creatives and introduce fresh copy variants built around specific proof-point hooks (NSL: 51.8M views; HockeyOne: 9x fan engagement; ISG: 50K clips in 15 days). New variants are included in today’s copy_variants output.",
-    "meta": "avgCtr: 0.58% (current) vs 0.71% (prior 7d implied). Alert threshold: >15% drop."
+    "title": "Emergency Creative Refresh — Account CTR Has Dropped 18.4% WoW",
+    "detail": "Account-level avgCTR fell from an implied baseline to 0.58% (-18.4% WoW), breaching the HIGH alert threshold of >15%. This is the most likely driver of the +24.7% CPL spike. Immediate action: rotate in new headlines and body copy across all active lead-gen campaigns (leagues US/EU, broadcaster US/EU ABM, PULSE US). Prioritise proof-point hooks using NSL (51.8M views), HockeyOne (264% reach increase), and Islamic Solidarity Games (50K clips) data.",
+    "meta": "avgCTR: 0.58% | WoW delta: -18.4% | Alert threshold: >15% drop → HIGH"
   },
   {
     "id": "sug_2026-03-09_2",
@@ -25,9 +25,9 @@
     "status": "open",
     "type": "b",
     "priority": "HIGH",
-    "title": "Pause or Reduce Budget on Website Visits – Image Ads (CPM, Brand Awareness)",
-    "detail": "The ‘Website visits - Image Ads’ campaign runs on CPM cost type with a ₹3,000/day budget and WEBSITE_VISIT objective — it generates no leads by design. With CPL up 24.7% WoW and overall leads down 11.8%, every rupee diverted from lead-gen campaigns raises blended CPL. Reduce this campaign’s daily budget to ₹1,000 and reallocate ₹2,000/day to the highest-converting lead-gen campaign (identify post API fix). This preserves brand reach at minimum viable level while protecting lead volume.",
-    "meta": "CPL +24.7% WoW (₹126.10). Leads: 34 (-11.8% WoW). Budget reallocation is cost-neutral."
+    "title": "Audit Budget Pacing Across All Campaigns — Leads Down 11.8%",
+    "detail": "Total leads declined from ~38 to 34 (-11.8% WoW) while spend rose +6.2%. This inverse relationship (more spend, fewer leads) signals either audience saturation, creative fatigue, or bid inefficiency. Action: check impression-share and budget utilisation per campaign in Campaign Manager. If frequency >3.5 on any campaign, pause and refresh creative immediately.",
+    "meta": "totalLeads: 34 | leadsDelta: -11.8% | spendDelta: +6.2% | avgCpl: ₹126.10 (+24.7% WoW)"
   },
   {
     "id": "sug_2026-03-09_3",
@@ -35,29 +35,29 @@
     "status": "open",
     "type": "cp",
     "priority": "HIGH",
-    "title": "Inject Verified Case Study Numbers as Primary Ad Hooks Across All Lead-Gen Campaigns",
-    "detail": "Current CTR of 0.58% is well below LinkedIn B2B benchmark of ~0.80-1.0% for lead-gen. Root cause: generic product-led hooks instead of outcome-led proof. Replace opening lines with: (a) ‘51.8 million video views. One AI. 80 matches.’ for Leagues-US/EU campaigns; (b) ‘500 highlights published daily. Zero editors.’ for Broadcaster ABM campaigns; (c) ‘9x fan engagement in one season.’ for JORDY AI prospects. Proof-point hooks consistently outperform brand-name hooks on LinkedIn by 30-40% CTR uplift.",
-    "meta": "avgCtr 0.58% vs LinkedIn B2B benchmark ~0.85%. History ctrDelta: -18.4%."
+    "title": "Refresh Broadcaster & OTT ABM Creative with HockeyOne Proof Points",
+    "detail": "Both 'broadcasters & OTT - US - ABM' and 'broadcasters & OTT - EU - ABM' are active but per-campaign analytics are unavailable. Given the account-wide CTR decline, ABM campaigns targeting high-value broadcaster personas are most at risk of frequency fatigue. New creative should lead with: '10.6M video views. 264% reach increase. 500% surge in Facebook video views — in one 7-week season.' CTA: 'See the Full Story' or 'Get the Case Study'.",
+    "meta": "Campaigns: broadcasters & OTT - US - ABM, broadcasters & OTT - EU - ABM | Basis: HockeyOne case study + account CTR alert"
   },
   {
     "id": "sug_2026-03-09_4",
     "date": "2026-03-09",
     "status": "open",
-    "type": "c",
+    "type": "t",
     "priority": "MEDIUM",
-    "title": "Launch JORDY AI Campaign — Sports Teams Segment Is Completely Unaddressed",
-    "detail": "No active campaign targets Sports Teams, the primary audience for JORDY AI. The product has a 30% M1 retention boost and 140% time-spent increase — compelling proof points for team digital directors struggling with app engagement. Launch a dedicated LEAD_GENERATION campaign targeting: Job titles: Head of Digital, Fan Engagement Manager, CRM Director; Industries: Professional Sports Teams, Sports & Recreation; Geo: US + UK initially. Audience brief included in today’s new_audiences output.",
-    "meta": "JORDY AI: 0 active campaigns. Addressable audience est. 15K–25K on LinkedIn."
+    "title": "Split leagues US vs EU Performance Once API Restored — Different Dayparting Strategy",
+    "detail": "Two active league campaigns run across different geographies (US: leagues - US - pulse | EU: Leagues - pulse - EU). US and EU professional sports decision-makers have different peak LinkedIn engagement windows. Recommended: US daypart 9–11am EST (2–4pm UTC), EU daypart 8–10am CET (7–9am UTC). This requires per-campaign data to validate — implement as first test once API access is restored.",
+    "meta": "Campaigns: leagues - US - pulse | Leagues - pulse - EU | Opportunity: reduce wasted impression spend on off-peak hours"
   },
   {
     "id": "sug_2026-03-09_5",
     "date": "2026-03-09",
     "status": "open",
-    "type": "c",
+    "type": "cp",
     "priority": "MEDIUM",
-    "title": "Launch BRAND GAUGE Campaign — Sponsorship ROI Messaging for Leagues & Broadcasters",
-    "detail": "No active campaign promotes BRAND GAUGE (sponsor analytics, media value measurement). With major sporting calendars accelerating in 2026 (World Cup, Olympics), leagues and broadcasters are under intense pressure to prove sponsor ROI. A targeted campaign hitting Commercial Directors, Sponsorship Managers and Chief Revenue Officers in Leagues & Broadcast industries would address an untapped pipeline segment. Audience brief included in today’s new_audiences output.",
-    "meta": "BRAND GAUGE: 0 active campaigns. Sponsor analytics is a high-value, urgent-need product category."
+    "title": "PULSE Lead Gen US — Add Table Tennis England Case Study Creative Variant",
+    "detail": "The 'PULSE Lead generation - Jan 20, 2026 - US 2' campaign has been running since January 20 — likely experiencing creative fatigue. Introduce a new variant leading with the Table Tennis England result: '250+ hours saved. 3× more video uploads. +105% total views — in 90 days.' This speaks directly to cost-efficiency and scale, which resonates with US league operations teams.",
+    "meta": "Campaign: PULSE Lead generation - Jan 20, 2026 - US 2 | Campaign age: ~48 days | Risk: creative fatigue"
   },
   {
     "id": "sug_2026-03-09_6",
@@ -65,19 +65,9 @@
     "status": "open",
     "type": "t",
     "priority": "MEDIUM",
-    "title": "A/B Test Frequency Caps on Broadcaster ABM Campaigns",
-    "detail": "ABM campaigns by design target small, precise audiences (Broadcasters & OTT — US and EU), which makes frequency a critical risk. History shows account-level CPL +24.7% WoW — a pattern consistent with frequency-driven fatigue in tight ABM audiences. Once analytics API is restored, check per-campaign frequency. If >2.5, implement LinkedIn’s campaign-level frequency cap at 3 impressions/member/week and expand lookalike audience seeds by 10-15%.",
-    "meta": "Account CPL +24.7% WoW. ABM audiences typically 5K–20K members — high fatigue risk."
-  },
-  {
-    "id": "sug_2026-03-09_7",
-    "date": "2026-03-09",
-    "status": "open",
-    "type": "b",
-    "priority": "LOW",
-    "title": "Separate US and EU Bidding Strategies for Leagues Campaigns",
-    "detail": "leagues - US - pulse and Leagues - pulse - EU are both on CPM cost type. LinkedIn CPMs differ significantly between US (~₹550-700/1K) and EU (~₹350-500/1K). Running identical CPM bid strategies across both geos means either overpaying in EU or under-competing in US. Once analytics are restored, compare CPM and CTR per geo and test Target CPA bidding on the stronger-performing geo to improve lead efficiency.",
-    "meta": "Two geo-split campaigns on identical cost type. Opportunity to optimise bids per market."
+    "title": "Test Jordy AI Messaging with Sports Teams Segment",
+    "detail": "No active campaign targets Sports Teams with JORDY AI messaging (30% M1 retention boost, 140% time-spent increase, +60% new content exposure). This is an untested segment with strong proof points. Recommend launching a new campaign targeting Sports Team digital/marketing directors in both US and EU. Start with ₹3,000/day budget mirroring 'Website visits - Image Ads' structure.",
+    "meta": "Gap: zero active JORDY AI campaigns in current portfolio | Opportunity: new segment, no audience overlap with existing campaigns"
   },
   {
     "id": "sug_2026-03-07_0",

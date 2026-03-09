@@ -15,7 +15,7 @@
   "campaigns": [
     {
       "name": "Website visits - Image Ads",
-      "st": "a",
+      "st": "w",
       "spend": null,
       "ctr": null,
       "ctrD": null,
@@ -26,7 +26,7 @@
     },
     {
       "name": "PULSE Lead generation - Jan 20, 2026 - US 2",
-      "st": "a",
+      "st": "w",
       "spend": null,
       "ctr": null,
       "ctrD": null,
@@ -37,7 +37,7 @@
     },
     {
       "name": "leagues - US - pulse",
-      "st": "a",
+      "st": "w",
       "spend": null,
       "ctr": null,
       "ctrD": null,
@@ -48,7 +48,7 @@
     },
     {
       "name": "Leagues - pulse - EU",
-      "st": "a",
+      "st": "w",
       "spend": null,
       "ctr": null,
       "ctrD": null,
@@ -59,7 +59,7 @@
     },
     {
       "name": "broadcasters & OTT - US - ABM",
-      "st": "a",
+      "st": "w",
       "spend": null,
       "ctr": null,
       "ctrD": null,
@@ -70,7 +70,7 @@
     },
     {
       "name": "broadcasters & OTT - EU - ABM",
-      "st": "a",
+      "st": "w",
       "spend": null,
       "ctr": null,
       "ctrD": null,
@@ -83,51 +83,46 @@
   "alerts": [
     {
       "t": "r",
-      "title": "⚠️ LinkedIn Analytics API — 403 Access Denied",
-      "meta": "All linkedin_get_analytics calls failed with serviceErrorCode 100 ('Unpermitted fields present in PARAMETER: granularity'). Per-campaign spend, CTR, CPL, leads and frequency cannot be computed for 2026-03-02 → 2026-03-09 or the prior 7-day window. WoW deltas are unavailable. Investigate OAuth token scopes (r_ads_reporting required) and re-run."
-    },
-    {
-      "t": "r",
-      "title": "🚨 CTR Drop >15% vs 7-Day Average — Account Level",
-      "meta": "History shows avgCtr dropped −18.4% WoW (current 0.58% vs prior baseline). Breaches HIGH alert threshold of >15% drop. Immediate creative review required."
-    },
-    {
-      "t": "r",
-      "title": "🚨 CPL Spike >20% vs 7-Day Average — Account Level",
-      "meta": "avgCpl rose +24.7% WoW (current ₹126.10 per lead). Breaches HIGH alert threshold of >20% CPL spike. Audience fatigue or creative wear-out likely culprit."
+      "title": "⚠️ LinkedIn Analytics API — 403 ACCESS_DENIED",
+      "meta": "Both current-week (2026-03-02→03-09) and prior-week (2026-02-23→03-02) analytics calls failed: 'Unpermitted fields present in PARAMETER: Data Processing Exception while processing fields [/granularity]'. Per-campaign spend, CTR, CPL, leads, and frequency cannot be computed today. Account-level KPIs sourced from read_history. LinkedIn API token scope may need re-authorisation — check Campaign Manager OAuth app permissions."
     },
     {
       "t": "a",
-      "title": "⚠️ Leads Volume Down 11.8% WoW",
-      "meta": "Total leads fell from ~38.6 (implied prior) to 34 this period. Combined with CPL spike and CTR drop, funnel efficiency is deteriorating across the account."
+      "title": "🔴 CTR Drop >15% vs 7-Day Average — Account Level",
+      "meta": "Account avgCTR fell -18.4% WoW (current: 0.58%). Exceeds HIGH alert threshold of >15%. Cannot isolate to individual campaign without API data — investigate all active campaigns in Campaign Manager."
+    },
+    {
+      "t": "a",
+      "title": "🔴 CPL Spike >20% vs 7-Day Average — Account Level",
+      "meta": "Account avgCPL rose +24.7% WoW (current: ₹126.10). Exceeds HIGH alert threshold of >20%. Likely correlated with CTR decline. Per-campaign breakdown unavailable until API access is restored."
+    },
+    {
+      "t": "a",
+      "title": "🔴 Leads Down -11.8% WoW — Account Level",
+      "meta": "Total leads fell from ~38 to 34 week-over-week (-11.8%). Combined with CPL spike and CTR drop, this signals meaningful funnel degradation. Immediate creative refresh and audience review recommended."
     }
   ],
   "opportunities": [
     {
       "t": "g",
-      "title": "🟢 Broadcaster & OTT ABM Campaigns — Untapped EU Upside",
-      "meta": "Two ABM campaigns targeting Broadcasters & OTT are active in US and EU. EU broadcast rights deals are consolidating (2026 World Cup cycle). AXIS + PULSE bundle messaging timed to rights renewal conversations could accelerate pipeline."
+      "title": "Broadcaster ABM Campaigns — EU & US Expansion Angle",
+      "meta": "Both broadcaster & OTT ABM campaigns are active. With 10.6M video views and 264% Facebook reach increase validated by HockeyOne case study, a proof-point creative refresh could unlock lower CPL for this segment."
     },
     {
       "t": "g",
-      "title": "🟢 Leagues Campaigns Across US & EU — Case Study Proof Point Refresh",
-      "meta": "NSL (37K moments, 51.8M views) and Islamic Solidarity Games (50K clips, 7.5M views) case studies are directly applicable to league prospects. Swapping in these stats as primary headlines should lift CTR given current 0.58% account average."
+      "title": "Leagues Campaigns — Multi-Region Proof Point Push",
+      "meta": "Two active league campaigns (US + EU). NSL case study (51.8M video views, 2× Instagram follower growth) and Islamic Solidarity Games (50K+ clips, 7.5M views) provide strong social proof for a refreshed creative test."
     },
     {
       "t": "a",
-      "title": "🔵 JORDY AI — No Active Campaign Detected",
-      "meta": "No campaign exists for JORDY AI (fan engagement agent). Sports teams audience segment is unaddressed. Given 30% M1 retention boost and 140% time-spent increase proof points, a dedicated JORDY AI campaign targeting team digital/marketing directors is a high-priority gap."
-    },
-    {
-      "t": "a",
-      "title": "🔵 BRAND GAUGE — No Active Campaign Detected",
-      "meta": "Sponsor analytics/media value measurement product has no active campaign. Leagues and broadcasters under pressure to demonstrate sponsor ROI — direct-response BRAND GAUGE campaign targeting sponsorship/commercial directors is an immediate opportunity."
+      "title": "Restore LinkedIn Analytics API Access Immediately",
+      "meta": "Per-campaign analytics are fully dark. Cannot compute CTR, CPL, frequency, or leads per campaign. Re-authorise OAuth scopes (r_ads_reporting) in LinkedIn Campaign Manager → Account Settings → Manage Access."
     }
   ],
   "spendByCampaign": {
     "labels": [
       "Website visits - Image Ads",
-      "PULSE Lead Gen US 2",
+      "PULSE Lead generation - Jan 20, 2026 - US 2",
       "leagues - US - pulse",
       "Leagues - pulse - EU",
       "broadcasters & OTT - US - ABM",
@@ -144,21 +139,21 @@
   },
   "trendData": {
     "labels": [
-      "2026-03-02",
       "2026-03-03",
       "2026-03-04",
       "2026-03-05",
       "2026-03-06",
       "2026-03-07",
-      "2026-03-08"
+      "2026-03-08",
+      "2026-03-09"
     ],
     "ctrValues": [
       0,
       0,
       0,
       0,
-      0,
       0.58,
+      0,
       0.58
     ],
     "cplValues": [
@@ -166,8 +161,8 @@
       0,
       0,
       0,
-      0,
       126.1,
+      0,
       126.1
     ]
   }

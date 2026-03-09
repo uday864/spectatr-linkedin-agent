@@ -1,100 +1,100 @@
 [
   {
     "date": "2026-03-09",
-    "adName": "Leagues US — CTR Recovery Variant",
+    "adName": "Account-Wide CTR Alert — Leagues US/EU Refresh",
     "campaign": "leagues - US - pulse",
     "product": "PULSE",
-    "diagnosis": "Account CTR dropped -18.4% WoW to 0.58%. Leagues campaigns are likely contributing given they run the most active creatives. Current hooks are product-led; replacing with outcome-led proof points from NSL and HockeyOne case studies.",
+    "diagnosis": "Account CTR dropped -18.4% WoW to 0.58% — breaches HIGH alert threshold. Campaign has been live long enough to risk creative fatigue. Refreshing with outcome-led, proof-point-first hooks tied to NSL and Islamic Solidarity Games case studies.",
     "format": "SPONSORED_STATUS_UPDATE",
     "cta": "Download Now",
     "headlines": [
       {
-        "label": "Variant A — Volume Proof",
-        "text": "51.8 million video views. One AI. 80 matches. Here’s how NSL did it."
+        "label": "Headline A — Volume Proof Point",
+        "text": "37,000 match moments. 51.8M video views. One season. Here's how NSL did it."
       },
       {
-        "label": "Variant B — Speed Hook",
-        "text": "Highlights published in seconds, not hours. 37,000+ moments. Zero editors."
+        "label": "Headline B — Speed Hook",
+        "text": "Real-time AI highlights — published in seconds, not hours. See the NSL results."
       },
       {
-        "label": "Variant C — Urgency / FOMO",
-        "text": "Your rivals are already publishing AI clips before the final whistle. Are you?"
+        "label": "Headline C — Scale Hook",
+        "text": "50,000 AI clips across 57 nations in 15 days. What could your league do?"
       }
     ],
     "bodies": [
       {
-        "label": "Body 1 — NSL Proof Point",
-        "text": "NSL ran 80 competitive matches over 7 months. PULSE generated 37,000+ match moments automatically — published to socials in real time, with zero post-production lag.\n\nResult: 51.8M video views. 2× Instagram follower growth. 110K+ likes.\n\nIf your league is still editing manually, you’re losing fans to whoever isn’t. Book a 20-minute demo →"
+        "label": "Body A — NSL Case Study Lead",
+        "text": "NSL automated coverage across 80 competitive matches — generating 37,000+ match moments and 51.8M video views in a single season. Instagram followers doubled. No extra production staff. PULSE runs in the background so your team can focus on what matters: the game. → Download the NSL case study and see the full numbers."
       },
       {
-        "label": "Body 2 — HockeyOne Proof Point",
-        "text": "HockeyOne went from manual editing to 9,500+ AI clips in a 7-week season. Published within seconds of the moment happening.\n\n9× growth in fan engagement. 264% Facebook reach increase. 500% surge in video views.\n\nYour league. Your moments. Live before the crowd leaves the stadium. See PULSE →"
+        "label": "Body B — Scale & Speed Lead",
+        "text": "The Islamic Solidarity Games published ~500 highlights daily across 57 NOC committees — 50,000+ clips over 15 days, 7.5M video views. That's AI working at a scale no production team can match. If your league is still cutting highlights manually, you're already behind. → See how PULSE handles it."
       }
     ]
   },
   {
     "date": "2026-03-09",
-    "adName": "Leagues EU — CTR Recovery Variant",
-    "campaign": "Leagues - pulse - EU",
-    "product": "PULSE",
-    "diagnosis": "EU leagues campaign mirrors US setup but operates in a different rights and language environment. Refreshing with ISG and HockeyOne international proof points more relevant to EU market context (multi-sport events, pan-European rights).",
-    "format": "SPONSORED_STATUS_UPDATE",
-    "cta": "Learn More",
-    "headlines": [
-      {
-        "label": "Variant A — Scale Proof",
-        "text": "50,000 real-time clips. 57 countries. 15 days. One AI platform."
-      },
-      {
-        "label": "Variant B — Speed / Efficiency",
-        "text": "500 highlights published daily at the Islamic Solidarity Games. No production team. Just PULSE."
-      },
-      {
-        "label": "Variant C — Pain-Led",
-        "text": "Your production team can’t cover every match. An AI that never sleeps can."
-      }
-    ],
-    "bodies": [
-      {
-        "label": "Body 1 — ISG Scale Proof",
-        "text": "At the Islamic Solidarity Games Riyadh 2025, PULSE delivered 512 daily highlights across 57 NOC committees — automatically, in real time, across 15 days.\n\n7.5M+ video views. 250K+ likes. 50K+ clips published with zero manual bottleneck.\n\nIf you’re running a league, tournament or multi-sport event in Europe, this is what your coverage infrastructure could look like. Let’s talk →"
-      },
-      {
-        "label": "Body 2 — Table Tennis England Efficiency Proof",
-        "text": "Table Tennis England saved 250+ hours in post-production in 3 months.\n\nUploads went from 5 to 15 videos per cycle. Views per video up 65%. Total views surged 105% (from 4K to 45K).\n\nSame content. Same team. Radically different output — because PULSE handles the editing. See how it works →"
-      }
-    ]
-  },
-  {
-    "date": "2026-03-09",
-    "adName": "Broadcaster ABM US — CPL Reduction Variant",
+    "adName": "Broadcaster ABM — HockeyOne Proof Point Refresh",
     "campaign": "broadcasters & OTT - US - ABM",
-    "product": "PULSE + AXIS",
-    "diagnosis": "ABM campaigns targeting small, precise broadcaster audiences are at high frequency risk given account CPL is +24.7% WoW. Fresh creative with a broadcaster-specific pain point (rights coverage gaps, AI tagging for MAM) should improve relevance score and lower CPL.",
+    "product": "PULSE",
+    "diagnosis": "Account-wide CPL spiked +24.7% and CTR fell -18.4%. ABM campaigns targeting broadcasters are high-value but high-frequency-risk. Rotating in HockeyOne proof points (10.6M views, 264% Facebook reach, 500% video view surge) to combat creative fatigue with fresh, specific social proof.",
     "format": "SPONSORED_STATUS_UPDATE",
-    "cta": "Request Demo",
+    "cta": "Get the Case Study",
     "headlines": [
       {
-        "label": "Variant A — Coverage Gap Pain",
-        "text": "You hold the rights. You can’t cover every match. PULSE can."
+        "label": "Headline A — Reach Spike Hook",
+        "text": "264% more reach. 500% more video views. 7 weeks. This is what AI does for broadcasters."
       },
       {
-        "label": "Variant B — Asset Management Pain",
-        "text": "Your archive is worth millions. AXIS tags and surfaces it in seconds."
+        "label": "Headline B — Output Volume Hook",
+        "text": "9,500 AI clips. 10.6M video views. One hockey season. No extra edit suite."
       },
       {
-        "label": "Variant C — Combined Value Prop",
-        "text": "AI highlights in seconds. 100% accurate asset tagging. Built for broadcast."
+        "label": "Headline C — Engagement Hook",
+        "text": "Fan engagement up 9×. Highlights published in seconds. HockeyOne's 2025 playbook — yours to steal."
       }
     ],
     "bodies": [
       {
-        "label": "Body 1 — PULSE for Broadcasters",
-        "text": "Rights holders and OTT platforms are sitting on thousands of hours of content they can’t monetise fast enough.\n\nPULSE generates broadcast-ready highlight clips within seconds of the moment happening — across 15+ sports, at any scale.\n\nHockeyOne saw 500% Facebook video view growth. NSL hit 51.8M views. These were league social channels — imagine what a broadcaster’s distribution can do.\n\nLet’s show you a live demo with your content →"
+        "label": "Body A — Broadcaster Efficiency Lead",
+        "text": "HockeyOne generated 9,500+ AI-powered clips across a 7-week season — each published within seconds of the moment happening. Facebook reach jumped 264%. Instagram reach grew 111%. YouTube views surged 308%. Fan likes went from 18K to 170K. All without scaling the production team. If your broadcast operation is still doing this manually, PULSE is built for you. → Get the HockeyOne case study."
       },
       {
-        "label": "Body 2 — AXIS for Asset Management",
-        "text": "How long does it take your team to find a specific play from last season? Hours? Days?\n\nAXIS delivers 100% accurate AI tagging across your entire media library — searchable by sport, moment type, player, and more. Instantly.\n\n250+ hours saved in 3 months at Table Tennis England. Scaled to broadcast-grade libraries, the efficiency gain is transformational.\n\nBook a 15-minute walkthrough →"
+        "label": "Body B — Speed & Scale Lead",
+        "text": "In 2025, HockeyOne's highlights were live before the crowd stopped cheering. 10.6M video views across Facebook, Instagram, TikTok, and YouTube — driven by AI that runs 24/7 across every match, every moment. For broadcasters and OTT platforms, that's the competitive edge that matters. → Download the full case study."
+      }
+    ]
+  },
+  {
+    "date": "2026-03-09",
+    "adName": "PULSE Lead Gen US 2 — Table Tennis England Efficiency Refresh",
+    "campaign": "PULSE Lead generation - Jan 20, 2026 - US 2",
+    "product": "PULSE",
+    "diagnosis": "Campaign launched January 20, 2026 — now ~48 days old and at high risk of creative fatigue, consistent with the account-wide CTR decline. Introducing a cost-efficiency and output-volume angle using Table Tennis England results to reach operations and content teams who respond to ROI/time-saving narratives.",
+    "format": "SPONSORED_STATUS_UPDATE",
+    "cta": "See How It Works",
+    "headlines": [
+      {
+        "label": "Headline A — Time Saving Hook",
+        "text": "250+ hours saved in post-production. 3× more videos published. +105% total views in 90 days."
+      },
+      {
+        "label": "Headline B — Output Growth Hook",
+        "text": "From 5 videos a week to 15 — without adding headcount. Table Tennis England's 90-day result."
+      },
+      {
+        "label": "Headline C — Views Growth Hook",
+        "text": "+105% total views. +65% views per video. 90 days. No new production staff."
+      }
+    ],
+    "bodies": [
+      {
+        "label": "Body A — Ops Efficiency Lead",
+        "text": "Table Tennis England was producing 5 videos a week. Three months after deploying PULSE, they were publishing 15 — while cutting 250+ hours of post-production time. Total views jumped from 4K to 45K (+105%). Reels and Shorts engagement significantly improved. If your content team is spending more time editing than creating, PULSE fixes that. → See exactly how it works."
+      },
+      {
+        "label": "Body B — ROI Lead",
+        "text": "What if your production team could do 3× the output in the same time? Table Tennis England went from 5 to 15 weekly videos, saved 250+ post-production hours, and grew total views by 105% — all within 90 days of going live with AI highlights. For leagues and sports organisations managing content at scale, this is what operational leverage looks like. → Book a 20-minute walkthrough."
       }
     ]
   },
