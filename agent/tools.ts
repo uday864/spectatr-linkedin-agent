@@ -96,7 +96,7 @@ export const TOOLS: Anthropic.Tool[] = [
           description: "Per-campaign metrics for current month-to-date (same shape as campaigns, delta fields = null)",
         },
       },
-      required: ["kpis", "campaigns", "alerts", "opportunities"],
+      required: ["kpis", "campaigns", "alerts", "opportunities", "kpis30d", "camps30d", "kpisMtd", "campsMtd"],
     },
   },
   {

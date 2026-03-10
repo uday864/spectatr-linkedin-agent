@@ -95,7 +95,7 @@ All 5 save_ calls are required. Use exact API numbers. Never round or estimate m
   let iter = 0;
   let res = await client.messages.create({
     model: "claude-sonnet-4-6",
-    max_tokens: 8096,
+    max_tokens: 16000,
     system,
     tools: TOOLS,
     messages,
@@ -122,7 +122,7 @@ All 5 save_ calls are required. Use exact API numbers. Never round or estimate m
     messages.push({ role: "user", content: results });
     res = await client.messages.create({
       model: "claude-sonnet-4-6",
-      max_tokens: 8096,
+      max_tokens: 16000,
       system,
       tools: TOOLS,
       messages,
