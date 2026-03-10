@@ -28,6 +28,30 @@ export const TOOLS: Anthropic.Tool[] = [
     },
   },
   {
+    name: "linkedin_get_posts",
+    description: "Fetch recent organic posts from the LinkedIn organization page along with engagement metrics (likes, comments, shares, impressions, clicks). Returns up to 20 most recent posts. Requires LI_ORG_ID in .env and r_organization_social OAuth scope.",
+    input_schema: {
+      type: "object" as const,
+      properties: {},
+      required: [],
+    },
+  },
+  {
+    name: "save_posts",
+    description: "Save organic LinkedIn post performance data to posts.json for the dashboard Content tab.",
+    input_schema: {
+      type: "object" as const,
+      properties: {
+        posts: {
+          type: "array",
+          description: "Array of post objects. Each must have: id, date (YYYY-MM-DD), text, likes, comments, shares, impressions, clicks, url.",
+          items: { type: "object" },
+        },
+      },
+      required: ["posts"],
+    },
+  },
+  {
     name: "linkedin_get_creatives",
     description: "Fetch ad creative details (copy, headline, CTA)",
     input_schema: {
@@ -153,6 +177,52 @@ export const TOOLS: Anthropic.Tool[] = [
         markdown: { type: "string" },
       },
       required: ["markdown"],
+    },
+  },
+  {
+    name: "fetch_sports_news",
+    description: "Fetch top recent sports industry news from RSS feeds (SportsPro, Front Office Sports, Sportico, Insider Sport, SVG Europe). Returns up to 12 articles sorted by most recent.",
+    input_schema: {
+      type: "object" as const,
+      properties: {},
+      required: [],
+    },
+  },
+  {
+    name: "save_generated_posts",
+    description: "Save 3 AI-generated LinkedIn post drafts for today to generated_posts.json. Each post includes full copy, creative brief, and news source.",
+    input_schema: {
+      type: "object" as const,
+      properties: {
+        posts: {
+          type: "array",
+          description: "Array of exactly 3 post objects",
+          items: {
+            type: "object",
+            properties: {
+              type:         { type: "string", enum: ["product", "news"], description: "'product' for product-focused post, 'news' for news/trend post" },
+              format_type:  { type: "string", description: "One of: THE PROVOCATION, THE DATA REFRAME, THE MATCHDAY SCENARIO, THE INDUSTRY DIAGNOSIS, THE NUMBERS POST" },
+              text:         { type: "string", description: "Full LinkedIn post copy including hashtags" },
+              newsHeadline: { type: "string", description: "Headline of the source news article" },
+              newsUrl:      { type: "string", description: "URL of the source news article" },
+              newsSource:   { type: "string", description: "Publication name e.g. SportsPro" },
+              product:      { type: "string", description: "PULSE, AXIS, JORDY AI, or empty string" },
+              creative: {
+                type: "object",
+                description: "Visual brief for the Canva-style mockup card",
+                properties: {
+                  background: { type: "string", description: "CSS linear-gradient or hex color for card background" },
+                  headline:   { type: "string", description: "Bold image headline, max 8 words" },
+                  subtext:    { type: "string", description: "Supporting line, max 12 words" },
+                  stat:       { type: "string", description: "Most compelling number e.g. '9,500+ clips'" },
+                  emoji:      { type: "string", description: "Single emoji capturing the post theme" },
+                },
+              },
+            },
+          },
+        },
+      },
+      required: ["posts"],
     },
   },
 ];

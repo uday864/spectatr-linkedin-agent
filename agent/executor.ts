@@ -2,9 +2,11 @@ import * as fs from "fs";
 import * as path from "path";
 import { LinkedInClient } from "../tools/linkedin";
 import { Storage } from "../tools/storage";
+import { RSSFetcher } from "../tools/rss";
 
 const linkedin = new LinkedInClient();
 const storage = new Storage();
+const rss = new RSSFetcher();
 const today = new Date().toISOString().split("T")[0];
 
 export async function executeTool(
@@ -24,6 +26,16 @@ export async function executeTool(
             (input.granularity as string | undefined) ?? "DAILY"
           )
         );
+
+      case "linkedin_get_posts": {
+        const posts = await linkedin.getOrgPosts();
+        storage.write("posts.json", posts);
+        return JSON.stringify({ ok: true, count: (posts as unknown[]).length });
+      }
+
+      case "save_posts":
+        // posts.json is already saved by linkedin_get_posts; this is a no-op
+        return JSON.stringify({ ok: true });
 
       case "linkedin_get_creatives":
         return JSON.stringify(await linkedin.getCreatives());
@@ -91,6 +103,23 @@ export async function executeTool(
         );
         console.log(`  📄 reports/${today}.md`);
         return JSON.stringify({ ok: true });
+      }
+
+      case "fetch_sports_news":
+        return JSON.stringify(await rss.fetchNews());
+
+      case "save_generated_posts": {
+        let posts: unknown = input.posts;
+        // Unwrap any string encoding Claude may introduce
+        while (typeof posts === "string") { try { posts = JSON.parse(posts); } catch { break; } }
+        if (!Array.isArray(posts)) posts = [];
+        const postsArr = posts as unknown[];
+        const existing = storage.read<{ date: string; posts: unknown[] }[]>("generated_posts.json", []);
+        const filtered = existing.filter((r) => r.date !== today);
+        filtered.push({ date: today, posts: postsArr });
+        filtered.sort((a, b) => b.date.localeCompare(a.date));
+        storage.write("generated_posts.json", filtered.slice(0, 30));
+        return JSON.stringify({ ok: true, count: (posts as unknown[]).length });
       }
 
       default:

@@ -1,82 +1,82 @@
 [
   {
     "date": "2026-03-10",
-    "name": "Head of Digital Content — Tier 1 Sports Leagues (US)",
-    "angle": "Content operations leader at a professional league frustrated by slow highlight turnaround and limited social reach",
-    "why": "Current US league campaigns (leagues - US - pulse) are generating near-zero delivery (2 impressions / Rs 3.67 in 7d). This tightly-scoped ABM segment targets the decision-maker most likely to own the PULSE buying decision at a league level, and has not been tested as a standalone audience.",
+    "name": "OTT Platform Heads — Tier 2 Sports Rights Holders (US)",
+    "angle": "OTT platforms holding secondary or niche sports rights struggling to justify content production costs vs subscriber growth",
+    "why": "broadcasters & OTT - US - ABM is spending ₹13,021 with zero leads. The current audience definition may be too broad or hitting wrong seniority levels. This segment targets decision-makers at the exact moment they are evaluating content ROI — VP/Director level at sports OTT and streaming properties.",
+    "product": "PULSE",
+    "titles": [
+      "VP of Content",
+      "Head of Digital Media",
+      "Director of Streaming",
+      "Head of Sports Content",
+      "VP Product — Sports",
+      "Director of OTT"
+    ],
+    "industries": [
+      "Online Audio and Video Media",
+      "Broadcast Media Production and Distribution",
+      "Entertainment Providers",
+      "Sports and Recreation Instruction"
+    ],
+    "size": "Estimated 8,000–15,000 on LinkedIn (US)",
+    "geo": "United States",
+    "headline": "9,500 clips. 7 weeks. Published in seconds.",
+    "body": "Hockey One ran a full season on one AI platform — 10.6M views, 9x fan engagement, zero post-production staff. If your OTT team is still manually producing highlights, here's the model that changes that.",
+    "cta": "Book a Demo",
+    "reason": "Current US broadcaster campaign has 0 leads on ₹13K spend. Narrowing to OTT-specific titles with content ROI framing matches PULSE's core value proposition more precisely than a broad broadcaster audience."
+  },
+  {
+    "date": "2026-03-10",
+    "name": "National Federation Digital Directors — Europe (Leagues + NOC Angle)",
+    "angle": "National sports federations in Europe managing multi-sport or multi-competition digital content with small teams and growing social media mandates",
+    "why": "Leagues - pulse - EU has 0% CTR over 7 days. European federation digital teams are a highly specific ICP — they run exactly the workflow PULSE replaces. The Islamic Solidarity Games proof point (50,000+ clips, 57 NOCs, 15 days) is directly relevant and not currently being used in EU targeting.",
     "product": "PULSE",
     "titles": [
       "Head of Digital",
-      "Director of Content",
-      "VP Digital Media",
+      "Director of Communications",
+      "Head of Media",
+      "Digital Content Manager",
       "Head of Social Media",
-      "Director of Broadcasting",
-      "Chief Digital Officer"
+      "Content Director"
     ],
     "industries": [
-      "Sports",
-      "Entertainment",
-      "Media & Entertainment"
+      "Sports and Recreation Instruction",
+      "Spectator Sports",
+      "Civic and Social Organizations"
     ],
-    "size": "Est. 8,000–15,000 (US LinkedIn, Seniority: Director+, company size 51–5000)",
-    "geo": "United States",
-    "headline": "37,000 match moments. 51.8M views. One season.",
-    "body": "NSL automated real-time highlight delivery across 80 matches — 37K+ clips, 51.8M video views, 2× Instagram follower growth in a single season.\n\nIf your league is still clipping manually, PULSE eliminates the bottleneck. Clips live in seconds. Every sport. Every moment.\n\n👉 See the NSL case study.",
-    "cta": "Download Now",
-    "reason": "leagues - US - pulse is effectively dormant (2 impressions, 7d). A fresh ICP-matched audience with a specific case-study hook will generate signal to determine whether the problem is creative, audience, or budget."
+    "size": "Estimated 12,000–20,000 on LinkedIn (UK, Germany, France, Netherlands, Spain, Italy)",
+    "geo": "United Kingdom, Germany, France, Netherlands, Spain, Italy",
+    "headline": "512 daily highlight packages. 57 nations. 15 days. Zero manual editing.",
+    "body": "At the Islamic Solidarity Games, every NOC received automated, personalised highlights — published daily across 15 days. 7.5M video views. 250,000+ likes. Your federation's next competition could run the same way.",
+    "cta": "See How It Works",
+    "reason": "Zero performance from current EU leagues campaign suggests the creative or audience is misaligned. This segment leads with the multi-NOC Games proof point which speaks directly to the scale challenge European federation digital teams face — without requiring big production budgets."
   },
   {
     "date": "2026-03-10",
-    "name": "Head of Sponsorship & Commercial — European Sports Properties",
-    "angle": "Sponsorship revenue leader who needs to prove media value to sponsors but lacks the measurement infrastructure",
-    "why": "BRAND GAUGE has no dedicated active campaign. The EU Leagues campaign (Leagues - pulse - EU) has 0 clicks and 0 leads in 7d despite Rs 961.51 spend — suggesting audience or message mismatch. A sponsorship-specific segment with a commercial ROI message tests a new product angle in the same EU geography.",
-    "product": "BRAND GAUGE",
+    "name": "Sports League Commissioner & Operations Executives — North America",
+    "angle": "League commissioners, COOs and heads of operations at emerging or growth-stage professional leagues in North America evaluating technology to scale content without scaling headcount",
+    "why": "leagues - US - pulse is nearly inactive (₹3.67, 2 impressions). The US leagues audience is the highest-intent ICP for PULSE but the campaign cannot win auctions. This new audience targets the exec decision-maker layer — not just digital managers — framing PULSE as a league-growth infrastructure decision, not a content tool.",
+    "product": "PULSE",
     "titles": [
-      "Head of Sponsorship",
-      "Sponsorship Manager",
-      "Commercial Director",
-      "Head of Partnerships",
-      "VP Commercial",
-      "Director of Revenue"
+      "Commissioner",
+      "Chief Operating Officer",
+      "President",
+      "VP of Leagues",
+      "Head of League Operations",
+      "SVP Digital & Media"
     ],
     "industries": [
-      "Sports",
-      "Entertainment",
-      "Events Services"
+      "Spectator Sports",
+      "Sports and Recreation Instruction",
+      "Entertainment Providers"
     ],
-    "size": "Est. 10,000–20,000 (EU LinkedIn, UK/DE/FR/NL/ES, Seniority: Manager+)",
-    "geo": "United Kingdom, Germany, France, Netherlands, Spain",
-    "headline": "Prove sponsor ROI in real time — not in a post-season deck.",
-    "body": "Sponsors demand proof of media value faster than ever. BRAND GAUGE delivers real-time sponsor analytics — AI-powered media measurement that tracks every logo exposure, calculates equivalent media value, and gives you data you can put in front of a sponsor the same day.\n\nStop losing renewal conversations because your measurement arrives three months late.\n\n👉 Book a 20-minute demo.",
-    "cta": "Request Demo",
-    "reason": "Untested product angle (BRAND GAUGE) in a geography where we already have campaign infrastructure (EU). Low incremental cost to test; high strategic value if sponsorship leaders convert."
-  },
-  {
-    "date": "2026-03-10",
-    "name": "CTO and Head of Technology — OTT Platforms and Streaming Services",
-    "angle": "Technology decision-maker evaluating AI infrastructure for content automation and media asset management",
-    "why": "The broadcaster ABM campaigns focus on content/digital roles. The CTO/tech buyer controls the build-vs-buy decision for AI highlight generation and MAM. AXIS's 100% AI tagging accuracy is a strong technical proof point that has not been tested with a technology-focused message in the US or EU.",
-    "product": "AXIS",
-    "titles": [
-      "Chief Technology Officer",
-      "Head of Technology",
-      "VP Engineering",
-      "Head of Product",
-      "Director of Platform Engineering",
-      "Head of Media Technology"
-    ],
-    "industries": [
-      "Broadcast Media",
-      "Online Media",
-      "Internet",
-      "Entertainment"
-    ],
-    "size": "Est. 12,000–25,000 (US + EU LinkedIn, company size 51–10,000)",
-    "geo": "United States, United Kingdom, Germany",
-    "headline": "100% AI tagging accuracy. Every asset. Zero manual QA.",
-    "body": "Media teams waste thousands of hours annually on manual asset tagging and content retrieval.\n\nAXIS delivers AI-powered media asset management with 100% tagging accuracy — automatically organising every clip, highlight, and broadcast asset so your team can find, licence, and distribute content instantly.\n\nBuilding this in-house takes years. AXIS is live in weeks.\n\n👉 See a technical walkthrough.",
-    "cta": "Watch Demo",
-    "reason": "Untested audience persona (CTO/tech buyer) for AXIS. Differentiates from the content-leader message currently running. Technical proof points (100% accuracy, fast deployment) are highly credible to this segment."
+    "size": "Estimated 5,000–9,000 on LinkedIn (US, Canada)",
+    "geo": "United States, Canada",
+    "headline": "NSL's inaugural season: 51.8M views. No production crew.",
+    "body": "Canada's first professional women's soccer league used AI to capture 37,000+ moments across 80 matches — 51.8M video views, 2x Instagram growth, zero venue production costs. If you're building a league that needs to punch above its media weight, this is how.",
+    "cta": "Get the Case Study",
+    "reason": "Targeting decision-maker executives rather than digital managers opens a new persuasion angle — league growth, cost efficiency, and investor-grade content metrics — which resonates at commissioner/COO level and hasn't been tested in the current US leagues targeting."
   },
   {
     "date": "2026-03-09",

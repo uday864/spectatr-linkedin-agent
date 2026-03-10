@@ -7,7 +7,7 @@
     "avgCpl": null,
     "impressions": 1073,
     "spendDelta": -13.58,
-    "ctrDelta": -32.75,
+    "ctrDelta": -32.74,
     "leadsDelta": null,
     "cplDelta": null,
     "imprDelta": -10.81
@@ -22,18 +22,29 @@
       "cpl": null,
       "cplD": null,
       "leads": 0,
-      "freq": 1.57
+      "freq": 1.211
     },
     {
       "name": "Leagues - pulse - EU",
       "st": "a",
       "spend": 961.51,
       "ctr": 0,
-      "ctrD": null,
+      "ctrD": 0,
       "cpl": null,
       "cplD": null,
       "leads": 0,
-      "freq": 1.62
+      "freq": 1.377
+    },
+    {
+      "name": "leagues - US - pulse",
+      "st": "a",
+      "spend": 3.67,
+      "ctr": 0,
+      "ctrD": 0,
+      "cpl": null,
+      "cplD": null,
+      "leads": 0,
+      "freq": null
     },
     {
       "name": "broadcasters & OTT - EU - ABM",
@@ -45,17 +56,6 @@
       "cplD": null,
       "leads": 0,
       "freq": 1.75
-    },
-    {
-      "name": "leagues - US - pulse",
-      "st": "a",
-      "spend": 3.67,
-      "ctr": 0,
-      "ctrD": null,
-      "cpl": null,
-      "cplD": null,
-      "leads": 0,
-      "freq": null
     },
     {
       "name": "Website visits - Image Ads",
@@ -83,45 +83,50 @@
   "alerts": [
     {
       "t": "r",
-      "title": "Account CTR dropped 32.75% WoW",
-      "meta": "0.28% this week vs 0.42% prior week — exceeds 15% alert threshold across all active campaigns"
+      "title": "CTR collapsed -32.74% WoW across account",
+      "meta": "Account CTR fell from 0.4157% (Feb 24–Mar 3) to 0.2796% (Mar 3–9). Exceeds -15% alert threshold. Driven primarily by broadcasters & OTT - US - ABM (-31.34%) and broadcasters & OTT - EU - ABM (-100%)."
     },
     {
       "t": "r",
-      "title": "broadcasters & OTT - US - ABM: CTR down 31.34% WoW",
-      "meta": "CTR fell from 0.48% (prior 7d) to 0.33% (current 7d) on Rs 13,020.66 spend"
+      "title": "Zero leads on ₹13,020 spend — broadcasters & OTT - US - ABM",
+      "meta": "₹13,020.66 spent in 7 days with 0 oneClickLeads and 0 conversions. Campaign is consuming 93% of account budget with no pipeline output."
     },
     {
       "t": "r",
-      "title": "broadcasters & OTT - EU - ABM: CTR down 100% WoW",
-      "meta": "0 clicks this week vs 1 click prior period; spend collapsed from Rs 1,376.98 to Rs 25.75 — check campaign budget & delivery"
+      "title": "Zero leads on ₹962 spend — Leagues - pulse - EU",
+      "meta": "₹961.51 spent over 7 days with 0 leads generated. CTR is 0.00% — no clicks at all. Creative or targeting may be misaligned."
     },
     {
       "t": "r",
-      "title": "Zero leads across all campaigns — Rs 14,011.59 spend with 0 conversions (7d)",
-      "meta": "All 6 campaigns returned 0 oneClickLeads and 0 externalWebsiteConversions over the 7-day window"
+      "title": "broadcasters & OTT - EU - ABM CTR dropped -100% WoW",
+      "meta": "0 clicks on 14 impressions this week vs 1 click on 200 impressions prior week. Campaign spend also down -98.1% — delivery has nearly stopped."
     },
     {
       "t": "a",
-      "title": "broadcasters & OTT - EU - ABM: Budget under-delivery >98%",
-      "meta": "Spend Rs 25.75 this week vs Rs 1,376.98 prior week — possible budget cap, audience exhaustion, or ad rejection issue"
+      "title": "leagues - US - pulse nearly dark — ₹3.67 spend in 7 days",
+      "meta": "Only 2 impressions and ₹3.67 spend in the 7d window. Campaign is not delivering meaningfully. Review budget cap or bid settings."
     }
   ],
   "opportunities": [
     {
-      "t": "g",
-      "title": "broadcasters & OTT - US - ABM leads the account in CTR (0.33%) and spend — creative refresh could recover the 31% CTR drop",
-      "meta": "3 clicks on 911 impressions; freq=1.57 means audience headroom remains. A/B test new social-proof headlines to lift CTR back toward 0.48%"
+      "t": "r",
+      "title": "Rebalance budget — 93% concentrated in one campaign",
+      "meta": "broadcasters & OTT - US - ABM is taking ₹13,021 of ₹14,012 total 7d spend. Zero leads produced. Reallocate 30-40% to Leagues - pulse - EU or reactivate PULSE Lead generation - Jan 20, 2026 - US 2 which has untapped audience."
     },
     {
       "t": "a",
-      "title": "PULSE Lead gen US 2 — Rs 11,987 spent over 30 days, 0 leads: urgent audience + creative overhaul",
-      "meta": "403 impressions, 1 click, 0 leads in 30d. CPM-heavy delivery with no conversion signal. Rebuild with tighter job-title targeting and a lead-gen specific offer"
+      "title": "Audit landing page / lead form — zero leads across all 30 days",
+      "meta": "No oneClickLeads or conversions recorded across any campaign in the 30-day window (₹45,531 total spend). Likely a lead form or post-click experience issue, not purely a targeting problem."
+    },
+    {
+      "t": "g",
+      "title": "Reactivate PULSE Lead generation - Jan 20, 2026 - US 2 with fresh creative",
+      "meta": "Campaign has 403 impressions and 1 click over 30 days but zero recent delivery. US audience showed 0.2481% CTR — above EU campaigns. Fresh video creative tied to HockeyOne or NSL case study could reignite performance."
     }
   ],
   "kpis30d": {
     "totalSpend": 45531.23,
-    "avgCtr": 0.3933,
+    "avgCtr": 0.3932,
     "totalLeads": 0,
     "avgCpl": null,
     "impressions": 2797,
@@ -144,10 +149,10 @@
       "freq": null
     },
     {
-      "name": "PULSE Lead generation - Jan 20, 2026 - US 2",
+      "name": "Leagues - pulse - EU",
       "st": "a",
-      "spend": 11986.74,
-      "ctr": 0.2482,
+      "spend": 5071.59,
+      "ctr": 0.4193,
       "ctrD": null,
       "cpl": null,
       "cplD": null,
@@ -155,10 +160,10 @@
       "freq": null
     },
     {
-      "name": "Leagues - pulse - EU",
+      "name": "leagues - US - pulse",
       "st": "a",
-      "spend": 5071.59,
-      "ctr": 0.4193,
+      "spend": 26.72,
+      "ctr": 0,
       "ctrD": null,
       "cpl": null,
       "cplD": null,
@@ -177,10 +182,10 @@
       "freq": null
     },
     {
-      "name": "leagues - US - pulse",
+      "name": "PULSE Lead generation - Jan 20, 2026 - US 2",
       "st": "a",
-      "spend": 26.72,
-      "ctr": 0,
+      "spend": 11986.74,
+      "ctr": 0.2481,
       "ctrD": null,
       "cpl": null,
       "cplD": null,
@@ -235,9 +240,9 @@
       "freq": null
     },
     {
-      "name": "broadcasters & OTT - EU - ABM",
+      "name": "leagues - US - pulse",
       "st": "a",
-      "spend": 73.33,
+      "spend": 3.67,
       "ctr": 0,
       "ctrD": null,
       "cpl": null,
@@ -246,9 +251,9 @@
       "freq": null
     },
     {
-      "name": "leagues - US - pulse",
+      "name": "broadcasters & OTT - EU - ABM",
       "st": "a",
-      "spend": 3.67,
+      "spend": 73.33,
       "ctr": 0,
       "ctrD": null,
       "cpl": null,
@@ -282,30 +287,33 @@
   "spendByCampaign": {
     "labels": [
       "broadcasters & OTT - US - ABM",
-      "PULSE Lead generation - Jan 20, 2026 - US 2",
       "Leagues - pulse - EU",
       "broadcasters & OTT - EU - ABM",
       "leagues - US - pulse",
-      "Website visits - Image Ads"
+      "Website visits - Image Ads",
+      "PULSE Lead generation - Jan 20, 2026 - US 2"
     ],
     "values": [
-      26152.2,
-      11986.74,
-      5071.59,
-      2293.98,
-      26.72,
+      13020.66,
+      961.51,
+      25.75,
+      3.67,
+      0,
       0
     ]
   },
   "trendData": {
     "labels": [
-      "2026-03-09"
+      "2026-03-09",
+      "2026-03-10"
     ],
     "ctrValues": [
-      0.3725
+      0.3725,
+      0.2796
     ],
     "cplValues": [
-      null
+      0,
+      0
     ]
   }
 }

@@ -5,7 +5,8 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Spectatr.ai — Ad Intelligence</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@400;500;700;800;900&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -15,10 +16,11 @@
   --li:#0A66C2;--li2:#1d7fd4;
   --green:#00c48c;--red:#f0503a;--amber:#f0a030;--purple:#8b5cf6;
   --tx:#e2e6f0;--mu:#5a6280;--mu2:#3d4460;
-  --mono:'Fira Code',monospace;--sans:'Cabinet Grotesk',sans-serif
+  --mono:'Fira Code',monospace;--sans:'Inter',sans-serif;--title:'Plus Jakarta Sans',sans-serif
 }
 body{background:var(--bg);color:var(--tx);font-family:var(--sans);font-size:14px;min-height:100vh}
-.shell{display:grid;grid-template-columns:210px 1fr;grid-template-rows:52px 1fr;min-height:100vh}
+h1,h2,h3,h4,.ph h2,.card .ch h3{font-family:var(--title)}
+.shell{display:grid;grid-template-columns:1fr;grid-template-rows:52px 1fr;min-height:100vh}
 
 /* topbar */
 .top{grid-column:1/-1;background:var(--s1);border-bottom:1px solid var(--b1);padding:0 22px;height:52px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
@@ -40,26 +42,16 @@ body{background:var(--bg);color:var(--tx);font-family:var(--sans);font-size:14px
 .bg{background:transparent;border:1px solid var(--b2);color:var(--mu)}.bg:hover{color:var(--tx);border-color:var(--mu)}
 .bgrn{background:var(--green);color:#000;font-weight:800}.bgrn:hover{opacity:.9}
 
-/* sidebar */
-.side{background:var(--s1);border-right:1px solid var(--b1);padding:16px 0;display:flex;flex-direction:column}
-.ns{padding:0 10px;margin-top:12px}
-.ns:first-child{margin-top:0}
-.nl{font-family:var(--mono);font-size:9px;color:var(--mu2);letter-spacing:.15em;text-transform:uppercase;padding:0 8px;margin-bottom:4px}
-.ni{display:flex;align-items:center;gap:8px;padding:8px 10px;border-radius:7px;color:var(--mu);font-size:13px;font-weight:500;cursor:pointer;transition:all .15s;position:relative}
-.ni:hover{color:var(--tx);background:var(--s3)}
-.ni.on{color:var(--tx);background:var(--s3)}
-.ni.on::before{content:'';position:absolute;left:0;top:50%;transform:translateY(-50%);width:2px;height:60%;background:var(--li);border-radius:2px}
-.nc{margin-left:auto;padding:1px 6px;border-radius:8px;font-family:var(--mono);font-size:9px}
-.nc-r{background:rgba(240,80,58,.2);color:var(--red)}
-.nc-g{background:rgba(0,196,140,.15);color:var(--green)}
-.nc-b{background:rgba(10,102,194,.2);color:#5ba4d4}
-.sfoot{margin-top:auto;padding:12px 10px 0;border-top:1px solid var(--b1)}
-.sfc{background:var(--s2);border:1px solid var(--b1);border-radius:8px;padding:11px}
-.sfc strong{color:var(--green);display:block;font-size:11px;margin-bottom:3px}
-.sfc p{font-size:11px;color:var(--mu);line-height:1.5}
+/* dropdown nav */
+.ddwrap{position:relative}
+.ddmenu{position:absolute;top:calc(100% + 6px);left:0;background:var(--s2);border:1px solid var(--b2);border-radius:9px;padding:5px;min-width:190px;display:none;z-index:150;box-shadow:0 8px 24px rgba(0,0,0,.4)}
+.ddwrap.open .ddmenu{display:block}
+.ddmenu button{display:block;width:100%;text-align:left;padding:8px 12px;border:none;background:transparent;color:var(--mu);font-family:var(--sans);font-size:13px;font-weight:500;border-radius:5px;cursor:pointer;transition:all .1s}
+.ddmenu button:hover{background:var(--s3);color:var(--tx)}
+.ddmenu button.on{color:var(--tx);background:var(--s3)}
 
 /* main */
-.main{overflow-y:auto}
+.main{overflow-y:auto;grid-column:1/-1}
 .page{display:none;padding:22px;animation:fi .2s ease}
 .page.on{display:block}
 @keyframes fi{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:translateY(0)}}
@@ -200,6 +192,80 @@ tbody tr:hover td{background:rgba(255,255,255,.02)}
 .ic.pos{background:rgba(0,196,140,.07);border-color:rgba(0,196,140,.2);color:var(--green)}
 .ic.neg{background:rgba(240,80,58,.07);border-color:rgba(240,80,58,.2);color:var(--red)}
 
+/* content tab */
+.ckrow{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:14px}
+.prow{display:grid;grid-template-columns:3fr 2fr;gap:12px;margin-bottom:14px}
+.post-card{background:var(--s2);border:1px solid var(--b1);border-radius:8px;padding:13px;position:relative;margin-bottom:8px}
+.post-card:last-child{margin-bottom:0}
+.post-rank{position:absolute;top:10px;right:10px;font-family:var(--mono);font-size:9px;padding:2px 7px;border-radius:4px}
+.rank-top{background:rgba(0,196,140,.15);color:var(--green)}
+.rank-bot{background:rgba(240,80,58,.12);color:var(--red)}
+.post-text{font-size:12px;color:var(--tx);line-height:1.55;margin-bottom:9px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.post-stats{display:flex;gap:12px;flex-wrap:wrap}
+.pstat{font-family:var(--mono);font-size:10px;color:var(--mu)}
+.pstat strong{color:var(--tx)}
+.eng-rate{font-family:var(--mono);font-size:11px;font-weight:700;color:var(--green);margin-bottom:4px}
+.hmap{display:grid;grid-template-columns:repeat(7,1fr);gap:5px;padding:6px 0}
+.hday{text-align:center}
+.hday-lbl{font-family:var(--mono);font-size:9px;color:var(--mu);margin-bottom:4px;text-transform:uppercase}
+.hcell{height:40px;border-radius:5px;display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:9px;font-weight:600}
+.insight{display:flex;gap:10px;align-items:flex-start;padding:10px 13px;border-radius:7px;margin-bottom:7px;border:1px solid}
+.insight.pos{background:rgba(0,196,140,.04);border-color:rgba(0,196,140,.15)}
+.insight.neg{background:rgba(240,80,58,.04);border-color:rgba(240,80,58,.12)}
+.insight-icon{font-size:16px;flex-shrink:0;margin-top:-1px}
+.insight-text{font-size:12px;color:var(--tx);line-height:1.5}
+/* create tab */
+.cr-select{background:var(--s2);border:1px solid var(--b1);color:var(--tx);font-family:var(--mono);font-size:11px;padding:5px 9px;border-radius:6px;cursor:pointer}
+.post-draft-card{display:grid;grid-template-columns:1fr 300px;gap:16px;background:var(--s1);border:1px solid var(--b1);border-radius:10px;padding:18px;margin-bottom:16px}
+.pdc-left{display:flex;flex-direction:column;gap:10px}
+.pdc-meta{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.post-type-badge{font-family:var(--mono);font-size:9px;font-weight:700;padding:3px 9px;border-radius:4px;text-transform:uppercase;letter-spacing:.5px}
+.ptb-product{background:rgba(10,102,194,.2);color:#4d9de0}
+.ptb-news{background:rgba(0,196,140,.15);color:var(--green)}
+.post-format-tag{font-family:var(--mono);font-size:9px;color:var(--mu);background:var(--s2);padding:2px 7px;border-radius:4px}
+.news-chip{font-family:var(--mono);font-size:9px;color:var(--li2);display:flex;align-items:center;gap:4px}
+.news-chip a{color:var(--li2);text-decoration:none}
+.news-chip a:hover{text-decoration:underline}
+.post-draft-text{font-size:13px;color:var(--tx);line-height:1.7;white-space:pre-wrap;background:var(--s2);border:1px solid var(--b1);border-radius:7px;padding:14px;flex:1;min-height:120px}
+.copy-btn{align-self:flex-start;background:var(--s3);border:1px solid var(--b1);color:var(--tx);font-family:var(--mono);font-size:10px;padding:6px 14px;border-radius:5px;cursor:pointer;transition:background .15s}
+.copy-btn:hover{background:var(--li)}
+.copy-btn.copied{background:var(--green);color:#fff;border-color:var(--green)}
+.pdc-right{display:flex;align-items:center;justify-content:center}
+.creative-card{width:264px;height:264px;border-radius:12px;position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;padding:18px;flex-shrink:0}
+.cc-logo{position:absolute;top:13px;left:13px;font-size:10px;font-weight:700;color:rgba(255,255,255,.75);font-family:var(--mono);letter-spacing:.5px}
+.cc-product{position:absolute;top:13px;right:13px;font-size:9px;color:rgba(255,255,255,.6);font-family:var(--mono);background:rgba(0,0,0,.25);padding:2px 7px;border-radius:3px}
+.cc-emoji{font-size:34px;margin-bottom:6px;line-height:1}
+.cc-stat{font-size:26px;font-weight:900;color:#fff;line-height:1;margin-bottom:4px;text-shadow:0 1px 4px rgba(0,0,0,.3)}
+.cc-headline{font-size:13px;font-weight:700;color:#fff;line-height:1.3;margin-bottom:3px;text-shadow:0 1px 3px rgba(0,0,0,.3)}
+.cc-sub{font-size:10px;color:rgba(255,255,255,.8);line-height:1.4}
+.cc-source{position:absolute;bottom:9px;right:12px;font-size:8px;color:rgba(255,255,255,.45);font-family:var(--mono)}
+/* post filter */
+.pfrow{display:flex;align-items:center;gap:6px}
+.pf-btn{padding:5px 13px;border-radius:6px;border:1px solid var(--b2);cursor:pointer;font-family:var(--mono);font-size:10px;font-weight:500;background:transparent;color:var(--mu);transition:all .15s}
+.pf-btn:hover{color:var(--tx);border-color:var(--mu2)}
+.pf-btn.on{background:var(--li);color:#fff;border-color:var(--li)}
+/* best posting time */
+.bpt-table{width:100%;border-collapse:collapse}
+.bpt-table th{font-family:var(--mono);font-size:9px;color:var(--mu);text-transform:uppercase;letter-spacing:.08em;padding:8px 12px;text-align:left;border-bottom:1px solid var(--b1)}
+.bpt-table td{padding:9px 12px;font-size:12px;border-bottom:1px solid var(--b1)}
+.bpt-table tr:last-child td{border-bottom:none}
+.bpt-table tr:hover td{background:var(--s2)}
+.bpt-day{font-family:var(--title);font-weight:600;font-size:13px}
+.bpt-eng{font-family:var(--mono);font-size:11px;font-weight:600}
+.bpt-time{font-family:var(--mono);font-size:10px;color:var(--mu)}
+.bpt-badge{display:inline-block;padding:2px 7px;border-radius:4px;font-family:var(--mono);font-size:8px;font-weight:700;text-transform:uppercase}
+.bpt-best{background:rgba(0,196,140,.15);color:var(--green)}
+.bpt-low{background:rgba(240,80,58,.08);color:var(--red)}
+/* strategy suggestions */
+.strat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:4px}
+.strat-card{background:var(--s2);border:1px solid var(--b1);border-radius:10px;padding:16px}
+.strat-icon{font-size:22px;margin-bottom:8px}
+.strat-title{font-family:var(--title);font-size:13px;font-weight:700;color:var(--tx);margin-bottom:6px}
+.strat-body{font-size:12px;color:var(--mu);line-height:1.6}
+.strat-card.imp{border-color:rgba(0,196,140,.25);background:rgba(0,196,140,.04)}
+.strat-card.warn{border-color:rgba(240,160,48,.2);background:rgba(240,160,48,.03)}
+.strat-card.info{border-color:rgba(10,102,194,.2);background:rgba(10,102,194,.03)}
+
 /* date filter */
 .frow{display:flex;gap:5px;align-items:center}
 .filt{padding:5px 12px;border-radius:6px;border:1px solid var(--b2);cursor:pointer;font-family:var(--mono);font-size:10px;font-weight:500;background:transparent;color:var(--mu);transition:all .15s}
@@ -232,12 +298,19 @@ tbody tr:hover td{background:rgba(255,255,255,.02)}
       <h1>Spectatr.ai <span>· Ad Intelligence</span></h1>
     </div>
     <div class="tnav">
-      <button class="tb on" onclick="nav(this,'overview')">Overview</button>
-      <button class="tb" onclick="nav(this,'campaigns')">Campaigns</button>
-      <button class="tb" onclick="nav(this,'suggestions')">Suggestions <span class="nb" id="nb-s">—</span></button>
-      <button class="tb" onclick="nav(this,'copy')">Copy Variants <span class="nb g" id="nb-c">—</span></button>
-      <button class="tb" onclick="nav(this,'audiences')">New Audiences <span class="nb g" id="nb-a">—</span></button>
-      <button class="tb" onclick="nav(this,'changelog')">Change Log</button>
+      <button class="tb on" id="nav-overview" onclick="navTop(this,'content')">Overview</button>
+      <button class="tb" id="nav-create" onclick="navTop(this,'create')">Post Suggestions</button>
+      <div class="ddwrap" id="dd-ads">
+        <button class="tb" onclick="toggleDd()" id="nav-ads">LinkedIn Ads ▾</button>
+        <div class="ddmenu" id="ads-menu">
+          <button onclick="navDd('overview')">Metrics &amp; Analytics</button>
+          <button onclick="navDd('campaigns')">Campaigns</button>
+          <button onclick="navDd('suggestions')">Suggestions <span class="nb" id="nb-s">—</span></button>
+          <button onclick="navDd('copy')">Copy Variants <span class="nb g" id="nb-c">—</span></button>
+          <button onclick="navDd('audiences')">New Audiences <span class="nb g" id="nb-a">—</span></button>
+          <button onclick="navDd('changelog')">Change Log</button>
+        </div>
+      </div>
     </div>
     <div class="tr">
       <div class="sdot"></div>
@@ -245,28 +318,8 @@ tbody tr:hover td{background:rgba(255,255,255,.02)}
       <button class="btn bg" onclick="loadAll()">↻ Refresh</button>
     </div>
   </header>
-  <aside class="side">
-    <div class="ns">
-      <div class="nl">Analytics</div>
-      <div class="ni on" onclick="navs(this,'overview')">▦ Overview</div>
-      <div class="ni" onclick="navs(this,'campaigns')">◈ Campaigns</div>
-    </div>
-    <div class="ns">
-      <div class="nl">Agent Output</div>
-      <div class="ni" onclick="navs(this,'suggestions')">✦ Suggestions <span class="nc nc-r" id="sc-s">—</span></div>
-      <div class="ni" onclick="navs(this,'copy')">✍ Copy Variants <span class="nc nc-g" id="sc-c">—</span></div>
-      <div class="ni" onclick="navs(this,'audiences')">◎ New Audiences <span class="nc nc-b" id="sc-a">—</span></div>
-      <div class="ni" onclick="navs(this,'changelog')">⟳ Change Log</div>
-    </div>
-    <div class="sfoot">
-      <div class="sfc">
-        <strong id="sfd">Agent last ran</strong>
-        <p id="sfm">Waiting for first run…</p>
-      </div>
-    </div>
-  </aside>
   <main class="main">
-    <div class="page on" id="p-overview">
+    <div class="page" id="p-overview">
       <div class="ph">
         <div><h2>Overview</h2><p id="osub">Loading…</p></div>
         <div class="frow">
@@ -301,12 +354,63 @@ tbody tr:hover td{background:rgba(255,255,255,.02)}
       <div class="ph"><div><h2>New Audiences</h2><p>Untested LinkedIn segments — ready-to-launch copy included</p></div></div>
       <div id="audb"><div class="ld">Loading</div></div>
     </div>
+    <div class="page on" id="p-content">
+      <div class="ph">
+        <div><h2>Overview</h2><p id="ct-sub">LinkedIn organic post performance</p></div>
+        <div class="pfrow">
+          <button class="pf-btn on" data-f="all" onclick="setPostFilter('all')">All Time</button>
+          <button class="pf-btn" data-f="month" onclick="setPostFilter('month')">This Month</button>
+          <button class="pf-btn" data-f="30d" onclick="setPostFilter('30d')">Last 30 Days</button>
+          <button class="pf-btn" data-f="7d" onclick="setPostFilter('7d')">Last 7 Days</button>
+        </div>
+      </div>
+      <div id="ct-empty" class="empty" style="display:none">
+        <div class="ei">◉</div>
+        <p>No post data yet — run the agent to fetch LinkedIn organic posts.</p>
+        <p style="font-family:var(--mono);font-size:10px;color:var(--mu2);margin-top:6px">Requires LI_ORG_ID in .env and r_organization_social OAuth scope</p>
+      </div>
+      <div id="ct-dash" style="display:none">
+        <div class="ckrow" id="ct-krow"></div>
+        <div class="prow">
+          <div class="card"><div class="ch"><div><h3 id="ct-top-title">🏆 Top Posts</h3><div class="sub">Ranked by engagement rate</div></div></div><div class="cb" id="ct-top"></div></div>
+          <div class="card"><div class="ch"><div><h3 id="ct-bot-title">⚠️ Bottom Posts</h3><div class="sub">Lowest engagement rate</div></div></div><div class="cb" id="ct-bot"></div></div>
+        </div>
+        <div class="g21" style="margin-bottom:14px">
+          <div class="card"><div class="ch"><div><h3>Engagement Trend</h3><div class="sub">Weekly avg engagement rate %</div></div></div><div class="cb"><canvas id="cc" style="max-height:185px"></canvas></div></div>
+          <div class="card"><div class="ch"><div><h3>Content Themes</h3><div class="sub">By post count</div></div></div><div class="cb"><canvas id="cd" style="max-height:185px"></canvas></div></div>
+        </div>
+        <div class="g2" style="margin-bottom:14px">
+          <div class="card"><div class="ch"><div><h3>Best Posting Day &amp; Time</h3><div class="sub">Avg engagement by day · Recommended time slots</div></div></div><div class="cb" id="ct-bpt"></div></div>
+          <div class="card"><div class="ch"><div><h3>Key Insights</h3><div class="sub">Auto-detected patterns</div></div></div><div class="cb" id="ct-insights"></div></div>
+        </div>
+        <div class="card" style="margin-bottom:14px">
+          <div class="ch"><div><h3>💡 Content Strategy Suggestions</h3><div class="sub" id="ct-strat-sub">Based on your post data</div></div></div>
+          <div class="cb"><div class="strat-grid" id="ct-strat"></div></div>
+        </div>
+      </div>
+    </div>
     <div class="page" id="p-changelog">
       <div class="ph">
         <div><h2>Change Log</h2><p>Before / after tracking with metric impact</p></div>
         <button class="btn bgrn" onclick="openM()">+ Log Change</button>
       </div>
       <div class="card"><div class="cb"><div id="clb"><div class="ld">Loading</div></div></div></div>
+    </div>
+
+    <div class="page" id="p-create">
+      <div class="ph">
+        <div><h2>Post Suggestions</h2><p id="cr-sub">AI-generated LinkedIn post drafts</p></div>
+        <div style="display:flex;align-items:center;gap:10px">
+          <label style="font-family:var(--mono);font-size:11px;color:var(--mu)">Date</label>
+          <select id="cr-date-filter" class="cr-select" onchange="renderCreate(this.value)"></select>
+        </div>
+      </div>
+      <div id="cr-empty" class="empty" style="display:none">
+        <div class="ei">✍</div>
+        <p>No post drafts yet — run the agent to generate today's posts.</p>
+        <p style="font-family:var(--mono);font-size:10px;color:var(--mu2);margin-top:6px">Agent fetches sports news + writes 3 LinkedIn post drafts each run.</p>
+      </div>
+      <div id="cr-posts"></div>
     </div>
   </main>
 </div>
@@ -340,10 +444,12 @@ tbody tr:hover td{background:rgba(255,255,255,.02)}
 </div>
 
 <script>
-let M=null,SUGG=[],COPY=[],AUD=[],CL=[],HIST=[];
-let TC=null,SC=null;
+let M=null,SUGG=[],COPY=[],AUD=[],CL=[],HIST=[],POSTS=[],GALL=[];
+let TC=null,SC=null,CC=null,CD=null;
+let GPOSTS=[];
 let FILTER='7d';
-const PAGES=['overview','campaigns','suggestions','copy','audiences','changelog'];
+let POST_FILTER='all';
+const PAGES=['overview','campaigns','suggestions','copy','audiences','changelog','content','create'];
 
 async function fetchJ(f){
   try{const r=await fetch(`data/${f}?t=${Date.now()}`);if(!r.ok)return null;return r.json();}
@@ -352,11 +458,12 @@ async function fetchJ(f){
 
 async function loadAll(){
   document.getElementById('stx').textContent='Refreshing…';
-  const[m,s,c,a,cl,meta,hist]=await Promise.all([
+  const[m,s,c,a,cl,meta,hist,posts,gen]=await Promise.all([
     fetchJ('metrics.json'),fetchJ('suggestions.json'),fetchJ('copy_variants.json'),
     fetchJ('audiences.json'),fetchJ('changelog.json'),fetchJ('meta.json'),fetchJ('history.json'),
+    fetchJ('posts.json'),fetchJ('generated_posts.json'),
   ]);
-  M=m;SUGG=s||[];COPY=c||[];AUD=a||[];CL=cl||[];HIST=hist||[];
+  M=m;SUGG=s||[];COPY=c||[];AUD=a||[];CL=cl||[];HIST=hist||[];POSTS=posts||[];GALL=gen||[];
   renderAll(meta);
   document.getElementById('stx').textContent='Updated '+new Date().toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'});
 }
@@ -395,7 +502,7 @@ function getHistSlice(){
 
 function renderAll(meta){
   renderMeta(meta);renderKPIs();renderCharts();renderAlerts();
-  renderCamps();renderSugg();renderCopy();renderAud();renderCL();
+  renderCamps();renderSugg();renderCopy();renderAud();renderCL();renderContent();renderCreate();
 }
 
 function renderMeta(m){
@@ -590,24 +697,417 @@ function saveC(){
 
 document.getElementById('modal').addEventListener('click',e=>{if(e.target===e.currentTarget)closeM();});
 
-function nav(btn,id){
-  PAGES.forEach(p=>document.getElementById('p-'+p).classList.remove('on'));
-  document.querySelectorAll('.tb').forEach(b=>b.classList.remove('on'));
-  document.getElementById('p-'+id).classList.add('on');
-  if(btn)btn.classList.add('on');
-  document.querySelectorAll('.ni').forEach(n=>{n.classList.remove('on');if(n.getAttribute('onclick')?.includes(`'${id}'`))n.classList.add('on');});
-}
+// Map page IDs to which top nav button should be highlighted
+const TOP_NAV_MAP={content:'nav-overview',create:'nav-create',overview:'nav-ads',campaigns:'nav-ads',suggestions:'nav-ads',copy:'nav-ads',audiences:'nav-ads',changelog:'nav-ads'};
+const ADS_PAGES=new Set(['overview','campaigns','suggestions','copy','audiences','changelog']);
 
-function navs(el,id){
+function showPage(id){
   PAGES.forEach(p=>document.getElementById('p-'+p).classList.remove('on'));
-  document.querySelectorAll('.ni').forEach(n=>n.classList.remove('on'));
-  document.getElementById('p-'+id).classList.add('on');el.classList.add('on');
-  document.querySelectorAll('.tb').forEach(b=>{b.classList.remove('on');if(b.getAttribute('onclick')?.includes(`'${id}'`))b.classList.add('on');});
+  document.getElementById('p-'+id).classList.add('on');
+  // top nav highlights
+  document.getElementById('nav-overview').classList.remove('on');
+  document.getElementById('nav-create').classList.remove('on');
+  document.getElementById('nav-ads').classList.remove('on');
+  const navId=TOP_NAV_MAP[id]||'nav-overview';
+  document.getElementById(navId).classList.add('on');
+  // close dropdown
+  document.getElementById('dd-ads').classList.remove('open');
+  // update dropdown items
+  document.querySelectorAll('#ads-menu button').forEach(b=>b.classList.remove('on'));
+  if(ADS_PAGES.has(id)){const menu=document.getElementById('ads-menu');menu.querySelectorAll('button').forEach(b=>{if(b.getAttribute('onclick')?.includes(`'${id}'`))b.classList.add('on');});}
+}
+function navTop(btn,id){showPage(id);}
+function navDd(id){showPage(id);}
+function toggleDd(){document.getElementById('dd-ads').classList.toggle('open');}
+// Close dropdown on outside click
+document.addEventListener('click',e=>{if(!document.getElementById('dd-ads').contains(e.target))document.getElementById('dd-ads').classList.remove('open');});
+
+// Legacy nav/navs kept for backwards compat with any calls
+function nav(btn,id){showPage(id);}
+function navs(el,id){showPage(id);}
+
+// Post filter
+function getFilteredPosts(){
+  if(POST_FILTER==='all')return POSTS;
+  const now=new Date();let cutoff;
+  if(POST_FILTER==='7d')cutoff=new Date(Date.now()-7*86400000);
+  else if(POST_FILTER==='30d')cutoff=new Date(Date.now()-30*86400000);
+  else if(POST_FILTER==='month')cutoff=new Date(now.getFullYear(),now.getMonth(),1);
+  return POSTS.filter(p=>p.date&&new Date(p.date+'T12:00:00')>=cutoff);
+}
+function setPostFilter(f){
+  POST_FILTER=f;
+  document.querySelectorAll('.pf-btn').forEach(b=>b.classList.toggle('on',b.dataset.f===f));
+  renderContent();
 }
 
 function exportCSV(){
   const rows=[['Campaign','Status','Spend','CTR','CTR Δ','CPL','CPL Δ','Leads','Freq'],...(M?.campaigns||[]).map(c=>[c.name,c.st,c.spend,c.ctr,c.ctrD,c.cpl,c.cplD,c.leads,c.freq])];
   const a=document.createElement('a');a.href='data:text/csv;charset=utf-8,'+encodeURIComponent(rows.map(r=>r.join(',')).join('\n'));a.download='campaigns.csv';a.click();
+}
+
+// ── CONTENT TAB ──────────────────────────────────────────────────
+
+const THEME_KEYS={
+  'Product Feature':  ['feature','launch','update','platform','ai','automated','analytics','clip','highlight','spectatr'],
+  'Sports News Hook': ['sport','league','team','game','match','championship','player','win','goal','broadcast','tournament','ott'],
+  'Industry Insight': ['insight','trend','report','study','data','industry','market','research','future'],
+  'Social Proof':     ['case study','customer','client','result','success','views','million'],
+  'Behind the Scenes':['behind','culture','meet','founder','building','how we','our team','journey'],
+};
+
+function detectTheme(text){
+  const t=(text||'').toLowerCase();
+  for(const[theme,kws]of Object.entries(THEME_KEYS))
+    if(kws.some(k=>t.includes(k)))return theme;
+  return'Other';
+}
+
+function enrichPosts(raw){
+  return raw.map(p=>{
+    const imp=p.impressions||1;
+    const eng=((p.likes+p.comments+p.shares)/imp)*100;
+    const d=new Date(p.date||Date.now());
+    const wk=Math.ceil((d-new Date(d.getFullYear(),0,1))/604800000);
+    return{...p,engRate:+eng.toFixed(4),theme:detectTheme(p.text),weekLabel:`W${wk} ${d.getFullYear()}`};
+  });
+}
+
+function renderContent(){
+  const enriched=enrichPosts(getFilteredPosts());
+  const filterLabel={'7d':'Last 7 days','30d':'Last 30 days','month':'This month'}[POST_FILTER]||'All time';
+  if(!enriched.length){
+    document.getElementById('ct-empty').style.display='';
+    document.getElementById('ct-dash').style.display='none';
+    if(POSTS.length){
+      document.getElementById('ct-empty').innerHTML=`<div class="ei">🔍</div><p>No posts found in ${filterLabel.toLowerCase()}.</p><p style="font-family:var(--mono);font-size:10px;color:var(--mu2);margin-top:6px">Try a wider date range using the filters above.</p>`;
+      document.getElementById('ct-sub').textContent=`No posts in ${filterLabel.toLowerCase()}`;
+    }else{
+      document.getElementById('ct-empty').innerHTML=`<div class="ei">◉</div><p>No post data yet — run the agent to fetch LinkedIn organic posts.</p><p style="font-family:var(--mono);font-size:10px;color:var(--mu2);margin-top:6px">Requires LI_ORG_ID in .env and r_organization_social OAuth scope</p>`;
+      document.getElementById('ct-sub').textContent='LinkedIn organic post performance';
+    }
+    return;
+  }
+  document.getElementById('ct-empty').style.display='none';
+  document.getElementById('ct-dash').style.display='';
+  const sorted=[...enriched].sort((a,b)=>b.engRate-a.engRate);
+  const avgEng=enriched.reduce((s,p)=>s+p.engRate,0)/enriched.length;
+  document.getElementById('ct-sub').textContent=`${enriched.length} posts · ${filterLabel} · Avg ${avgEng.toFixed(2)}% engagement`;
+  renderContentKPIs(enriched);
+  const topN=POST_FILTER==='7d'?1:3;
+  const botN=POST_FILTER==='7d'?1:2;
+  document.getElementById('ct-top-title').innerHTML=`🏆 Top Post${topN>1?'s':''}`;
+  document.getElementById('ct-bot-title').innerHTML=`⚠️ Bottom Post${botN>1?'s':''}`;
+  renderTopBottom(sorted,topN,botN);
+  renderEngTrend(enriched);
+  renderThemeDoughnut(enriched);
+  renderHeatmap(enriched);
+  renderInsights(enriched);
+  renderBestPostingTime(enriched);
+  renderPostSuggestions(enriched);
+}
+
+function renderContentKPIs(posts){
+  const avg=a=>a.length?a.reduce((s,v)=>s+v,0)/a.length:0;
+  const avgEng=avg(posts.map(p=>p.engRate));
+  const days=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'],byDay={};
+  posts.forEach(p=>{const d=new Date(p.date).getDay();(byDay[d]=byDay[d]||[]).push(p.engRate);});
+  const bestDay=Object.entries(byDay).sort((a,b)=>avg(b[1])-avg(a[1]))[0];
+  const themes={};
+  posts.forEach(p=>themes[p.theme]=(themes[p.theme]||0)+1);
+  const topTheme=Object.entries(themes).sort((a,b)=>b[1]-a[1])[0];
+  document.getElementById('ct-krow').innerHTML=[
+    {l:'Total Posts',v:posts.length,d:''},
+    {l:'Avg Eng Rate',v:avgEng.toFixed(2)+'%',d:'(likes+comments+shares)/impressions'},
+    {l:'Best Day',v:bestDay?days[bestDay[0]]:'—',d:bestDay?avg(bestDay[1]).toFixed(2)+'% avg':''},
+    {l:'Top Theme',v:topTheme?topTheme[0]:'—',d:topTheme?topTheme[1]+' posts':''},
+  ].map(k=>`<div class="kpi"><div class="ka km"></div><div class="kl">${k.l}</div><div class="kv" style="font-size:16px">${k.v}</div><div class="kd dm">${k.d}</div></div>`).join('');
+}
+
+function renderTopBottom(sorted,topN,botN){
+  topN=topN||3; botN=botN||2;
+  const card=(p,rank,top)=>`<div class="post-card">
+    <span class="post-rank ${top?'rank-top':'rank-bot'}">${rank}</span>
+    <div class="eng-rate">${p.engRate.toFixed(2)}% engagement</div>
+    <div class="post-text">${p.text||'(no text)'}</div>
+    <div class="post-stats">
+      <span class="pstat">👍 <strong>${p.likes}</strong></span>
+      <span class="pstat">💬 <strong>${p.comments}</strong></span>
+      <span class="pstat">🔁 <strong>${p.shares}</strong></span>
+      <span class="pstat">👁 <strong>${(p.impressions||0).toLocaleString()}</strong></span>
+      ${p.url?`<a href="${p.url}" target="_blank" style="font-family:var(--mono);font-size:9px;color:var(--li2);margin-left:auto">↗</a>`:''}
+    </div></div>`;
+  const rankLabels=(n,prefix)=>Array.from({length:n},(_,i)=>`${prefix}${i+1}`);
+  document.getElementById('ct-top').innerHTML=sorted.slice(0,topN).map((p,i)=>card(p,rankLabels(topN,'#')[i],true)).join('');
+  document.getElementById('ct-bot').innerHTML=[...sorted].reverse().slice(0,botN).map((p,i)=>card(p,rankLabels(botN,'B')[i],false)).join('');
+}
+
+function renderEngTrend(posts){
+  if(CC){CC.destroy();CC=null;}
+  const wk={};
+  posts.forEach(p=>{(wk[p.weekLabel]=wk[p.weekLabel]||[]).push(p.engRate);});
+  const labels=Object.keys(wk).sort();
+  const data=labels.map(w=>+(wk[w].reduce((a,b)=>a+b,0)/wk[w].length).toFixed(3));
+  const gc='rgba(31,36,54,.8)',tf={family:'Fira Code',size:9};
+  CC=new Chart(document.getElementById('cc'),{type:'line',
+    data:{labels,datasets:[{label:'Avg Eng Rate %',data,borderColor:'#00c48c',backgroundColor:'rgba(0,196,140,.08)',fill:true,tension:.4,pointRadius:3}]},
+    options:{responsive:true,plugins:{legend:{labels:{color:'#5a6280',font:tf,boxWidth:9}}},
+      scales:{y:{grid:{color:gc},ticks:{color:'#5a6280',font:tf,callback:v=>v+'%'},border:{color:gc}},
+              x:{grid:{color:gc},ticks:{color:'#5a6280',font:tf},border:{color:gc}}}}});
+}
+
+function renderThemeDoughnut(posts){
+  if(CD){CD.destroy();CD=null;}
+  const c={};
+  posts.forEach(p=>c[p.theme]=(c[p.theme]||0)+1);
+  const labels=Object.keys(c),data=labels.map(l=>c[l]);
+  CD=new Chart(document.getElementById('cd'),{type:'doughnut',
+    data:{labels,datasets:[{data,backgroundColor:['#0A66C2','#00c48c','#f0a030','#8b5cf6','#f0503a','#4d9de0'],borderWidth:2,borderColor:'#0d0f16'}]},
+    options:{responsive:true,cutout:'60%',plugins:{legend:{position:'bottom',labels:{color:'#5a6280',font:{family:'Fira Code',size:9},boxWidth:8,padding:6}}}}});
+}
+
+function renderHeatmap(posts){
+  const days=['Mon','Tue','Wed','Thu','Fri','Sat','Sun'],idx={1:0,2:1,3:2,4:3,5:4,6:5,0:6};
+  const byDay=Array(7).fill(null).map(()=>[]);
+  posts.forEach(p=>{const d=new Date(p.date).getDay();byDay[idx[d]].push(p.engRate);});
+  const avgs=byDay.map(a=>a.length?a.reduce((s,v)=>s+v,0)/a.length:null);
+  const valid=avgs.filter(v=>v!==null);
+  const mn=Math.min(...valid),mx=Math.max(...valid);
+  const cells=days.map((d,i)=>{
+    const v=avgs[i],p=v===null?0:mx===mn?0.5:(v-mn)/(mx-mn);
+    const bg=v===null?'var(--s2)':`rgba(0,196,140,${(0.1+p*0.7).toFixed(2)})`;
+    return`<div class="hday"><div class="hday-lbl">${d}</div>
+      <div class="hcell" style="background:${bg};color:${v===null?'var(--mu)':'#fff'}">${v===null?'—':v.toFixed(2)+'%'}</div>
+      <div style="font-family:var(--mono);font-size:9px;color:var(--mu);text-align:center;margin-top:3px">${byDay[i].length} posts</div>
+    </div>`;
+  }).join('');
+  document.getElementById('ct-hmap').innerHTML=`<div class="hmap">${cells}</div>`;
+}
+
+function renderInsights(posts){
+  const avg=a=>a.length?a.reduce((s,v)=>s+v,0)/a.length:0;
+  const insights=[];
+  const check=(label,icon,fn,min=2)=>{
+    const a=posts.filter(fn),b=posts.filter(p=>!fn(p));
+    if(a.length<min||b.length<min)return;
+    const ra=avg(a.map(p=>p.engRate)),rb=avg(b.map(p=>p.engRate));
+    const pos=ra>=rb,pct=Math.abs((ra/rb-1)*100).toFixed(0);
+    insights.push({icon,pos,text:`${label} ${pos?'outperform':'underperform'} other posts by ${pct}% (${ra.toFixed(2)}% vs ${rb.toFixed(2)}% avg eng rate)`});
+  };
+  check('Posts with sports hooks','🏆',p=>/sport|league|team|game|match|championship|player|win|goal|tournament/i.test(p.text));
+  check('Posts with questions (?)','❓',p=>(p.text||'').includes('?'));
+  check('Posts with statistics','📊',p=>/\d+%|\d+x|\d+M|\d+K/i.test(p.text||''));
+  check('Social proof posts','🏅',p=>/case study|customer|client|result|success|views|million/i.test(p.text||''));
+  check('Short posts (<150 chars)','✂️',p=>(p.text||'').length<150);
+  const dayNames=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'],bd={};
+  posts.forEach(p=>{const d=new Date(p.date).getDay();(bd[d]=bd[d]||[]).push(p.engRate);});
+  const dr=Object.entries(bd).filter(([,a])=>a.length>=2).sort((a,b)=>avg(b[1])-avg(a[1]));
+  if(dr.length>=2)insights.push({icon:'📅',pos:true,
+    text:`Best day to post is ${dayNames[dr[0][0]]} (${avg(dr[0][1]).toFixed(2)}% avg) vs worst ${dayNames[dr[dr.length-1][0]]} (${avg(dr[dr.length-1][1]).toFixed(2)}% avg)`});
+  document.getElementById('ct-insights').innerHTML=!insights.length
+    ?'<div class="empty"><div class="ei">💡</div><p>Need more posts to detect patterns (min 4 per group)</p></div>'
+    :insights.map(i=>`<div class="insight ${i.pos?'pos':'neg'}"><span class="insight-icon">${i.icon}</span><span class="insight-text">${i.text}</span></div>`).join('');
+}
+
+function renderBestPostingTime(posts){
+  const el=document.getElementById('ct-bpt');
+  if(!posts.length){el.innerHTML='<div class="empty"><div class="ei">📅</div><p>Post data needed for timing analysis</p></div>';return;}
+  const DAYS=['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'];
+  const REC_TIMES=['10am – 12pm','7 – 9am','7 – 9am','7 – 9am','9 – 10am','—','—'];
+  const dayIdx={1:0,2:1,3:2,4:3,5:4,6:5,0:6};
+  const byDay=Array(7).fill(null).map(()=>[]);
+  posts.forEach(p=>{const d=new Date((p.date||'')+'T12:00:00').getDay();if(!isNaN(d))byDay[dayIdx[d]].push(p.engRate);});
+  const avg=a=>a.length?+(a.reduce((s,v)=>s+v,0)/a.length).toFixed(2):null;
+  const avgs=byDay.map(avg);
+  const valid=avgs.filter(v=>v!==null);
+  if(!valid.length){el.innerHTML='<div class="empty"><div class="ei">📅</div><p>Not enough data for timing analysis</p></div>';return;}
+  const mx=Math.max(...valid);
+  el.innerHTML=`<table class="bpt-table"><thead><tr>
+    <th>Day</th><th>Avg Engagement</th><th>Posts</th><th>Best Time (LinkedIn B2B)</th><th>Signal</th>
+  </tr></thead><tbody>${DAYS.map((d,i)=>{
+    const v=avgs[i];
+    const isBest=v!==null&&v===mx;
+    const isLow=v!==null&&v<mx*0.5;
+    const cls=isBest?'bpt-best':isLow?'bpt-low':'';
+    const barW=v===null?0:Math.round((v/mx)*100);
+    const barColor=isBest?'var(--grn)':isLow?'var(--red)':'var(--li)';
+    const bar=v===null?'':` <span style="display:inline-block;vertical-align:middle;height:4px;border-radius:2px;background:${barColor};width:${barW}px;max-width:80px;margin-left:6px"></span>`;
+    const signal=v===null?'<span style="color:var(--mu)">No data</span>':isBest?'<span style="color:var(--grn)">⭐ Best</span>':isLow?'<span style="color:var(--red)">Low</span>':'<span style="color:var(--mu2)">Average</span>';
+    return`<tr>
+      <td class="bpt-day ${cls}">${d}</td>
+      <td class="bpt-eng ${cls}">${v===null?'—':v+'%'}${bar}</td>
+      <td style="color:var(--mu);font-family:var(--mono);font-size:10px">${byDay[i].length||'—'}</td>
+      <td style="font-family:var(--mono);font-size:10px;color:var(--mu2)">${REC_TIMES[i]}</td>
+      <td style="font-size:11px">${signal}</td>
+    </tr>`;
+  }).join('')}</tbody></table>`;
+}
+
+function renderPostSuggestions(posts){
+  const el=document.getElementById('ct-strat');
+  const sub=document.getElementById('ct-strat-sub');
+  const filterLabel={'7d':'last 7 days','30d':'last 30 days','month':'this month'}[POST_FILTER]||'all time';
+  sub.textContent=`Based on ${posts.length} post${posts.length!==1?'s':''} · ${filterLabel}`;
+  if(posts.length<3){
+    el.innerHTML='<div style="color:var(--mu);font-family:var(--mono);font-size:11px;padding:16px;grid-column:1/-1">Need at least 3 posts to generate suggestions.</div>';
+    return;
+  }
+  const avg=a=>a.length?a.reduce((s,v)=>s+v,0)/a.length:0;
+  const pct=(a,b)=>b>0?Math.round(Math.abs((a/b-1)*100)):0;
+  const suggestions=[];
+
+  // 1. Best day to post
+  const DNAMES=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+  const byDay={};
+  posts.forEach(p=>{const d=new Date((p.date||'')+'T12:00:00').getDay();if(!isNaN(d))(byDay[d]=byDay[d]||[]).push(p.engRate);});
+  const dayEntries=Object.entries(byDay).filter(([,a])=>a.length>=2).sort((a,b)=>avg(b[1])-avg(a[1]));
+  if(dayEntries.length>=2){
+    const [bd,ba]=[dayEntries[0][0],dayEntries[0][1]];
+    const [wd,wa]=[dayEntries[dayEntries.length-1][0],dayEntries[dayEntries.length-1][1]];
+    suggestions.push({icon:'📅',title:`Post on ${DNAMES[bd]}s`,
+      detail:`${DNAMES[bd]} posts avg ${avg(ba).toFixed(2)}% engagement — ${pct(avg(ba),avg(wa))}% above ${DNAMES[wd]}s. Shift your publishing cadence to lean into this.`});
+  }
+
+  // 2. Questions drive engagement
+  const withQ=posts.filter(p=>(p.text||'').includes('?'));
+  const noQ=posts.filter(p=>!(p.text||'').includes('?'));
+  if(withQ.length>=2&&noQ.length>=2){
+    const qe=avg(withQ.map(p=>p.engRate)),ne=avg(noQ.map(p=>p.engRate));
+    if(qe>ne*1.05)suggestions.push({icon:'❓',title:'End every post with a question',
+      detail:`Posts with a question average ${qe.toFixed(2)}% vs ${ne.toFixed(2)}% without — ${pct(qe,ne)}% more engagement. Invite comment section conversations to boost reach.`});
+    else if(ne>qe*1.05)suggestions.push({icon:'💬',title:'Try a statement over a question',
+      detail:`Non-question posts average ${ne.toFixed(2)}% vs ${qe.toFixed(2)}% — your audience responds to confident takes, not prompts.`});
+  }
+
+  // 3. Data / stats in posts
+  const withStat=posts.filter(p=>/\d+%|\d+x|\d+M|\d+K|\d{4,}/i.test(p.text||''));
+  const noStat=posts.filter(p=>!/\d+%|\d+x|\d+M|\d+K|\d{4,}/i.test(p.text||''));
+  if(withStat.length>=2&&noStat.length>=2){
+    const se=avg(withStat.map(p=>p.engRate)),ne=avg(noStat.map(p=>p.engRate));
+    if(se>ne*1.05)suggestions.push({icon:'📊',title:'Lead with a specific number',
+      detail:`Posts with stats (%, M, K, x) average ${se.toFixed(2)}% engagement — ${pct(se,ne)}% above posts without. Concrete numbers make people stop scrolling.`});
+  }
+
+  // 4. Post length analysis
+  const shortP=posts.filter(p=>(p.text||'').length<300);
+  const longP=posts.filter(p=>(p.text||'').length>=300);
+  if(shortP.length>=2&&longP.length>=2){
+    const se=avg(shortP.map(p=>p.engRate)),le=avg(longP.map(p=>p.engRate));
+    const diff=Math.abs(pct(se,le));
+    if(diff>=10){
+      const better=se>le;
+      suggestions.push({icon:'✂️',title:better?'Keep posts under 300 chars':'Write longer posts (300+ chars)',
+        detail:`${better?'Short':'Long'} posts average ${better?se.toFixed(2):le.toFixed(2)}% engagement — ${diff}% above ${better?'longer':'shorter'} ones. ${better?'Punch in the preview, before "see more" cuts off.':'Your audience reads depth — give them substance.'}`});
+    }
+  }
+
+  // 5. Top performing theme
+  const byTheme={};
+  posts.forEach(p=>(byTheme[p.theme]=byTheme[p.theme]||[]).push(p.engRate));
+  const themes=Object.entries(byTheme).filter(([,a])=>a.length>=2).sort((a,b)=>avg(b[1])-avg(a[1]));
+  if(themes.length>=2){
+    const [tt,ta]=[themes[0][0],themes[0][1]];
+    const [,wa]=themes[themes.length-1];
+    suggestions.push({icon:'🏷️',title:`Double down on "${tt}"`,
+      detail:`"${tt}" posts avg ${avg(ta).toFixed(2)}% engagement — your strongest theme, ${pct(avg(ta),avg(wa))}% above lowest. Create more content in this category.`});
+  }
+
+  const top3=suggestions.slice(0,3);
+  if(!top3.length){
+    el.innerHTML='<div style="color:var(--mu);font-family:var(--mono);font-size:11px;padding:16px;grid-column:1/-1">Not enough variation in post data to generate suggestions yet — try "All Time".</div>';
+    return;
+  }
+  el.innerHTML=top3.map(s=>`<div class="strat-card">
+    <div class="strat-icon">${s.icon}</div>
+    <div style="font-family:var(--title);font-weight:700;font-size:13px;margin-bottom:6px;color:var(--tx)">${s.title}</div>
+    <div style="font-size:12px;line-height:1.6;color:var(--mu2)">${s.detail}</div>
+  </div>`).join('');
+}
+
+// ── CREATE TAB ──────────────────────────────────────────────────────────────
+
+function renderCreate(dateFilter){
+  const empty=document.getElementById('cr-empty');
+  const container=document.getElementById('cr-posts');
+  const sel=document.getElementById('cr-date-filter');
+  const sub=document.getElementById('cr-sub');
+
+  if(!GALL||!GALL.length){
+    empty.style.display='';container.innerHTML='';
+    sel.innerHTML='<option>No data</option>';
+    sub.textContent='AI-generated LinkedIn post drafts';
+    return;
+  }
+
+  // Populate date filter
+  const dates=GALL.map(r=>r.date);
+  const current=dateFilter||dates[0];
+  sel.innerHTML=dates.map(d=>`<option value="${d}"${d===current?' selected':''}>${fmtDate(d)}</option>`).join('');
+
+  const run=GALL.find(r=>r.date===current);
+  const posts=(run&&run.posts)||[];
+  GPOSTS=posts;
+
+  if(!posts.length){
+    empty.style.display='';container.innerHTML='';
+    sub.textContent='No drafts for this date';
+    return;
+  }
+
+  empty.style.display='none';
+  sub.textContent=`${posts.length} draft${posts.length!==1?'s':''} · ${fmtDate(current)}`;
+  container.innerHTML=posts.map((p,i)=>renderDraftCard(p,i)).join('');
+}
+
+function fmtDate(d){
+  if(!d)return'—';
+  const dt=new Date(d+'T12:00:00');
+  return dt.toLocaleDateString([],{month:'short',day:'numeric',year:'numeric'});
+}
+
+function renderDraftCard(p,idx){
+  const typeCls=p.type==='product'?'ptb-product':'ptb-news';
+  const typeLabel=p.type==='product'?'Product':'News';
+  const newsHtml=p.newsSource?`<span class="news-chip">via ${p.newsUrl?`<a href="${p.newsUrl}" target="_blank">${p.newsSource}</a>`:p.newsSource}</span>`:'';
+  const formatHtml=p.format_type?`<span class="post-format-tag">${p.format_type}</span>`:'';
+  const productHtml=p.product?`<span class="post-format-tag" style="color:var(--amber)">${p.product}</span>`:'';
+  const creative=p.creative||{};
+  const bg=creative.background||'linear-gradient(135deg,#0A66C2,#004182)';
+
+  return`<div class="post-draft-card">
+    <div class="pdc-left">
+      <div class="pdc-meta">
+        <span class="post-type-badge ${typeCls}">${typeLabel}</span>
+        ${formatHtml}${productHtml}${newsHtml}
+      </div>
+      <div class="post-draft-text">${escHtml(p.text||'')}</div>
+      <button class="copy-btn" id="copybtn-${idx}" onclick="copyPost(${idx})">Copy post</button>
+    </div>
+    <div class="pdc-right">
+      <div class="creative-card" style="background:${bg}">
+        <span class="cc-logo">spectatr.ai</span>
+        ${p.product?`<span class="cc-product">${p.product}</span>`:''}
+        <div class="cc-emoji">${creative.emoji||'🏆'}</div>
+        <div class="cc-stat">${escHtml(creative.stat||'')}</div>
+        <div class="cc-headline">${escHtml(creative.headline||'')}</div>
+        <div class="cc-sub">${escHtml(creative.subtext||'')}</div>
+        ${p.newsSource?`<span class="cc-source">${p.newsSource}</span>`:''}
+      </div>
+    </div>
+  </div>`;
+}
+
+function escHtml(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+
+function copyPost(idx){
+  const p=GPOSTS[idx];
+  if(!p)return;
+  navigator.clipboard.writeText(p.text||'').then(()=>{
+    const btn=document.getElementById('copybtn-'+idx);
+    if(!btn)return;
+    btn.textContent='Copied!';btn.classList.add('copied');
+    setTimeout(()=>{btn.textContent='Copy post';btn.classList.remove('copied');},2000);
+  });
 }
 
 loadAll();

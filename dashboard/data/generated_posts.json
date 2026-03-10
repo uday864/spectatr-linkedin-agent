@@ -1,0 +1,55 @@
+[
+  {
+    "date": "2026-03-10",
+    "posts": [
+      {
+        "type": "product",
+        "format_type": "THE MATCHDAY SCENARIO",
+        "newsHeadline": "Lauren Shehadi Lands Netflix MLB Reporter Role",
+        "newsSource": "Front Office Sports",
+        "newsUrl": "https://frontofficesports.com/lauren-shehadi-joining-netflix-mlb-reporter/",
+        "product": "PULSE",
+        "text": "It's Opening Night. Netflix is live.\n\nLauren Shehadi is on camera. 50 million subscribers watching.\n\nAnd somewhere in your content team's workflow — someone is still manually scrubbing footage to find the clip that just happened.\n\nThis is the gap that's opening up right now.\n\nNetflix entering live MLB is not just a distribution story. It's a production arms race. The streamers who win won't just have the rights — they'll be the ones who can publish every key moment within seconds of it happening, across every format, for every platform.\n\nHockey One did this for a full 7-week season.\n\n9,500+ AI-powered clips. Published in seconds. 10.6M video views. 9x fan engagement growth. Zero additional production staff.\n\nSash Herceg, their Executive Manager, put it plainly: \"The automation meant we could push out short format match content almost as it happened.\"\n\nThe streaming era doesn't wait for your editor to finish the cut.\n\nThe question for every broadcast and OTT team right now: what's your seconds-not-hours plan?\n\n#SportsBroadcast #OTT #SportsMedia #LiveSports #ContentStrategy",
+        "creative": {
+          "background": "linear-gradient(135deg,#0A0A0A,#1a1a2e)",
+          "headline": "Netflix is live. Are your clips keeping up?",
+          "subtext": "The streaming era doesn't wait for your editor to finish the cut.",
+          "stat": "9,500+ clips in 7 weeks",
+          "emoji": "🎬"
+        }
+      },
+      {
+        "type": "news",
+        "format_type": "THE INDUSTRY DIAGNOSIS",
+        "newsHeadline": "Angels Buy Out RSN Stake from Main Street Sports",
+        "newsSource": "Front Office Sports",
+        "newsUrl": "https://frontofficesports.com/angels-buy-out-rsn-stake-from-main-street-sports/",
+        "product": "JORDY AI",
+        "text": "The RSN model isn't dying because fans stopped caring about their local teams.\n\nIt's dying because the RSN was the only place fans could go.\n\nThe Angels buying out their RSN stake is the latest domino. But zoom out: this is the fifth year in a row that a major regional sports network has restructured, collapsed, or been abandoned by a club.\n\nThe pattern everyone in sports media accepts as normal: teams produce content for a linear broadcast partner, the partner owns the fan relationship, the team gets carriage fees and loses control of its own audience.\n\nThat model made sense in 1998. It makes no sense now.\n\nThe clubs that come out of the RSN collapse strongest won't be the ones who find a new broadcast deal fastest. They'll be the ones who spent the last two years building a direct fan relationship — owned data, owned engagement, owned digital identity.\n\nFan engagement isn't a social media strategy.\n\nIt's infrastructure.\n\nThe leagues and clubs who treat it that way are the ones who'll have something to sell — or keep — when the next RSN deal falls apart.\n\nWhat's your plan for the audience you don't own yet?\n\n#SportsMedia #RSN #FanEngagement #SportsBusinessStrategy #DigitalSports",
+        "creative": {
+          "background": "linear-gradient(135deg,#1a0a2e,#2d1b69)",
+          "headline": "RSN dies. Who owns your fans?",
+          "subtext": "Five years of collapse. The clubs rebuilding direct relationships win.",
+          "stat": "5th straight year of RSN restructuring",
+          "emoji": "📡"
+        }
+      },
+      {
+        "type": "news",
+        "format_type": "THE NUMBERS POST",
+        "newsHeadline": "Paul Rabil: Why Owning a Team Is a 100x Bet",
+        "newsSource": "Front Office Sports",
+        "newsUrl": "https://frontofficesports.com/videos/paul-rabil-why-owning-a-team-is-a-100x-bet/",
+        "product": "",
+        "text": "Paul Rabil left an established league to build PLL from zero.\n\nHe called it a 100x bet.\n\nHere's what a 100x bet on a new league actually looks like when you get the content infrastructure right:\n\n📊 51.8M video views — NSL's inaugural women's soccer season in Canada\n📊 37,000+ moments captured across 80 matches over 7 months\n📊 2x Instagram follower growth — first professional season, zero venue production crews\n📊 110,000+ likes — for a brand that didn't exist 12 months earlier\n📊 70%+ of that reach hit people who had never followed the league before\n\nThe hardest part of building a new league isn't the prize money or the broadcast deal.\n\nIt's proving to the market — fans, sponsors, broadcasters — that you can generate the kind of digital presence that makes the league feel real.\n\nNSL solved that in season one. Not because they had a big media budget. Because they automated the content layer and let the moments speak.\n\nFor anyone betting on a new property right now: content at scale isn't a nice-to-have.\n\nIt's the proof of concept.\n\n#SportsLeague #SportsBusiness #ContentStrategy #LeagueBuilding #WomensSports #SportsMedia",
+        "creative": {
+          "background": "linear-gradient(135deg,#003d1f,#006b35)",
+          "headline": "Building a league? Content is the proof of concept.",
+          "subtext": "NSL's inaugural season: 51.8M views, no production crew.",
+          "stat": "51.8M views",
+          "emoji": "🏆"
+        }
+      }
+    ]
+  }
+]

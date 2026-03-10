@@ -33,7 +33,7 @@ Run the full daily LinkedIn ad analysis for Spectatr.ai.
 STEP 1 — call linkedin_get_campaigns FIRST and wait for the result.
   Collect the numeric id of every returned campaign — used to match analytics rows to names.
 
-STEP 2 — call all five in parallel after STEP 1 completes:
+STEP 2 — call all six in parallel after STEP 1 completes:
   a. linkedin_get_analytics(startDate=${week_ago}, endDate=${yest}, granularity=DAILY)
      → 7-day window (complete days only); one row per campaign per day — SUM for totals
   b. linkedin_get_analytics(startDate=${prev_week}, endDate=${week_ago}, granularity=ALL)
@@ -43,6 +43,8 @@ STEP 2 — call all five in parallel after STEP 1 completes:
   d. linkedin_get_analytics(startDate=${month_start}, endDate=${yest}, granularity=ALL)
      → month-to-date; one aggregated row per campaign — save as kpisMtd / campsMtd
   e. linkedin_get_creatives
+  f. linkedin_get_posts
+     → Fetches last 20 organic posts from the LinkedIn org page with engagement stats
 
 STEP 3 — call read_history(30) to get historical daily snapshots.
 
@@ -86,9 +88,44 @@ IF ANALYTICS RETURNS AN ERROR:
 - Set all per-campaign spend/ctr/cpl/leads/freq to null.
 - Never fabricate or estimate metrics.
 
-STEP 4 — save_metrics, save_suggestions, save_copy_variants, save_new_audiences, save_report
+ORGANIC POSTS (from STEP 2f linkedin_get_posts result):
+- linkedin_get_posts already saves posts.json automatically — no further action needed for post data.
+- Call save_posts() as a no-op checkpoint to confirm organic data step is complete.
 
-All 5 save_ calls are required. Use exact API numbers. Never round or estimate metrics.`,
+STEP 4 — save_metrics, save_suggestions, save_copy_variants, save_new_audiences, save_posts, save_report
+
+All 6 save_ calls are required. Use exact API numbers. Never round or estimate metrics.
+
+STEP 5 — call fetch_sports_news ONCE. Returns up to 12 recent articles from sports industry RSS feeds.
+
+STEP 6 — Generate 3 LinkedIn post drafts using:
+  (a) News articles from STEP 5 — pick the 2-3 most relevant to sports tech, OTT, broadcast, or leagues
+  (b) Top 3 best-performing past posts from the linkedin_get_posts result, sorted by engagement rate
+      = (likes + comments + shares) / max(impressions, 1) × 100 — use these as tone/style reference
+  (c) Full brand context in the system prompt (products, proof points, formats, voice rules)
+
+Write exactly 3 posts:
+  POST 1 — type: "product" — Lead with a news hook, pivot to an operational insight, resolve with the most relevant Spectatr.ai product (PULSE, AXIS, or JORDY AI only). Show thought leadership, not sales copy.
+  POST 2 — type: "news" — Sports tech / OTT / broadcast trend or insight. Loosely reference Spectatr.ai's category. End with a sharp question that earns comments.
+  POST 3 — type: "news" — Different article, different angle. League / federation / rights distribution business perspective. Spectatr.ai mention is optional if natural.
+
+Rules (strictly enforce):
+  - All 3 posts MUST use different format_types (THE PROVOCATION / THE DATA REFRAME / THE MATCHDAY SCENARIO / THE INDUSTRY DIAGNOSIS / THE NUMBERS POST)
+  - All 3 posts MUST reference different news articles
+  - All 3 must feel like different humans wrote them — different emotional registers
+  - NEVER reference FLUX or BRAND GAUGE
+  - NEVER fabricate or alter verified client numbers
+  - Match the voice and directness of the best-performing past posts
+
+For each post, also provide a creative object for the dashboard mockup:
+  background: CSS linear-gradient or solid hex that fits the mood (e.g. "linear-gradient(135deg,#0A66C2,#004182)")
+  headline: ≤8 word bold image statement
+  subtext: ≤12 word supporting line
+  stat: the single most compelling number in the post (e.g. "9,500+ clips", "51.8M views")
+  emoji: one emoji that captures the post theme
+
+Then call save_generated_posts({ posts: [ ...all 3 post objects... ] }).
+Pass the posts array directly — do NOT stringify it.`,
     },
   ];
 

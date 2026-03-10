@@ -3,11 +3,11 @@
     "id": "sug_2026-03-10_0",
     "date": "2026-03-10",
     "status": "open",
-    "type": "c",
+    "type": "b",
     "priority": "HIGH",
-    "title": "Refresh creatives on broadcasters & OTT - US - ABM immediately — CTR down 31.34% WoW",
-    "detail": "CTR dropped from 0.48% to 0.33% week-over-week on the account's top-spending campaign (Rs 13,020 in 7d). Frequency is only 1.57 so audience fatigue is not the cause — the creative is the likely culprit. Swap in new social-proof led headlines citing HockeyOne or ISG results (e.g. '10.6M video views in 7 weeks'). Test 2 new variants against current control.",
-    "meta": "7d CTR: 0.3293% | Prior 7d CTR: 0.4796% | WoW delta: -31.34% | Spend: Rs 13,020.66"
+    "title": "Cap broadcasters & OTT - US - ABM at 60% of daily budget immediately",
+    "detail": "This campaign consumed ₹13,020.66 — 93% of total 7d spend — while generating zero leads. The CTR also fell -31.34% WoW to 0.33%. Unchecked, this will burn the March budget with no pipeline return. Set a campaign-level daily cap and redistribute ₹3,000–4,000/day to the EU ABM and Leagues campaigns which have healthier historical CTRs (0.42%).",
+    "meta": "7d spend: ₹13,020.66 | leads: 0 | CTR: 0.33% (-31.34% WoW)"
   },
   {
     "id": "sug_2026-03-10_1",
@@ -15,19 +15,19 @@
     "status": "open",
     "type": "cp",
     "priority": "HIGH",
-    "title": "Audit and rebuild PULSE Lead gen US 2 — Rs 11,987 spent in 30d with 0 leads",
-    "detail": "This campaign has delivered 403 impressions and 1 click in 30 days with zero lead conversions. Immediate action: (1) Narrow job-title targeting to Head of Digital/Content/Broadcast at Leagues & Broadcasters. (2) Switch offer from generic demo to a specific outcome: 'See how NSL automated 37K clips in 7 months — book a 15-min walk-through'. (3) Verify the lead gen form is live and the thank-you redirect is firing.",
-    "meta": "30d spend: Rs 11,986.74 | Impressions: 403 | Clicks: 1 | Leads: 0 | CPL: null"
+    "title": "Audit and rebuild the lead form on all lead gen campaigns",
+    "detail": "Zero oneClickLeads and zero externalWebsiteConversions across ₹45,531 in 30-day spend. This is not a reach problem — 2,797 impressions were served. The post-click experience (lead form friction, form fields, thank-you page tracking pixel) must be audited. A/B test a shorter 2-field LinkedIn native lead gen form against the current setup.",
+    "meta": "30d spend: ₹45,531.23 | 30d leads: 0 | 30d impressions: 2,797"
   },
   {
     "id": "sug_2026-03-10_2",
     "date": "2026-03-10",
     "status": "open",
-    "type": "b",
+    "type": "c",
     "priority": "HIGH",
-    "title": "Investigate broadcasters & OTT - EU - ABM delivery collapse — spend down 98% WoW",
-    "detail": "EU ABM campaign dropped from Rs 1,377 to Rs 25.75 in spend this week with 0 clicks — a near-complete delivery failure. Check: (1) Is the campaign still within budget? (2) Were any creatives rejected by LinkedIn review? (3) Has the audience shrunk below minimum threshold? Restore delivery or pause and redirect budget to US ABM where there is click signal.",
-    "meta": "7d spend: Rs 25.75 | Prior 7d spend: Rs 1,376.98 | Delta: -98.13% | Clicks: 0"
+    "title": "Replace creative on broadcasters & OTT - US - ABM — CTR down -31% in one week",
+    "detail": "CTR dropped from 0.48% to 0.33% in a single week on the highest-spend campaign. With frequency at 1.21 this is not ad fatigue — it's creative underperformance relative to prior period. Swap in a case-study led video (HockeyOne: 9,500+ clips, 10.6M views in 7 weeks) with a pain-led hook: 'Your highlights team is still scrubbing footage. Here's what happened when Hockey One automated it.' Add a direct CTA: 'See the results → Book a demo'.",
+    "meta": "CTR: 0.33% (was 0.48%) | WoW delta: -31.34% | 7d spend: ₹13,020.66"
   },
   {
     "id": "sug_2026-03-10_3",
@@ -35,29 +35,39 @@
     "status": "open",
     "type": "t",
     "priority": "HIGH",
-    "title": "Add lead-gen conversion tracking across all campaigns — currently 0 leads on Rs 45,531 in 30d",
-    "detail": "Zero leads across all campaigns over 30 days despite Rs 45,531 in spend is a systemic signal. Either: (a) LinkedIn Insight Tag / lead gen forms are misconfigured, or (b) landing pages are not converting. Audit Insight Tag firing in LinkedIn Campaign Manager, verify lead gen form submissions are syncing to CRM, and set up a test conversion from each active campaign.",
-    "meta": "30d total spend: Rs 45,531.23 | Total leads: 0 | All campaigns: 0 oneClickLeads, 0 externalWebsiteConversions"
+    "title": "Broaden targeting on Leagues - pulse - EU — 0 clicks on 146 impressions",
+    "detail": "Zero clicks across 146 impressions and ₹961 spend this week. The EU leagues audience may be too narrow. Expand to include: Head of Digital, Director of Broadcast, Head of Media Rights at organisations with 50–500 employees in UK, Germany, Netherlands, Spain, France. Also test Lookalike Audiences based on existing lead form openers if volume allows.",
+    "meta": "7d CTR: 0.00% | 7d impressions: 146 | 7d spend: ₹961.51"
   },
   {
     "id": "sug_2026-03-10_4",
     "date": "2026-03-10",
     "status": "open",
-    "type": "cp",
+    "type": "b",
     "priority": "MEDIUM",
-    "title": "Leagues - pulse - EU: 0 clicks in 7d on Rs 961.51 — tighten targeting and refresh copy",
-    "detail": "EU Leagues campaign delivered 146 impressions with 0 clicks this week. Freq=1.62 indicates the same small audience (est. 90 unique users) is being served the same ads. Introduce job-title exclusions (e.g. exclude students/interns), add seniority filter (Director+), and rotate in a new creative leading with the ISG case study (512 daily highlights for 57 NOCs).",
-    "meta": "7d spend: Rs 961.51 | Impressions: 146 | Clicks: 0 | CTR: 0.00% | Freq: 1.62"
+    "title": "Reactivate broadcasters & OTT - EU - ABM with a minimum ₹500/day budget floor",
+    "detail": "This campaign delivered 0 clicks on only 14 impressions this week — spend collapsed from ₹1,377 to ₹26 (-98%). EU broadcaster audience is a core ICP for PULSE and AXIS. The near-zero delivery suggests a bid floor issue or budget exhaustion. Increase bid and set a floor to restore consistent delivery. Prior week's 0.5% CTR (1 click / 200 impressions) shows the audience is responsive.",
+    "meta": "7d spend: ₹25.75 (-98.1% WoW) | prior CTR: 0.50%"
   },
   {
     "id": "sug_2026-03-10_5",
     "date": "2026-03-10",
     "status": "open",
-    "type": "b",
+    "type": "cp",
     "priority": "MEDIUM",
-    "title": "Consolidate leagues - US - pulse budget into the stronger US ABM campaign until conversion tracking is fixed",
-    "detail": "leagues - US - pulse spent only Rs 3.67 over 7 days (vs Rs 1.18 prior period) — the campaign is effectively dormant with 2 impressions. Budget consolidation into broadcasters & OTT - US - ABM (the only campaign generating clicks) will improve delivery efficiency while lead tracking is being corrected.",
-    "meta": "7d spend: Rs 3.67 | Impressions: 2 | Clicks: 0 | CTR: 0.00%"
+    "title": "Launch a dedicated retargeting campaign for website visitors and lead form openers",
+    "detail": "With 2,797 impressions over 30 days and zero conversions, there is a pool of warm users who have seen ads but not converted. Build a LinkedIn Matched Audiences retargeting campaign targeting: (a) users who opened but didn't submit the lead form, (b) LinkedIn website visitor segments. Use a case-study carousel (NSL: 51.8M views, 37K moments) with a lower-friction CTA: 'Get the one-page case study'.",
+    "meta": "30d impressions: 2,797 | 30d leads: 0 | retargeting pool estimated 698+ unique visitors (530422746 unique reach)"
+  },
+  {
+    "id": "sug_2026-03-10_6",
+    "date": "2026-03-10",
+    "status": "open",
+    "type": "t",
+    "priority": "LOW",
+    "title": "Test seniority-layered targeting on leagues - US - pulse — campaign nearly dark",
+    "detail": "Only ₹3.67 spent and 2 impressions in 7 days. Either the audience is too small or bids are too low to win auctions. Add seniority layers (Director, VP, C-Suite) within sports leagues and associations in North America, raise CPM bid by 40%, and set a minimum ₹500/day budget. The US leagues audience is the highest-intent ICP for PULSE.",
+    "meta": "7d spend: ₹3.67 | 7d impressions: 2 | campaign nearly inactive"
   },
   {
     "id": "sug_2026-03-09_0",

@@ -1,67 +1,67 @@
 [
   {
     "date": "2026-03-10",
-    "adName": "broadcasters & OTT - US - ABM — Variant Set A",
+    "adName": "broadcasters & OTT - US - ABM — CTR Recovery Variant",
     "campaign": "broadcasters & OTT - US - ABM",
     "product": "PULSE",
-    "diagnosis": "CTR dropped 31.34% WoW (0.48% → 0.33%) on 911 impressions. Creative likely fatigued despite low frequency (1.57). New hooks needed leading with specific, measurable outcomes for broadcaster/OTT audience.",
-    "format": "Single Image / Sponsored Content",
-    "cta": "Download Now",
+    "diagnosis": "CTR fell -31.34% WoW from 0.48% to 0.33%. Zero leads on ₹13,020 spend. Current creative is not driving action. Lead with a specific case study outcome, not a product description.",
+    "format": "SPONSORED_VIDEO or Single Image with bold stat headline",
+    "cta": "Book a Demo",
     "headlines": [
       {
-        "label": "Headline 1 — Outcome-led proof point",
-        "text": "10.6M video views in 7 weeks. Zero editors."
+        "label": "H1 — Pain hook",
+        "text": "Your highlights team just missed the moment that mattered."
       },
       {
-        "label": "Headline 2 — Pain-led",
-        "text": "Your highlights go live hours late. Ours go live in seconds."
+        "label": "H2 — Proof-led",
+        "text": "9,500 clips. 7 weeks. Zero extra staff. This is what Hockey One did."
       },
       {
-        "label": "Headline 3 — Scale proof",
-        "text": "500 clips published daily. 15 sports. One AI platform."
+        "label": "H3 — Urgency",
+        "text": "51.8M views from one season. Your league is leaving reach on the table."
       }
     ],
     "bodies": [
       {
-        "label": "Body A — Case study anchor",
-        "text": "HockeyOne used PULSE to generate 9,500+ AI clips over a 7-week season — published within seconds of each moment. Facebook reach up 264%. Instagram reach up 111%. YouTube views up 308%.\n\nIf you're still editing highlights by hand, you're leaving audience growth on the table.\n\n👉 Download the broadcaster playbook."
+        "label": "B1 — Case study outcome lead",
+        "text": "Hockey One ran a full 7-week season with 9,500+ AI-powered clips — published within seconds of each moment. Result: 10.6M video views, 9x fan engagement growth, zero additional production headcount. If your broadcast team is still manually clipping highlights, you're already behind. See exactly how they did it."
       },
       {
-        "label": "Body B — Pain/cost angle",
-        "text": "Every hour your highlights sit in post-production is an hour your competitors own the feed.\n\nBroadcasters using PULSE publish real-time clips across 15+ sports — automatically, at scale, with zero manual editing.\n\nNSL hit 51.8M video views in a single season. You're next.\n\n👉 See how it works — download the guide."
+        "label": "B2 — Pain-to-proof",
+        "text": "Most OTT teams spend 48+ hours turning a match into shareable content. Hockey One cut that to seconds. 9,500 clips. 4.3M Facebook views. 4.9M Instagram views. One AI platform. No post-production crew. If you're running live sports and not publishing clips within minutes of every key moment, your audience is getting the highlights from someone else."
       }
     ]
   },
   {
     "date": "2026-03-10",
-    "adName": "broadcasters & OTT - EU - ABM — Variant Set A",
-    "campaign": "broadcasters & OTT - EU - ABM",
+    "adName": "Leagues - pulse - EU — Engagement Recovery Variant",
+    "campaign": "Leagues - pulse - EU",
     "product": "PULSE",
-    "diagnosis": "CTR dropped 100% WoW and spend collapsed 98% (Rs 1,377 → Rs 25.75). Campaign near-dead. New creatives ready to deploy once delivery issue is resolved. Messaging tailored to European rights-holders with ISG proof point.",
-    "format": "Single Image / Sponsored Content",
-    "cta": "Learn More",
+    "diagnosis": "0 clicks on 146 impressions over 7 days. Creative or message completely failing to land with EU leagues audience. Need a sharper pain-led hook and a stat that is undeniable for a league digital manager.",
+    "format": "Single Image Ad with strong stat overlay or short video",
+    "cta": "See How It Works",
     "headlines": [
       {
-        "label": "Headline 1 — Multi-sport scale",
-        "text": "57 national committees. 512 highlights per day. One platform."
+        "label": "H1 — Scale stat hook",
+        "text": "37,000 match moments. 80 games. Zero production crew at venues."
       },
       {
-        "label": "Headline 2 — Speed hook",
-        "text": "From final whistle to published clip: under 60 seconds."
+        "label": "H2 — Challenge assumption",
+        "text": "Your fans want highlights in seconds. Are you publishing in days?"
       },
       {
-        "label": "Headline 3 — Rights-holder ROI",
-        "text": "7.5M video views. 250K+ likes. No production team needed."
+        "label": "H3 — Outcome first",
+        "text": "2x Instagram growth in one season — without hiring a single editor."
       }
     ],
     "bodies": [
       {
-        "label": "Body A — ISG case study",
-        "text": "At the Islamic Solidarity Games Riyadh 2025, PULSE delivered 50,000+ real-time clips across 57 NOC committees over 15 days — roughly 500 highlights published daily to the ANOC Digital Content Hub.\n\n7.5 million video views. 2 million+ views across NOC social channels.\n\nIf your rights distribution still runs on manual workflows, this is what you're competing against.\n\n👉 Learn how PULSE works for broadcasters."
+        "label": "B1 — NSL case study",
+        "text": "Canada's NSL captured 37,000+ moments across 80 matches in their inaugural season. 51.8M video views. 2x Instagram follower growth. 110,000+ likes. No production crew at a single venue. For European leagues managing multi-venue calendars with lean digital teams, this is the operating model that changes the economics of content. Find out how NSL built it."
       },
       {
-        "label": "Body B — Efficiency angle",
-        "text": "Post-production doesn't scale. AI does.\n\nEuropean broadcasters are under pressure to deliver more content across more platforms with the same — or smaller — teams.\n\nPULSE automates highlight generation across 15+ sports, publishing clips in seconds with 100% AI tagging accuracy.\n\nTable Tennis England cut 250+ hours of post-production time in 3 months.\n\n👉 See the platform in action."
+        "label": "B2 — Operational reality",
+        "text": "Every league has the same problem: the match ends, your team spends hours clipping, editing, formatting, captioning. By the time the highlight goes live, the conversation has moved on. NSL solved this in their first season — 37,000 moments published in real time across a 7-month, 80-match schedule. No extra staff. 51.8M views. Here's the exact setup they used."
       }
     ]
   },

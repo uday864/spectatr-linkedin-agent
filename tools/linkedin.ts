@@ -119,6 +119,69 @@ export class LinkedInClient {
     }
   }
 
+  async getOrgPosts(): Promise<unknown[]> {
+    const orgId = process.env.LI_ORG_ID;
+    if (!orgId) return [{ error: "LI_ORG_ID not set in .env" }];
+
+    const org = `urn:li:organization:${orgId}`;
+    const orgEnc = encodeURIComponent(org);
+
+    // Fetch recent organic posts from the LinkedIn organization page.
+    // Requires r_organization_social OAuth scope.
+    // NOTE: ugcPosts uses %5B0%5D (encoded brackets), NOT List() format.
+    const postsData = (await this.get(
+      `/ugcPosts?q=authors&authors%5B0%5D=${orgEnc}&count=20&sortBy=LAST_MODIFIED`
+    )) as { elements?: unknown[] };
+    const posts = (postsData.elements ?? []) as Record<string, unknown>[];
+    if (!posts.length) return [];
+
+    // Fetch per-post engagement stats sequentially to avoid rate limits.
+    const results: unknown[] = [];
+    for (const post of posts) {
+      const shareEnc = encodeURIComponent(post.id as string);
+      const statsUrl =
+        `/organizationalEntityShareStatistics?q=organizationalEntity` +
+        `&organizationalEntity=${orgEnc}&shares%5B0%5D=${shareEnc}`;
+      try {
+        const statsData = (await this.get(statsUrl)) as {
+          elements?: { totalShareStatistics?: Record<string, number> }[];
+        };
+        const s = statsData.elements?.[0]?.totalShareStatistics ?? {};
+        const ts =
+          (post.created as Record<string, number>)?.time ??
+          (post.lastModified as Record<string, number>)?.time ??
+          Date.now();
+        const content = (post.specificContent as Record<string, Record<string, unknown>>)?.[
+          "com.linkedin.ugc.ShareContent"
+        ];
+        results.push({
+          id:          post.id,
+          date:        new Date(ts).toISOString().split("T")[0],
+          text:        (content?.shareCommentary as Record<string, string>)?.text ?? "",
+          likes:       s.likeCount       ?? 0,
+          comments:    s.commentCount    ?? 0,
+          shares:      s.shareCount      ?? 0,
+          impressions: s.impressionCount ?? 0,
+          clicks:      s.clickCount      ?? 0,
+          url:         `https://www.linkedin.com/feed/update/${post.id}/`,
+        });
+      } catch {
+        const ts =
+          (post.created as Record<string, number>)?.time ?? Date.now();
+        const content = (post.specificContent as Record<string, Record<string, unknown>>)?.[
+          "com.linkedin.ugc.ShareContent"
+        ];
+        results.push({
+          id:          post.id,
+          date:        new Date(ts).toISOString().split("T")[0],
+          text:        (content?.shareCommentary as Record<string, string>)?.text ?? "",
+          likes: 0, comments: 0, shares: 0, impressions: 0, clicks: 0, url: "",
+        });
+      }
+    }
+    return results;
+  }
+
   async getCreatives(): Promise<unknown> {
     const a = encodeURIComponent(this.accountId);
     return this.get(
