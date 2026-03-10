@@ -126,18 +126,42 @@ export class LinkedInClient {
     const org = `urn:li:organization:${orgId}`;
     const orgEnc = encodeURIComponent(org);
 
-    // Fetch recent organic posts from the LinkedIn organization page.
+    // Paginate through ugcPosts, collecting all posts from the last 90 days.
     // Requires r_organization_social OAuth scope.
     // NOTE: ugcPosts uses %5B0%5D (encoded brackets), NOT List() format.
-    const postsData = (await this.get(
-      `/ugcPosts?q=authors&authors%5B0%5D=${orgEnc}&count=20&sortBy=LAST_MODIFIED`
-    )) as { elements?: unknown[] };
-    const posts = (postsData.elements ?? []) as Record<string, unknown>[];
-    if (!posts.length) return [];
+    const PAGE_SIZE = 20;
+    const cutoff = Date.now() - 90 * 24 * 60 * 60 * 1000; // 90 days ago in ms
+    const allPosts: Record<string, unknown>[] = [];
+    let start = 0;
+
+    outer: while (true) {
+      const postsData = (await this.get(
+        `/ugcPosts?q=authors&authors%5B0%5D=${orgEnc}&count=${PAGE_SIZE}&start=${start}&sortBy=LAST_MODIFIED`
+      )) as { elements?: unknown[] };
+
+      const page = (postsData.elements ?? []) as Record<string, unknown>[];
+      if (!page.length) break;
+
+      for (const post of page) {
+        // Posts are sorted newest-first; stop as soon as we pass the 90-day cutoff
+        const ts =
+          (post.created as Record<string, number>)?.time ??
+          (post.lastModified as Record<string, number>)?.time ??
+          Date.now();
+        if (ts < cutoff) break outer;
+        allPosts.push(post);
+      }
+
+      if (page.length < PAGE_SIZE) break; // last partial page — no more results
+      start += PAGE_SIZE;
+    }
+
+    console.log(`  📋 getOrgPosts: ${allPosts.length} posts in last 90 days`);
+    if (!allPosts.length) return [];
 
     // Fetch per-post engagement stats sequentially to avoid rate limits.
     const results: unknown[] = [];
-    for (const post of posts) {
+    for (const post of allPosts) {
       const shareEnc = encodeURIComponent(post.id as string);
       const statsUrl =
         `/organizationalEntityShareStatistics?q=organizationalEntity` +

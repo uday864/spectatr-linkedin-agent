@@ -358,7 +358,7 @@ tbody tr:hover td{background:rgba(255,255,255,.02)}
       <div class="ph">
         <div><h2>Overview</h2><p id="ct-sub">LinkedIn organic post performance</p></div>
         <div class="pfrow">
-          <button class="pf-btn on" data-f="all" onclick="setPostFilter('all')">All Time</button>
+          <button class="pf-btn on" data-f="all" onclick="setPostFilter('all')">Last 3 Months</button>
           <button class="pf-btn" data-f="month" onclick="setPostFilter('month')">This Month</button>
           <button class="pf-btn" data-f="30d" onclick="setPostFilter('30d')">Last 30 Days</button>
           <button class="pf-btn" data-f="7d" onclick="setPostFilter('7d')">Last 7 Days</button>
@@ -1015,7 +1015,7 @@ function renderPostSuggestions(posts){
 
   const top3=suggestions.slice(0,3);
   if(!top3.length){
-    el.innerHTML='<div style="color:var(--mu);font-family:var(--mono);font-size:11px;padding:16px;grid-column:1/-1">Not enough variation in post data to generate suggestions yet — try "All Time".</div>';
+    el.innerHTML='<div style="color:var(--mu);font-family:var(--mono);font-size:11px;padding:16px;grid-column:1/-1">Not enough variation in post data to generate suggestions yet — try "Last 3 Months".</div>';
     return;
   }
   el.innerHTML=top3.map(s=>`<div class="strat-card">
