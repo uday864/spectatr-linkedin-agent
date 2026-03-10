@@ -508,8 +508,8 @@ function renderAll(meta){
 function renderMeta(m){
   if(!m)return;
   const d=m.lastRun?new Date(m.lastRun):null;
-  document.getElementById('sfd').textContent=d?d.toLocaleDateString([],{month:'short',day:'numeric'})+' · '+d.toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'}):'Agent last ran';
-  document.getElementById('sfm').textContent=m.lastSuggestionCount?`${m.lastSuggestionCount} suggestions generated`:'Waiting for first run…';
+  const _sfd=document.getElementById('sfd');if(_sfd)_sfd.textContent=d?d.toLocaleDateString([],{month:'short',day:'numeric'})+' · '+d.toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'}):'Agent last ran';
+  const _sfm=document.getElementById('sfm');if(_sfm)_sfm.textContent=m.lastSuggestionCount?`${m.lastSuggestionCount} suggestions generated`:'Waiting for first run…';
   if(d)document.getElementById('osub').textContent='Last updated '+d.toLocaleDateString([],{month:'long',day:'numeric',year:'numeric'});
 }
 
@@ -589,7 +589,6 @@ function renderSugg(){
   const dates=Object.keys(byDate).sort((a,b)=>b.localeCompare(a));
   const open=SUGG.filter(s=>s.status==='open').length;
   document.getElementById('nb-s').textContent=open;
-  document.getElementById('sc-s').textContent=open;
   if(!dates.length){document.getElementById('sugb').innerHTML='<div class="empty"><div class="ei">✦</div><p>No suggestions yet</p></div>';return;}
   document.getElementById('sugb').innerHTML=dates.map(date=>{
     const items=byDate[date],ap=items.filter(i=>i.status==='applied').length;
@@ -613,7 +612,6 @@ function cyc(id){
 function renderCopy(){
   const n=COPY.filter(v=>v.date===COPY[0]?.date).length;
   document.getElementById('nb-c').textContent=n||'—';
-  document.getElementById('sc-c').textContent=n||'—';
   if(!COPY.length){document.getElementById('copyb').innerHTML='<div class="empty"><div class="ei">✍</div><p>No copy variants yet</p></div>';return;}
   document.getElementById('copyb').innerHTML=COPY.slice(0,10).map(v=>`
     <div class="cv"><div class="cvh"><div>
@@ -633,7 +631,6 @@ function renderCopy(){
 function renderAud(){
   const today=AUD[0]?.date,n=AUD.filter(a=>a.date===today).length;
   document.getElementById('nb-a').textContent=n||'—';
-  document.getElementById('sc-a').textContent=n||'—';
   if(!AUD.length){document.getElementById('audb').innerHTML='<div class="empty"><div class="ei">◎</div><p>No audience suggestions yet</p></div>';return;}
   document.getElementById('audb').innerHTML=AUD.slice(0,6).map(a=>`
     <div class="ac"><div class="ach">
