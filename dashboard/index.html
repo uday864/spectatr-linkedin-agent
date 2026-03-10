@@ -798,7 +798,6 @@ function renderContent(){
   renderTopBottom(sorted,topN,botN);
   renderEngTrend(enriched);
   renderThemeDoughnut(enriched);
-  renderHeatmap(enriched);
   renderInsights(enriched);
   renderBestPostingTime(enriched);
   renderPostSuggestions(enriched);
@@ -841,9 +840,14 @@ function renderTopBottom(sorted,topN,botN){
 
 function renderEngTrend(posts){
   if(CC){CC.destroy();CC=null;}
-  const wk={};
-  posts.forEach(p=>{(wk[p.weekLabel]=wk[p.weekLabel]||[]).push(p.engRate);});
-  const labels=Object.keys(wk).sort();
+  // Group by week, track earliest post date per week for correct chronological sort
+  const wk={},wkDate={};
+  posts.forEach(p=>{
+    (wk[p.weekLabel]=wk[p.weekLabel]||[]).push(p.engRate);
+    if(!wkDate[p.weekLabel]||p.date<wkDate[p.weekLabel])wkDate[p.weekLabel]=p.date;
+  });
+  // Sort by actual earliest date in each week bucket (strict chronological, oldest left)
+  const labels=Object.keys(wk).sort((a,b)=>wkDate[a].localeCompare(wkDate[b]));
   const data=labels.map(w=>+(wk[w].reduce((a,b)=>a+b,0)/wk[w].length).toFixed(3));
   const gc='rgba(31,36,54,.8)',tf={family:'Fira Code',size:9};
   CC=new Chart(document.getElementById('cc'),{type:'line',
