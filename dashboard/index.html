@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Spectatr.ai — Ad Intelligence</title>
+<title>Spectatr.ai — LinkedIn Intelligence</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
@@ -295,7 +295,7 @@ tbody tr:hover td{background:rgba(255,255,255,.02)}
   <header class="top">
     <div class="tlogo">
       <div class="lsq">S</div>
-      <h1>Spectatr.ai <span>· Ad Intelligence</span></h1>
+      <h1>Spectatr.ai <span>· LinkedIn Intelligence</span></h1>
     </div>
     <div class="tnav">
       <button class="tb on" id="nav-overview" onclick="navTop(this,'content')">Overview</button>
@@ -798,9 +798,11 @@ function renderContent(){
   renderTopBottom(sorted,topN,botN);
   renderEngTrend(enriched);
   renderThemeDoughnut(enriched);
-  renderInsights(enriched);
   renderBestPostingTime(enriched);
-  renderPostSuggestions(enriched);
+  // Insights & Suggestions always use the full dataset — they need volume for patterns
+  const allEnriched=enrichPosts(POSTS);
+  renderInsights(allEnriched);
+  renderPostSuggestions(allEnriched);
 }
 
 function renderContentKPIs(posts){
@@ -947,8 +949,7 @@ function renderBestPostingTime(posts){
 function renderPostSuggestions(posts){
   const el=document.getElementById('ct-strat');
   const sub=document.getElementById('ct-strat-sub');
-  const filterLabel={'7d':'last 7 days','30d':'last 30 days','month':'this month'}[POST_FILTER]||'all time';
-  sub.textContent=`Based on ${posts.length} post${posts.length!==1?'s':''} · ${filterLabel}`;
+  sub.textContent=`Based on ${posts.length} post${posts.length!==1?'s':''} · all available data`;
   if(posts.length<3){
     el.innerHTML='<div style="color:var(--mu);font-family:var(--mono);font-size:11px;padding:16px;grid-column:1/-1">Need at least 3 posts to generate suggestions.</div>';
     return;
