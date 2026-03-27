@@ -1,5 +1,376 @@
 [
   {
+    "date": "2026-03-27",
+    "posts": [
+      {
+        "text": "The recent move of Michele Steele to Big Ten Network highlights the continuous evolution of sports broadcasting. Yet, the core challenge remains: how do broadcasters deliver more real-time content without an army of editors? Scaling sports content isn't about more hands, it's about smarter workflows.\n\nTraditional content pipelines simply can't keep pace with fan demand. Every goal, every celebration, every pivotal moment needs to be clipped, tagged, and distributed within seconds, across multiple platforms and formats. This isn't just a content problem; it's an operational bottleneck.\n\nPULSE transforms this. We automated 9,500+ AI-powered clips in just 7 weeks for Hockey One League, publishing content within seconds of the live action. Zero extra staff. That's not just speed; it's a fundamental shift in how broadcast teams operate and engage audiences.\n\n#SportsTech #Broadcast #AI #ContentStrategy #PULSE",
+        "format_type": "THE INDUSTRY DIAGNOSIS",
+        "newsUrl": "https://frontofficesports.com/michele-steele-joining-big-ten-network/",
+        "newsSource": "Front Office Sports",
+        "product": "PULSE",
+        "creative": {
+          "background": "linear-gradient(135deg,#0A66C2,#004182)",
+          "subtext": "Automated highlights, zero extra staff.",
+          "headline": "Scale Content Without Staff",
+          "emoji": "🚀",
+          "stat": "9,500+ clips"
+        },
+        "newsHeadline": "Ex-ESPN Reporter Michele Steele Joins Big Ten Network",
+        "type": "product"
+      },
+      {
+        "product": "JORDY AI",
+        "creative": {
+          "subtext": "Transforming viewers into loyal fans.",
+          "headline": "Views to Loyalty: The Real Game",
+          "emoji": "⚽",
+          "stat": "30% M1 retention",
+          "background": "#FF7A00"
+        },
+        "newsHeadline": "Is Dagenham following the Wrexham playbook with KSI?",
+        "type": "news",
+        "newsSource": "Insider Sport",
+        "newsUrl": "https://insidersport.com/2026/03/26/ksi-dagenham-wrexham-playbook-global/",
+        "text": "Dagenham Redbridge leveraging KSI for digital reach echoes Wrexham's viral success. But the real game isn't just racking up views; it's converting fleeting attention into deep, measurable fan engagement. Are we truly building communities, or just chasing clicks?\n\nThe challenge for clubs goes beyond broadcast numbers. It's about how every touchpoint, from social posts to matchday interactions, builds loyalty. Many properties see a surge in eyeballs but a flatline in meaningful interaction. This isn't a marketing problem; it's a retention crisis.\n\nConsider the impact of truly intelligent fan interaction. Jordy AI delivers a 30% boost in M1 retention and a 140% increase in average time spent for partners. That's moving beyond the \"playbook\" to a proven strategy for fan value.\n\nWhat's your club's biggest challenge in turning a viral moment into lasting fan loyalty?\n#FanEngagement #SportsClubs #DigitalStrategy #JordyAI",
+        "format_type": "THE DATA REFRAME"
+      },
+      {
+        "type": "news",
+        "product": "PULSE",
+        "creative": {
+          "emoji": "🏆",
+          "stat": "512 daily highlights",
+          "subtext": "Global visibility, zero manual editing.",
+          "headline": "League Transformation Beyond Schedules",
+          "background": "linear-gradient(135deg,#6D28D9,#4C1D95)"
+        },
+        "newsHeadline": "MLS Leaders Think New Schedule Will Be ‘Transformative’",
+        "newsSource": "Front Office Sports",
+        "newsUrl": "https://frontofficesports.com/mls-new-calendar-world-cup/",
+        "text": "MLS leaders tout a new schedule as 'transformative.' But true transformation for a league isn't just about calendar changes; it's about fundamentally reshaping content operations and global reach. Is merely adjusting fixtures enough to truly move the needle digitally?\n\nMany leagues wrestle with the sheer volume of content required to engage fans across 50+ national markets. The bottleneck isn't the games themselves, but how efficiently every moment is captured, formatted, and delivered to a global audience, often with limited resources. This demands a new approach to content scale.\n\nThe Islamic Solidarity Games Riyadh 2025 delivered 512 daily highlights for all 57 NOC committees over 15 days. That's 50,000+ real-time clips generated, driving 7.5 million+ video views, with zero manual editing. That's scalable transformation, not just a schedule tweak.\n\n#SportsLeagues #GlobalContent #DigitalTransformation #SpectatrAI #PULSE",
+        "format_type": "THE PROVOCATION"
+      }
+    ]
+  },
+  {
+    "date": "2026-03-23",
+    "posts": [
+      {
+        "type": "product",
+        "format_type": "THE MATCHDAY SCENARIO",
+        "product": "PULSE",
+        "newsHeadline": "Why Teams Aren't Posting Their Own March Madness Highlights",
+        "newsSource": "Front Office Sports",
+        "newsUrl": "https://frontofficesports.com/why-teams-arent-posting-their-own-march-madness-highlights/",
+        "text": "It's tip-off. Your star guard hits a buzzer-beater.\n\nThe crowd erupts. Your socials team is watching. Everyone's watching.\n\nAnd you can't post it.\n\nFront Office Sports reported this week that NCAA rules prevent teams from publishing their own March Madness game highlights. The clip that defines your season — you don't control when it reaches your fans.\n\nThis is the reality for most sports properties. Rights structures, platform restrictions, approval chains. By the time the clip is cleared, edited, and posted, the moment has already died on someone else's feed.\n\nFor leagues and federations that do own their content rights, the problem isn't legal — it's operational.\n\nHockey One owns their footage. In Season 5, they published 9,500+ clips within seconds of each moment happening. Not minutes. Seconds. Across Facebook, Instagram, TikTok, and YouTube simultaneously. The result: 10.6 million video views and a 9x growth in fan engagement — without adding a single person to the production team.\n\nThe bottleneck was never the rights. It was the workflow.\n\nIf your property controls its content and you're still clipping manually, you're self-imposing the same restriction the NCAA puts on its teams.\n\n→ See how Hockey One solved it. Link in comments.\n\n#SportsTechnology #SportsMedia #ContentStrategy #DigitalSports #AIinSports",
+        "creative": {
+          "background": "linear-gradient(135deg, #0A0A2E, #1a1a6e)",
+          "headline": "The moment happened. You missed it.",
+          "subtext": "NCAA teams can't post their own highlights. Can you?",
+          "stat": "9,500+ clips in 7 weeks",
+          "emoji": "🏀"
+        }
+      },
+      {
+        "type": "news",
+        "format_type": "THE INDUSTRY DIAGNOSIS",
+        "product": "AXIS",
+        "newsHeadline": "College Athletic Departments Are Becoming Full-Blown Media Companies",
+        "newsSource": "Front Office Sports",
+        "newsUrl": "https://frontofficesports.com/college-sports-content-studios-lsu-clemson/",
+        "text": "\"There's only so many tickets you can sell, but content is infinite.\"\n\nThat line, from Front Office Sports' piece on college athletic departments building full media studios, is the most honest thing anyone in sports has said about the business model shift.\n\nLSU. Clemson. And now dozens more — investing in production infrastructure, hiring content teams, treating their archive like an asset.\n\nHere's the diagnosis nobody's making: most of them are building the factory without building the warehouse.\n\nYou can produce 500 videos a season. But if your archive isn't indexed — if finding a specific play, sponsor moment, or athlete interview requires an editor to scrub through raw footage for 45 minutes — you haven't solved the problem. You've just created a bigger one.\n\nTable Tennis England saved 250+ hours of post-production time in three months. Not by producing less. By making what they already had actually findable.\n\nThe sports properties winning the content game in 2026 aren't the ones with the biggest studios. They're the ones where an editor can search \"Sponsor logo, fourth quarter, close game\" and pull 40 clips in 8 seconds.\n\nContent is infinite. An unindexed archive is a cost centre. An AI-tagged one is a competitive advantage.\n\nThe athletic departments building media companies right now — what does your archive infrastructure look like?\n\n#SportsMedia #SportsBusiness #ContentOperations #SportsProduction #CollegeSports",
+        "creative": {
+          "background": "linear-gradient(135deg, #1a1a1a, #2d2d2d)",
+          "headline": "You built the factory. Not the warehouse.",
+          "subtext": "Content is infinite. Finding it shouldn't take 45 minutes.",
+          "stat": "250+ hours saved",
+          "emoji": "🎬"
+        }
+      },
+      {
+        "type": "news",
+        "format_type": "THE DATA REFRAME",
+        "product": "",
+        "newsHeadline": "WNBA Releases CBA Term Sheet With Top Salaries Above $1M, RevSharing",
+        "newsSource": "Sportico",
+        "newsUrl": "https://www.sportico.com/leagues/basketball/2026/wnba-labor-term-sheet-cba-salaries-cap-revenue-1234887689/",
+        "text": "The WNBA just agreed to pay top players over $1 million — with a revenue sharing model tied directly into the deal.\n\nThe headline is the salaries. But read the structure: players secured a guaranteed share of league and team revenue as part of the CBA.\n\nThat's not a labour story. That's a distribution model story.\n\nWhen athletes have a contractual stake in league revenue, every content decision has a financial dimension it didn't have before. Reach isn't a vanity metric. It's a revenue input. A highlight that gets 4 million views instead of 400,000 views isn't just better PR — it's a measurable contribution to the revenue pool players now share.\n\nThis changes what \"content performance\" means for league operators.\n\nFederations and leagues that still measure social by likes and follower counts are operating with the wrong dashboard. The WNBA deal makes explicit what was always true: audience reach and engagement are commercial assets, not marketing outputs.\n\nNSL Canada understood this in their inaugural season — 51.8 million video views, 70%+ reached non-followers, 2x Instagram growth. That's not a content team winning an award. That's a commercial foundation.\n\nOther leagues are signing CBAs with revenue share clauses right now. Are they building the content infrastructure to justify those numbers?\n\n#WNBA #SportsBusiness #SportsMedia #LeagueOperations #WomensSports",
+        "creative": {
+          "background": "linear-gradient(135deg, #4B0082, #FF6B35)",
+          "headline": "Revenue share changes what content means.",
+          "subtext": "Reach isn't vanity anymore. It's a contractual obligation.",
+          "stat": "51.8M video views",
+          "emoji": "💰"
+        }
+      }
+    ]
+  },
+  {
+    "date": "2026-03-22",
+    "posts": [
+      {
+        "type": "product",
+        "format_type": "THE MATCHDAY SCENARIO",
+        "newsHeadline": "College Athletic Departments Are Becoming Full-Blown Media Companies",
+        "newsSource": "Front Office Sports",
+        "newsUrl": "https://frontofficesports.com/college-sports-content-studios-lsu-clemson/",
+        "product": "PULSE",
+        "text": "It's Saturday afternoon. Your team just scored.\n\nThe clip needs to be cut. Reviewed. Approved. Formatted for Reels. Formatted again for TikTok. Uploaded.\n\nBy the time it's live, a fan account with 200K followers posted an unbranded version 47 minutes ago. It has 80,000 views. Yours has 1,200.\n\nThis is the gap every college media operation is racing to close.\n\nFront Office Sports reported this week that college athletic departments are building full-blown media companies — LSU, Clemson, and others investing heavily in content studios and production staff.\n\nBut more staff doesn't close the gap between the moment and the publish.\n\nHockey One's digital team had the same problem. They solved it differently.\n\n9,500+ AI-generated clips over a 7-week season. Published in seconds, not hours. Facebook video views up 500%. Fan engagement grew 9×. Zero additional production headcount.\n\nThe race to become a media company isn't won by hiring more editors.\n\nIt's won by removing the delay between the moment and the audience.\n\n#SportsMedia #CollegeSports #ContentStrategy #SportsDigital #AIinSports",
+        "creative": {
+          "background": "linear-gradient(135deg,#1a1a2e,#16213e)",
+          "headline": "The moment won't wait for your edit suite",
+          "subtext": "9x fan engagement. Published in seconds. Zero extra staff.",
+          "stat": "9,500+ clips",
+          "emoji": "⚡"
+        }
+      },
+      {
+        "type": "news",
+        "format_type": "THE DATA REFRAME",
+        "newsHeadline": "WNBA Releases CBA Term Sheet With Top Salaries Above $1M, RevSharing",
+        "newsSource": "Sportico",
+        "newsUrl": "https://www.sportico.com/leagues/basketball/2026/wnba-labor-term-sheet-cba-salaries-cap-revenue-1234887689/",
+        "product": "",
+        "text": "The WNBA just agreed to pay its top players over $1 million and share league revenue directly with the players.\n\nHere's what that number actually means: the league has enough commercial confidence to make a 7-year commitment on revenue it hasn't fully generated yet.\n\nThat's not a labour story. That's a growth bet.\n\nAnd the growth lever isn't ticket sales — you can't scale a stadium. It's content reach.\n\nThe leagues that are winning commercially right now have one thing in common: they've closed the gap between a live moment and a global audience.\n\nNSL Canada — the first professional women's soccer league in the country — put up 51.8 million video views in their inaugural season. 2× Instagram follower growth. 70%+ of that reach hit people who had never followed them before.\n\nNot because they had a bigger broadcast deal. Because they stopped letting moments die in an edit queue.\n\nThe WNBA's CBA bet is that fans will show up in numbers that justify $1M salaries.\n\nThe leagues making that bet a safe one are the ones publishing before the moment is cold.\n\nHow is your league monetising its content velocity right now?\n\n#WNBA #SportsCommerce #WomensSports #LeagueBusiness #SportsMedia",
+        "creative": {
+          "background": "linear-gradient(135deg,#ff6b35,#f7c59f)",
+          "headline": "A $1M salary bet on content reach",
+          "subtext": "The leagues winning commercially closed the moment-to-audience gap.",
+          "stat": "51.8M views",
+          "emoji": "📈"
+        }
+      },
+      {
+        "type": "news",
+        "format_type": "THE INDUSTRY DIAGNOSIS",
+        "newsHeadline": "The NBA, Magic City and the Limits of Brand Control",
+        "newsSource": "Sportico",
+        "newsUrl": "https://www.sportico.com/personalities/people/2026/nba-hawks-magic-city-brand-control-limits-1234887885/",
+        "product": "JORDY AI",
+        "text": "The NBA blocked the Atlanta Hawks from running a 'Magic City Night' promotion.\n\nThe league cited brand standards. The Hawks cited community and culture.\n\nSportico ran the story as a brand control debate. I'd argue it's a distribution control debate.\n\nLeagues spend enormous energy controlling what partners and clubs can say about their brand — and almost no energy controlling how fans experience their brand after the final whistle.\n\nThe broadcast ends. The app goes quiet. The club's social team posts a recap at 11pm.\n\nThe fan who was loudest in the arena is now on Reddit, Discord, or a WhatsApp group — and the league has zero presence in any of those conversations.\n\nThis is the real control problem.\n\nBrand guidelines can tell a franchise what colours to use on a promotional poster. They can't stop a fan from getting their match experience from a third-party account.\n\nThe leagues building presence in the post-match window — with fan engagement tools that know the live score, the key moments, the player stats, the next fixture — are the ones building a relationship with the fan that doesn't depend on the rights deal staying intact.\n\nControlling your brand in 2026 means owning the conversation, not just the logo.\n\nWhat does your league's fan touchpoint look like at 10pm on matchnight?\n\n#SportsBusiness #FanEngagement #LeagueStrategy #SportsMarketing #DigitalSports",
+        "creative": {
+          "background": "linear-gradient(135deg,#2d1b69,#11998e)",
+          "headline": "You control the logo. Who controls the fan?",
+          "subtext": "Brand guidelines stop at the final whistle. Fan conversations don't.",
+          "stat": "10pm",
+          "emoji": "🎯"
+        }
+      }
+    ]
+  },
+  {
+    "date": "2026-03-19",
+    "posts": [
+      {
+        "type": "product",
+        "format_type": "THE MATCHDAY SCENARIO",
+        "product": "PULSE",
+        "newsHeadline": "NFL-Backed EverPass to Exclusively Stream Sunday Ticket in Bars",
+        "newsSource": "Sportico",
+        "newsUrl": "https://www.sportico.com/leagues/football/2026/nfl-sunday-ticket-commercial-bar-streaming-everpass-directv-1234887742/",
+        "text": "It's 4pm on a Sunday. 200 people are watching the NFL in a bar in Chicago.\n\nEverPass is streaming Sunday Ticket to the screen. The moment is live.\n\nBut somewhere in the digital feed — between the play and the social clip — there's a 4-hour gap.\n\nThe goal happens. The crowd reacts. And the highlight isn't published until Monday morning, when the conversation is already dead.\n\nThis is the infrastructure problem nobody talks about when they announce new streaming deals.\n\nThe rights distribution gets solved. The content velocity doesn't.\n\nHockey One figured this out last season.\n\n9,500+ clips generated over 7 weeks. Published within seconds of the moment — not hours after it. No editors. No render queues. No overnight backlog.\n\n10.6 million video views. 9x growth in fan engagement. 500% surge in Facebook video views.\n\nThe streaming deal gets fans to the screen. What happens in the seconds after the whistle determines whether they stay.\n\n#SportsTech #OTT #SportsBroadcasting #ContentStrategy #AIHighlights",
+        "creative": {
+          "background": "linear-gradient(135deg,#0A66C2,#003366)",
+          "headline": "The moment happens. Is it published yet?",
+          "subtext": "9,500+ clips. 7 weeks. Seconds, not hours.",
+          "stat": "10.6M views",
+          "emoji": "⚡"
+        }
+      },
+      {
+        "type": "news",
+        "format_type": "THE INDUSTRY DIAGNOSIS",
+        "product": "",
+        "newsHeadline": "Movies Get All the Ink, but ESPN Is a Key Part of Bob Iger's Legacy",
+        "newsSource": "Sportico",
+        "newsUrl": "https://www.sportico.com/business/media/2026/bob-iger-disney-legacy-espn-sports-1234887712/",
+        "text": "Everyone's writing about Star Wars and Marvel.\n\nBut the real inflection point in Bob Iger's legacy is ESPN.\n\nHe spent two decades running the world's most valuable sports media asset — and left it at the exact moment when the model it was built on stopped working.\n\nLinear TV bundles. Massive rights fees. Passive audiences who watched what was scheduled.\n\nThat model made ESPN worth $60 billion in its prime. It's also the model that's now being replaced, sport by sport, deal by deal.\n\nThe diagnosis isn't that ESPN failed. It's that the broadcast rights model was always a distribution monopoly — not a content advantage.\n\nWhen distribution fractured across streaming, OTT, and social, the moat disappeared.\n\nWhat replaced it isn't the next cable bundle. It's properties that own the relationship with the fan directly — through real-time content, personalised engagement, and platform-native distribution.\n\nThe leagues and federations that are building that infrastructure now won't need to wait for a broadcaster to call.\n\nThat's the actual legacy story here.\n\nWhat do you think Iger's biggest bet on ESPN got right — and what did it miss?\n\n#SportsBusiness #MediaRights #OTT #DigitalTransformation #SportsMedia",
+        "creative": {
+          "background": "linear-gradient(135deg,#1a1a2e,#16213e)",
+          "headline": "Rights fees built the moat. Streaming filled it in.",
+          "subtext": "The broadcast model's end was always a distribution story.",
+          "stat": "$60B peak valuation",
+          "emoji": "📡"
+        }
+      },
+      {
+        "type": "news",
+        "format_type": "THE DATA REFRAME",
+        "product": "PULSE",
+        "newsHeadline": "Inside WNBA's Tentative CBA Deal: $7M Cap and Path to Ratification",
+        "newsSource": "Front Office Sports",
+        "newsUrl": "https://frontofficesports.com/inside-the-wnbas-tentative-deal-7m-cap-and-path-to-ratification/",
+        "text": "The WNBA just agreed a $7M salary cap.\n\nThe reaction from most media: not enough.\n\nBut here's the number that actually matters: viewership for the 2025 WNBA season was up 201% year-over-year.\n\nThe gap between what women's sports generates in eyeballs and what it generates in revenue isn't a demand problem. It's an infrastructure problem.\n\nThe NSL — Canada's first professional women's football league — launched its inaugural season in 2025 with 6 clubs and no production crew at any venue.\n\n51.8 million video views. 2x Instagram follower growth. 110,000+ likes across 80 matches.\n\n37,000+ moments captured. Automatically. Published in real time.\n\n70%+ of viewers were people who'd never followed the league before.\n\nThe revenue follows the audience. The audience follows the content. The content follows the infrastructure.\n\nLeagues investing in automated, real-time content distribution right now are the ones that will have the leverage in the next CBA negotiation — not the ones waiting for a broadcast deal to do it for them.\n\nThe WNBA cap will rise. The leagues that own their content pipeline will get there faster.\n\n#WomensSports #WNBA #SportsContent #LeagueOperations #SportsTech",
+        "creative": {
+          "background": "linear-gradient(135deg,#6B21A8,#1e1b4b)",
+          "headline": "201% viewership growth. The revenue hasn't caught up yet.",
+          "subtext": "Women's sports has an infrastructure gap, not a demand gap.",
+          "stat": "51.8M views",
+          "emoji": "🏆"
+        }
+      }
+    ]
+  },
+  {
+    "date": "2026-03-18",
+    "posts": [
+      {
+        "type": "product",
+        "format_type": "THE MATCHDAY SCENARIO",
+        "newsHeadline": "Women's March Madness Growth Faces Next Star-Power Test",
+        "newsSource": "Front Office Sports",
+        "newsUrl": "https://frontofficesports.com/womens-march-madness-growth-faces-next-star-power-test/",
+        "product": "PULSE",
+        "text": "It's tip-off in 40 minutes.\n\nYour content team is still cutting last night's highlights. The clip from the fourth quarter — the one that would've gone viral — is sitting in a folder no one's touched yet.\n\nBy the time it's edited, formatted, captioned, and approved, the moment is cold.\n\nThis is the problem women's sports is running into right now.\n\nMarch Madness viewership for the women's tournament has grown every year. More eyes. More expectation. More pressure on content teams to deliver at a speed they weren't built for.\n\nThe NSL had the same pressure when they launched Canada's first professional women's soccer league in 2025.\n\n80 matches. 7 months. Zero production crew at venues.\n\nPULSE monitored every live stream continuously. Detected goals, celebrations, and key moments the second they happened. Auto-clipped. Auto-formatted for every platform. Published before the crowd left the stadium.\n\n37,000+ match moments captured. 51.8 million video views. 2× Instagram follower growth across the season.\n\nThe women's sports moment is here. The question is whether your production infrastructure can keep up with it.\n\n#WomensSports #SportsContent #SportsTech #DigitalMedia #MarchMadness",
+        "creative": {
+          "background": "linear-gradient(135deg,#6A0DAD,#C2185B)",
+          "headline": "The Moment Won't Wait for Your Edit Queue",
+          "subtext": "How women's leagues are publishing highlights in seconds, not hours",
+          "stat": "51.8M views",
+          "emoji": "⚡"
+        }
+      },
+      {
+        "type": "news",
+        "format_type": "THE DATA REFRAME",
+        "newsHeadline": "NBC Draws Best Players Championship Viewership in 5 Years",
+        "newsSource": "Front Office Sports",
+        "newsUrl": "https://frontofficesports.com/nbc-draws-best-players-championship-viewership-in-five-years/",
+        "product": "",
+        "text": "NBC just posted its best Players Championship numbers in five years.\n\nThe instinct is to read that as proof that linear TV is back.\n\nFlip it: it's proof that when the right moment happens — Cam Young, $4.5 million, TPC Sawgrass — audiences will find it wherever it lives.\n\nThe constraint has never been demand. It's always been distribution.\n\nBroadcasters who grew audiences in the last five years didn't do it by betting on one platform. They published everywhere, fast, and let the algorithm do the rest.\n\nThe sports properties struggling with viewership aren't losing because fans lost interest. They're losing because by the time the clip is ready, the conversation has moved on.\n\nLive moments have a half-life measured in minutes now.\n\nThe broadcasters that will win the next five years aren't the ones with the best studio shows. They're the ones who can get the right 30 seconds to the right platform before the moment cools.\n\nIs your broadcast infrastructure built for that speed — or for the speed of 2018?\n\n#SportsBroadcast #OTT #SportsMedia #TVRatings #DigitalStrategy",
+        "creative": {
+          "background": "linear-gradient(135deg,#0A2342,#1565C0)",
+          "headline": "Viewership Isn't the Problem. Speed Is.",
+          "subtext": "Why the broadcasters winning aren't the ones you'd expect",
+          "stat": "Best ratings in 5 years",
+          "emoji": "📺"
+        }
+      },
+      {
+        "type": "news",
+        "format_type": "THE INDUSTRY DIAGNOSIS",
+        "newsHeadline": "WNBA, WNBPA Reach Tentative Verbal Agreement for New CBA",
+        "newsSource": "Front Office Sports",
+        "newsUrl": "https://frontofficesports.com/wnba-wnbpa-cba-verbal-agreement-deal/",
+        "product": "",
+        "text": "The WNBA just agreed a new CBA.\n\nBetter pay. Better travel. Better conditions. It's the right call — and it reflects what the commercial numbers are finally starting to justify.\n\nBut here's the diagnosis most people in this industry are missing:\n\nThe growth that made this CBA possible wasn't driven by a new TV deal alone. It was driven by fan engagement that the league didn't have five years ago.\n\nSocial video. Real-time moments. Highlights that reached people who had never been to a game or found the league on a TV guide.\n\nEvery women's sports property that has broken through commercially in the last three years has done it the same way: get the moments out fast, get them to non-followers, let organic reach do the distribution work the ad budget can't.\n\nNSL Canada did it in year one. 51.8 million video views. 70%+ of that reach went to non-followers. Two times Instagram follower growth — over seven months.\n\nThe WNBA's new CBA is a milestone.\n\nBut the leagues that reach a similar milestone in the next five years won't get there on the back of a rights deal. They'll get there because they built a digital audience first.\n\nThat part has to happen on the pitch, the court, and the feed — in real time.\n\n#WNBA #WomensSports #SportsLeagues #SportsBusiness #ContentStrategy",
+        "creative": {
+          "background": "linear-gradient(135deg,#004D40,#00897B)",
+          "headline": "The CBA Is the Outcome. Content Was the Cause.",
+          "subtext": "How women's leagues build the commercial case through digital reach",
+          "stat": "70%+ non-follower reach",
+          "emoji": "🏀"
+        }
+      }
+    ]
+  },
+  {
+    "date": "2026-03-17",
+    "posts": [
+      {
+        "type": "product",
+        "format_type": "THE MATCHDAY SCENARIO",
+        "newsHeadline": "WBC Is Bigger Than You Think Now",
+        "newsSource": "Front Office Sports",
+        "newsUrl": "https://frontofficesports.com/videos/wbc-is-bigger-than-you-think-now/",
+        "product": "PULSE",
+        "text": "It's the bottom of the 8th. Venezuela just hit a walk-off.\n\nThe stadium is losing its mind. 40,000 fans on their feet. The kind of moment that fills highlight reels for a decade.\n\nYour social team is watching from a press box with a laptop and a prayer.\n\nThey'll have a clip ready in... 3 hours. Maybe 4, if the edit needs a second pass.\n\nBy then, the moment has already been screenshotted, reposted, memed, and buried.\n\n---\n\nThe WBC just proved something important: multi-nation tournaments don't have a content problem — they have a speed problem.\n\nThe matches are compelling. The storylines write themselves. Italy's run. Venezuela vs. the U.S. The business is clearly there — Front Office Sports called it bigger than most people realised.\n\nBut the window between moment and publish is where leagues lose audiences they'll never get back.\n\nAt the Islamic Solidarity Games Riyadh 2025, PULSE generated 50,000+ clips across 57 NOCs and 20+ sports in 15 days. ~500 highlights published daily. First time in Games history that every NOC committee received personalised daily content packages.\n\n7.5 million video views.\n\nZero manual editing.\n\nThe moment happened. It was published in seconds.\n\nIf you're running a multi-nation tournament and your highlights are still on a post-production queue — the window is already closing.\n\n👉 See how the Islamic Solidarity Games did it.\n\n#SportsTechnology #SportsMedia #AIHighlights #ContentStrategy #SportsBusiness",
+        "creative": {
+          "background": "linear-gradient(135deg,#1a1a2e,#16213e,#0f3460)",
+          "headline": "Moment happens. Published in seconds.",
+          "subtext": "50,000+ clips. 57 nations. 15 days. Zero editors.",
+          "stat": "50,000+ clips",
+          "emoji": "⚡"
+        }
+      },
+      {
+        "type": "news",
+        "format_type": "THE DATA REFRAME",
+        "newsHeadline": "Ariel's Project Level Seeks $1 Billion for Women's Sports",
+        "newsSource": "Sportico",
+        "newsUrl": "https://www.sportico.com/business/finance/2026/ariels-project-level-1-billion-womens-sports-1234887389/",
+        "product": "",
+        "text": "$1 billion targeting women's sports.\n\nAriel Investments' Project Level has already closed $250M and is heading for ten figures. That's not a trend story anymore. That's a structural shift in where sports capital goes.\n\nHere's the number nobody's talking about alongside it:\n\nNSL Canada — the first professional women's soccer league in the country — launched its inaugural season with 6 clubs and 80 matches.\n\n51.8 million video views.\n2× Instagram follower growth.\n70%+ of their audience were non-followers before the season started.\n\nNot a legacy league with 30 years of brand equity. A year-one property, built from nothing.\n\nThe reach was there from day one. The audience was ready and waiting.\n\nHere's the reframe:\n\nThe investment case for women's sports has always been argued on potential. What NSL proved is that the audience doesn't need to be built — it needs to be served.\n\nA billion dollars will flow into ownership, facilities, and media rights.\n\nThe leagues that capture the return will be the ones who figured out content infrastructure before the cheques cleared.\n\nAre you building the distribution engine now, or waiting until you have to?\n\n#WomenInSports #SportsBusiness #SportsMedia #ContentStrategy #DigitalMedia",
+        "creative": {
+          "background": "linear-gradient(135deg,#6a0572,#ab0ead,#e040fb)",
+          "headline": "$1B into women's sports. Is your content ready?",
+          "subtext": "NSL hit 51.8M views in their first season.",
+          "stat": "51.8M views",
+          "emoji": "💜"
+        }
+      },
+      {
+        "type": "news",
+        "format_type": "THE INDUSTRY DIAGNOSIS",
+        "newsHeadline": "Venezuela Ends Italy's Cinderella WBC Run, Sets Up Clash With U.S.",
+        "newsSource": "Front Office Sports",
+        "newsUrl": "https://frontofficesports.com/venezuela-ends-italys-cinderella-wbc-run-sets-up-u-s-clash/",
+        "product": "",
+        "text": "Italy's WBC run is the best story in baseball right now.\n\nUnderdogs. Espresso. A roster half the world didn't know existed two weeks ago. Front Office Sports called them a Cinderella story. That's earned.\n\nBut here's the part nobody at the federation level is saying out loud:\n\nThe story existed. The audience was global. The broadcast moments were extraordinary.\n\nAnd most national baseball federations published their highlights 18 to 36 hours after the games ended.\n\nThat is the industry's normal. It has been for 20 years.\n\nWe've accepted a model where the most emotionally charged moments in sport — the upsets, the celebrations, the team huddles after elimination — are processed through a post-production queue and delivered to audiences who have already moved on.\n\nThe WBC's global broadcast reach is growing fast. Multi-nation tournaments are attracting investment, new fans, new markets.\n\nThe distribution infrastructure has not kept pace with the ambition.\n\nHockey One ran a 7-week national league season. 9,500+ AI-generated clips. Published within seconds of each moment. 10.6 million video views. 9× growth in fan engagement — likes from 18,589 to 170,154 in a single season.\n\nThey didn't build a bigger production team. They changed the model.\n\nEvery league and federation running a multi-market tournament right now is sitting on a Cinderella story that their audience will never fully see.\n\nNot because the moments aren't there.\n\nBecause the pipeline is too slow.\n\nWhat's your time-to-publish for a match-winning moment?\n\n#SportsBusiness #SportsMedia #LeagueOperations #ContentDistribution #FederationSports",
+        "creative": {
+          "background": "linear-gradient(135deg,#1b4332,#2d6a4f,#52b788)",
+          "headline": "The story was there. The pipeline wasn't.",
+          "subtext": "9,500 clips published in seconds. 9x fan engagement.",
+          "stat": "9x engagement growth",
+          "emoji": "🏆"
+        }
+      }
+    ]
+  },
+  {
+    "date": "2026-03-13",
+    "posts": [
+      {
+        "type": "product",
+        "format_type": "THE MATCHDAY SCENARIO",
+        "newsHeadline": "Why the NFL's 2026 Schedule Could Look Very Different",
+        "newsSource": "Front Office Sports",
+        "newsUrl": "https://frontofficesports.com/why-the-nfls-2026-schedule-could-look-very-different/",
+        "product": "PULSE",
+        "text": "It's 10:47 PM on a Thursday.\n\nThe NFL just finished its new standalone primetime window — a game that didn't exist on last year's schedule. 6.2 million people watched it live.\n\nYour highlights team clocked out at 6 PM.\n\nThe moment — the fourth-quarter fumble, the celebration, the comeback sequence that will drive 80% of tomorrow's engagement — is sitting unclipped in a production queue.\n\nBy the time it goes live, it's breakfast content at best.\n\nThe NFL's 2026 schedule is adding more standalone games, more isolated broadcast windows, more moments that land outside your production hours.\n\nThe leagues and broadcasters keeping pace aren't hiring more editors. They're not running night shifts.\n\nThey're using AI that monitors the live stream continuously, detects the moment, clips it, formats it for 9:16, 4:5, and 16:9 simultaneously, and publishes — in seconds.\n\nHockey One Season 5. 9,500+ clips over 7 weeks. Every one live within seconds of the moment. 10.6 million video views. Zero extra staff.\n\nThe schedule is changing. The question is whether your production workflow is.\n\n#SportsBroadcast #SportsMedia #ContentStrategy #AIinSports #DigitalSports",
+        "creative": {
+          "background": "linear-gradient(135deg, #0D0D0D, #1a1a2e)",
+          "headline": "The moment happened. You were asleep.",
+          "subtext": "AI publishes highlights in seconds. Not hours.",
+          "stat": "9,500+ clips",
+          "emoji": "🏈"
+        }
+      },
+      {
+        "type": "news",
+        "format_type": "THE INDUSTRY DIAGNOSIS",
+        "newsHeadline": "NWSL Enters Pivotal Season With Expansion, World Cup Boost",
+        "newsSource": "Front Office Sports",
+        "newsUrl": "https://frontofficesports.com/nwsl-enters-pivotal-season-with-expansion-world-cup-boost/",
+        "product": "",
+        "text": "The NWSL is expanding. Commissioner Jessica Berman says the league expects to break records in 2026. The Women's World Cup tailwind is real.\n\nHere's the pattern nobody's talking about.\n\nEvery time a women's league has a breakout moment — an expanded schedule, a World Cup cycle, a record broadcast deal — the content infrastructure doesn't scale with the attention.\n\nThe window opens. The audience arrives. The clips come out three hours late, manually edited, under-distributed.\n\nThe fans who showed up during peak interest don't come back because there was nothing to come back to.\n\nThis isn't a resources problem. The NWSL, the WSL, the A-League Women — they're not understaffed because they don't care. They're understaffed because the old model of sports content production simply can't absorb a 40% schedule increase without proportional headcount.\n\nNSL Canada proved a different model works. A professional women's soccer league — 6 clubs, 80 matches, 7 months — generated 51.8 million video views, 2x Instagram follower growth, and reached 70%+ non-followers.\n\nZero production crew at venues. Zero overnight editing shifts.\n\nThe leagues that convert this World Cup moment into lasting audience growth won't be the ones with the biggest teams. They'll be the ones that figured out how to publish faster than the attention span shrinks.\n\nWhat's the women's league in your market doing to hold onto the 2026 audience?\n\n#WomensSports #NWSL #SportsMedia #ContentStrategy #LeagueGrowth #SportsBusiness",
+        "creative": {
+          "background": "linear-gradient(135deg, #6a0572, #c9184a)",
+          "headline": "The audience arrives. The content isn't ready.",
+          "subtext": "Women's leagues can't afford to miss the World Cup window.",
+          "stat": "51.8M views",
+          "emoji": "⚽"
+        }
+      },
+      {
+        "type": "news",
+        "format_type": "THE DATA REFRAME",
+        "newsHeadline": "Bubble Teams Continue to Lose, While NCAA Tournament Expansion Looms",
+        "newsSource": "Front Office Sports",
+        "newsUrl": "https://frontofficesports.com/bubble-teams-continue-to-lose-while-ncaa-tournament-expansion-looms/",
+        "product": "AXIS",
+        "text": "The NCAA is discussing expanding to 72 or 76 teams.\n\nEvery sports business commentator is focused on the same question: which teams get in?\n\nFlip it.\n\n72 teams means 72 sets of stakeholders — coaches, players, universities, sponsors, rights partners — each expecting their own clips, their own highlights, their own moments surfaced and distributed before the news cycle moves on.\n\nIn a 64-team tournament, rights-holders already struggle to produce personalised content fast enough. The average highlight package takes 3–5 hours to edit and distribute. By that point, the conversation has moved to the next game.\n\nAdding 8–12 teams doesn't increase the production problem linearly. It compounds it.\n\nBecause the new entrants — the bubble teams, the mid-majors, the schools that have never been in this position — are exactly the ones with the smallest production staff and the biggest audience opportunity.\n\nThe solution isn't a larger editing team. It's a searchable archive and a distribution infrastructure that lets you find every relevant clip, tag it by player and context, and push it to the right channel in one click.\n\nAt the Islamic Solidarity Games Riyadh 2025, 512 personalised daily highlight packages were delivered across 57 NOCs and 20+ sports — simultaneously — for the first time in Games history.\n\nThe technology exists. Tournament expansion is actually an argument for deploying it, not delaying it.\n\n#NCAATournament #SportsBusiness #MediaRights #ContentDistribution #SportsMedia #CollegeSports",
+        "creative": {
+          "background": "linear-gradient(135deg, #003566, #ffd60a)",
+          "headline": "72 teams. One content infrastructure problem.",
+          "subtext": "Expansion means nothing if the highlights don't reach the fans.",
+          "stat": "512 packages/day",
+          "emoji": "🏀"
+        }
+      }
+    ]
+  },
+  {
     "date": "2026-03-10",
     "posts": [
       {

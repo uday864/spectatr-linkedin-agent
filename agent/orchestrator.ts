@@ -1,11 +1,11 @@
 import * as fs from "fs";
 import * as path from "path";
-import Anthropic from "@anthropic-ai/sdk";
+import { GoogleGenerativeAI, Content, Part, FunctionCallPart, FunctionResponsePart } from "@google/generative-ai";
 import { TOOLS } from "./tools";
 import { executeTool } from "./executor";
 import { postSlack } from "../tools/slack";
 
-const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
+const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY!);
 const today = new Date().toISOString().split("T")[0];
 const yest = new Date(Date.now() - 86_400_000).toISOString().split("T")[0];
 const week_ago = new Date(Date.now() - 7 * 86_400_000).toISOString().split("T")[0];
@@ -18,15 +18,20 @@ async function run(): Promise<void> {
   console.log(`  🚀 Spectatr.ai Ad Analyst · ${today}`);
   console.log(`${"═".repeat(52)}\n`);
 
-  const system = fs.readFileSync(
+  const systemInstruction = fs.readFileSync(
     path.join(__dirname, "../CLAUDE.md"),
     "utf-8"
   );
 
-  const messages: Anthropic.MessageParam[] = [
-    {
-      role: "user",
-      content: `Today is ${today}. Yesterday: ${yest}. 7 days ago: ${week_ago}. 14 days ago: ${prev_week}. 30 days ago: ${thirty_ago}. Month start: ${month_start}.
+  const model = genAI.getGenerativeModel({
+    model: "gemini-2.5-flash",
+    systemInstruction,
+    tools: [{ functionDeclarations: TOOLS }],
+  });
+
+  const chat = model.startChat({ history: [] });
+
+  const userPrompt = `Today is ${today}. Yesterday: ${yest}. 7 days ago: ${week_ago}. 14 days ago: ${prev_week}. 30 days ago: ${thirty_ago}. Month start: ${month_start}.
 
 Run the full daily LinkedIn ad analysis for Spectatr.ai.
 
@@ -125,52 +130,60 @@ For each post, also provide a creative object for the dashboard mockup:
   emoji: one emoji that captures the post theme
 
 Then call save_generated_posts({ posts: [ ...all 3 post objects... ] }).
-Pass the posts array directly — do NOT stringify it.`,
-    },
-  ];
+Pass the posts array directly — do NOT stringify it.`;
 
   let iter = 0;
-  let res = await client.messages.create({
-    model: "claude-sonnet-4-6",
-    max_tokens: 16000,
-    system,
-    tools: TOOLS,
-    messages,
-  });
+  let response = await chat.sendMessage(userPrompt);
 
-  while (res.stop_reason === "tool_use" && iter < 30) {
+  while (iter < 30) {
     iter++;
-    const calls = res.content.filter(
-      (b): b is Anthropic.ToolUseBlock => b.type === "tool_use"
-    );
-    console.log(`\n[Turn ${iter}] ${calls.map((c) => c.name).join(", ")}`);
-    messages.push({ role: "assistant", content: res.content });
-    const results: Anthropic.ToolResultBlockParam[] = [];
-    for (const c of calls) {
-      results.push({
-        type: "tool_result",
-        tool_use_id: c.id,
-        content: await executeTool(
-          c.name,
-          c.input as Record<string, unknown>
-        ),
-      });
+    const candidate = response.response.candidates?.[0];
+    if (!candidate) break;
+
+    // Extract function calls from the response
+    const functionCalls: FunctionCallPart[] = [];
+    for (const part of candidate.content.parts) {
+      if (part.functionCall) {
+        functionCalls.push(part as FunctionCallPart);
+      }
     }
-    messages.push({ role: "user", content: results });
-    res = await client.messages.create({
-      model: "claude-sonnet-4-6",
-      max_tokens: 16000,
-      system,
-      tools: TOOLS,
-      messages,
-    });
+
+    if (functionCalls.length === 0) break; // No more tool calls, we're done
+
+    console.log(`\n[Turn ${iter}] ${functionCalls.map((c) => c.functionCall.name).join(", ")}`);
+
+    // Execute all function calls and build responses
+    const functionResponses: Part[] = [];
+    for (const fc of functionCalls) {
+      const resultStr = await executeTool(
+        fc.functionCall.name,
+        (fc.functionCall.args as Record<string, unknown>) || {}
+      );
+      let resultObj: any;
+      try {
+        const parsed = JSON.parse(resultStr);
+        // Gemini requires response to be an object, not an array
+        resultObj = Array.isArray(parsed) ? { data: parsed } : (typeof parsed === "object" && parsed !== null ? parsed : { result: parsed });
+      } catch {
+        resultObj = { result: resultStr };
+      }
+      functionResponses.push({
+        functionResponse: {
+          name: fc.functionCall.name,
+          response: resultObj,
+        },
+      } as FunctionResponsePart);
+    }
+
+    response = await chat.sendMessage(functionResponses);
   }
 
-  const summary = res.content
-    .filter((b): b is Anthropic.TextBlock => b.type === "text")
-    .map((b) => b.text)
+  // Extract final text
+  const finalText = response.response.candidates?.[0]?.content.parts
+    .filter((p) => p.text)
+    .map((p) => p.text)
     .join("\n")
-    .slice(0, 600);
+    .slice(0, 600) || "";
 
   console.log(`\n${"─".repeat(52)}`);
   console.log(`  ✅ Done in ${iter} turns`);
@@ -182,7 +195,7 @@ Pass the posts array directly — do NOT stringify it.`,
     : "your GitHub Pages dashboard";
 
   await postSlack(
-    `*Spectatr.ai LinkedIn Report — ${today}*\n\n${summary}\n\n_Dashboard: ${dashUrl}_`
+    `*Spectatr.ai LinkedIn Report — ${today}*\n\n${finalText}\n\n_Dashboard: ${dashUrl}_`
   );
 }
 

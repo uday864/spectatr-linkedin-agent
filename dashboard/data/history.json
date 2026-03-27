@@ -28,5 +28,110 @@
       "cplDelta": null,
       "imprDelta": -10.81
     }
+  },
+  {
+    "date": "2026-03-13",
+    "kpis": {
+      "totalSpend": 7745.88,
+      "avgCtr": 0.4902,
+      "totalLeads": 0,
+      "avgCpl": null,
+      "impressions": 612,
+      "spendDelta": -53.6,
+      "ctrDelta": 180.44,
+      "leadsDelta": null,
+      "cplDelta": null,
+      "imprDelta": -46.5
+    }
+  },
+  {
+    "date": "2026-03-17",
+    "kpis": {
+      "totalSpend": 320.09,
+      "avgCtr": 0,
+      "totalLeads": 0,
+      "avgCpl": null,
+      "impressions": 24,
+      "spendDelta": -97.77,
+      "ctrDelta": -100,
+      "leadsDelta": null,
+      "cplDelta": null,
+      "imprDelta": -97.81
+    }
+  },
+  {
+    "date": "2026-03-18",
+    "kpis": {
+      "totalSpend": 0,
+      "avgCtr": null,
+      "totalLeads": 0,
+      "avgCpl": null,
+      "impressions": 0,
+      "spendDelta": null,
+      "ctrDelta": null,
+      "leadsDelta": null,
+      "cplDelta": null,
+      "imprDelta": null
+    }
+  },
+  {
+    "date": "2026-03-19",
+    "kpis": {
+      "totalSpend": 0,
+      "avgCtr": 0,
+      "totalLeads": 0,
+      "avgCpl": null,
+      "impressions": 0,
+      "spendDelta": -100,
+      "ctrDelta": null,
+      "leadsDelta": null,
+      "cplDelta": null,
+      "imprDelta": -100
+    }
+  },
+  {
+    "date": "2026-03-22",
+    "kpis": {
+      "totalSpend": 0,
+      "avgCtr": 0,
+      "totalLeads": 0,
+      "avgCpl": null,
+      "impressions": 0,
+      "spendDelta": -100,
+      "ctrDelta": -100,
+      "leadsDelta": null,
+      "cplDelta": null,
+      "imprDelta": -100
+    }
+  },
+  {
+    "date": "2026-03-23",
+    "kpis": {
+      "totalSpend": 0,
+      "avgCtr": 0,
+      "totalLeads": 0,
+      "avgCpl": null,
+      "impressions": 0,
+      "spendDelta": -100,
+      "ctrDelta": -100,
+      "leadsDelta": null,
+      "cplDelta": null,
+      "imprDelta": -100
+    }
+  },
+  {
+    "date": "2026-03-27",
+    "kpis": {
+      "avgCpl": null,
+      "impressions": 0,
+      "leadsDelta": 0,
+      "totalSpend": 0,
+      "avgCtr": 0,
+      "imprDelta": 0,
+      "cplDelta": 0,
+      "totalLeads": 0,
+      "spendDelta": 0,
+      "ctrDelta": 0
+    }
   }
 ]
